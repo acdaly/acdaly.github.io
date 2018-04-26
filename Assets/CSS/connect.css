@@ -1,0 +1,38 @@
+#connect{
+    height: 100vh;
+    min-height: 500px;
+    background-color: #121721;
+    color: white;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+#connect-icons div{
+    height: 100px;
+}
+
+#connect-icons p{
+    padding-top: 10px;
+    opacity: 0;
+}
+
+#connect-title{
+    padding-top: 100px;
+}
+
+#connect img{
+    height: 60px;
+}
+
+#connect-icons {
+    padding-top: 100px;
+}
+
+#p5-sketch{
+    margin-left: -10;
+    padding: 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 300px;
+}

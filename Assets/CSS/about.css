@@ -1,0 +1,72 @@
+#about{
+    display: block;
+    height:100vh;
+    min-height: 500px;
+    overflow: auto;
+    background-color: white;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 80px;
+    padding-top: 50px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+
+
+}
+
+#about-img{
+    background-color: black;
+    padding: 0;
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#about-profile{
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-left: 0;
+    padding-right: 0;
+    font-family: 'Pontano Sans', sans-serif;
+    font-size: 1.1em;
+
+
+}
+#about-img img{
+    height: 300px;
+    width: 300px;
+    
+}
+
+h3{
+    
+    padding-top: 30px;
+}
+
+#hobbies{
+    padding-top: 60px;
+    text-align: center;
+
+}
+
+#hobby-content{
+    padding-top: 30px;
+    font-family: 'Pontano Sans', sans-serif;
+}
+
+#hobbies img{
+    height: 50px;
+}
+
+#hobbies h5 {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    font-size: 1em;
+    font-weight: normal;
+    height: 20px;
+
+}

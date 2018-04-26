@@ -1,0 +1,25 @@
+#sidebar {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 3%;
+    z-index: 10;
+    width: 20px;
+}
+
+#dot1{
+    background-color: white;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    background-color: black;
+    border-radius: 50%;
+    display: inline-block;
+    border: solid 2px white;
+}
+
+.dot-spacer{
+    height: 10px;
+}
