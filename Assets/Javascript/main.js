@@ -283,7 +283,11 @@ function windowSizeOptions(){
       autoScrolling: false,
       touchSensitivity: 10,
       scrollingSpeed: 800,
+      navigation: true,
+      navigationPosition: 'left',
+      navigationTooltips: ['Home', 'Portfolio', 'About', 'Connect'],
       anchors: ['Home', 'Portfolio', 'About', 'Connect'],
+      scrollOverflow: true,
       onLeave: function(index, nextIndex, direction){sideDotScrolling(index, nextIndex);}
     });
   }
@@ -291,7 +295,11 @@ function windowSizeOptions(){
     autoScrolling: true,
     touchSensitivity: 10,
     scrollingSpeed: 800,
+    navigation: true,
+    navigationPosition: 'left',
+    navigationTooltips: ['Home', 'Portfolio', 'About', 'Connect'],
     anchors: ['Home', 'Portfolio', 'About', 'Connect'],
+    scrollOverflow: true,
     onLeave: function(index, nextIndex, direction){sideDotScrolling(index, nextIndex);}
     });
   }
