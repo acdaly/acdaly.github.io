@@ -240,29 +240,7 @@ function onPortfolioImgHover(){
         });
 };
 
-$.fn.isInViewport = function() {
-//Code copied from https://medium.com/talk-like/detecting-if-an-element-is-in-the-viewport-jquery-a6a4405a3ea2
-    var elementTop = $(this).offset().top;
-    var elementBottom = elementTop + $(this).outerHeight();
 
-    var viewportTop = $(window).scrollTop();
-    var viewportBottom = viewportTop + $(window).height();
-
-    return elementBottom > viewportTop && elementTop < viewportBottom;
-};
-
-function dotOutOfView(i){
-    //fills corresponding dot black in sidebar when it's not in view
-  $('#dot' + i).css('background-color', 'black');
-  $('#dot' + i).css('border-color', 'white');
-  $('#dot' + i).css('box-shadow', '0px 0px 0px 0px #121721');
-}
-
-function dotInView(i){
-    //fills corresponding dot white in sidebar to show which section is viewed
-  $('#dot' + i).css('background-color', 'white');
-  $('#dot' + i).css('box-shadow', '0px 0px 0px 2px #121721');
-}
 
 $(window).on('resize', function(){
       var win = $(this);
@@ -270,10 +248,7 @@ $(window).on('resize', function(){
       else {$.fn.fullpage.setAutoScrolling(true);}
 });
 
-function sideDotScrolling(index, nextIndex){
-    dotOutOfView(index);
-    dotInView(nextIndex);
-}
+
 
 function windowSizeOptions(){
 //when window with is narrow, disable autoscroll. Otherwise, enable autoscroll
@@ -287,8 +262,7 @@ function windowSizeOptions(){
       navigationPosition: 'left',
       navigationTooltips: ['Home', 'Portfolio', 'About', 'Connect'],
       anchors: ['Home-1', 'Portfolio-2', 'About-3', 'Connect-4'],
-      scrollOverflow: true,
-      onLeave: function(index, nextIndex, direction){sideDotScrolling(index, nextIndex);}
+      scrollOverflow: true
     });
   }
   else {$('#fullpage').fullpage({
@@ -299,8 +273,7 @@ function windowSizeOptions(){
     navigationPosition: 'left',
     navigationTooltips: ['Home', 'Portfolio', 'About', 'Connect'],
     anchors: ['Home-1', 'Portfolio-2', 'About-3', 'Connect-4'],
-    scrollOverflow: true,
-    onLeave: function(index, nextIndex, direction){sideDotScrolling(index, nextIndex);}
+    scrollOverflow: true
     });
   }
 }
