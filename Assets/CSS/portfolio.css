@@ -12,9 +12,18 @@
 
 }
 
+.container-fluid {
+    padding: 0;
+}
+
 #nav {
     margin-top: 50px;
     height: 50px;
+}
+
+.navbar {
+    padding-left: 35px;
+    padding-right: 35px;
 }
 
 

@@ -286,7 +286,7 @@ function windowSizeOptions(){
       navigation: true,
       navigationPosition: 'left',
       navigationTooltips: ['Home', 'Portfolio', 'About', 'Connect'],
-      anchors: ['Home', 'Portfolio', 'About', 'Connect'],
+      anchors: ['Home-1', 'Portfolio-2', 'About-3', 'Connect-4'],
       scrollOverflow: true,
       onLeave: function(index, nextIndex, direction){sideDotScrolling(index, nextIndex);}
     });
@@ -298,7 +298,7 @@ function windowSizeOptions(){
     navigation: true,
     navigationPosition: 'left',
     navigationTooltips: ['Home', 'Portfolio', 'About', 'Connect'],
-    anchors: ['Home', 'Portfolio', 'About', 'Connect'],
+    anchors: ['Home-1', 'Portfolio-2', 'About-3', 'Connect-4'],
     scrollOverflow: true,
     onLeave: function(index, nextIndex, direction){sideDotScrolling(index, nextIndex);}
     });
