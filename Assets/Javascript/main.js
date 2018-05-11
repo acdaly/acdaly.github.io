@@ -3,7 +3,7 @@
 var featured = {
     "projects": [
         {
-            "name": "Google Light Prototype",
+            "name": "Light Prototype",
             "img": "Assets/images/featured/1.jpg",
             "id": "google-prototype",
             "modalID": "#googleModal"
@@ -79,7 +79,7 @@ var creativeFrameworks = {
 var hardware = {
     "projects": [
         {
-            "name": "Google Light Prototype",
+            "name": "Light Prototype",
             "img": "Assets/images/coding/google-prototype.jpg",
             "id": "google-prototype",
             "modalID": "#googleModal"
@@ -108,7 +108,7 @@ var hardware = {
 var fabrication = {
     "projects": [
         {
-            "name": "Google Light Prototype",
+            "name": "Light Prototype",
             "img": "Assets/images/fabrication/google-prototype.jpg",
             "id": "google-prototype",
             "modalID": "#googleModal"
