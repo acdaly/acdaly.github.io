@@ -5,7 +5,7 @@
     background-color: white;
     padding-left: 0;
     padding-right: 0;
-    padding-bottom: 30px;
+    padding-bottom: 0px;
     font-family: 'Lato', sans-serif;
     font-weight: 300;
     overflow-x: hidden;
@@ -24,6 +24,9 @@
 .navbar {
     padding-left: 35px;
     padding-right: 35px;
+    background-color: #121721 !important;
+    border-color: #121721 !important;
+    box-shadow: 0px 0px !important;
 }
 
 
@@ -44,19 +47,23 @@
     color: white;
     background-color: #343a40;
     border-color: white; /*set the color you want here*/
+
 }
 
 .portfolio-img {
-    
-    height: 220px;
+    min-height: 100px;
+    height: 31vh;
+
     padding: 0px;
     overflow: hidden;
 
 }
 
 .portfolio-img img {
-    min-height: 220px;
+    min-height: 100px;
     width: 100%;
+
+
 
 }
 
