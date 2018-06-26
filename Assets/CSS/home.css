@@ -1,10 +1,20 @@
 
 #home-background {
     height: 100vh;
-    background-color: #121721;
+/*    background-color: #121721;*/
     font-family: 'Josefin Sans', sans-serif;
     color: white;
     text-align: center;
+}
+
+
+#home-sketch{
+    margin-left: -10;
+    padding: 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
 }
 
 #arrow {
@@ -20,7 +30,7 @@
 }
 
 #home-ari {
-    padding-top: 25%;
+    padding-top: 20%;
     font-size: 3em;
     letter-spacing: .3em;
     color: rgba(255, 255, 255, .9);
@@ -36,7 +46,7 @@
     padding-top: 50px;
     padding-left: 12%;
     padding-right: 12%;
-    font-size: 1.1em;
+    font-size: .9em;
     letter-spacing: .02em;
     color: rgba(255, 255, 255, .6);
     font-family: 'Lato', sans-serif;

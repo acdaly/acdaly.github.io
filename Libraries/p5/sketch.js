@@ -11,8 +11,8 @@ function setup() {
     width = windowWidth;
     height = 300;
     initialY = int(height*(1/10));
-    var cnv = createCanvas(width, height);
-    cnv.parent('p5-sketch');
+    var cnvTwo = createCanvas(width, height);
+    cnvTwo.parent('p5-sketch');
     
     curves = int(width/50);
     skyColor = color('#121721');
@@ -85,8 +85,8 @@ function drawOcean(){
 function draw() {
     if (width != windowWidth){
         width = windowWidth;
-        var cnv = createCanvas(width, height);
-        cnv.parent('p5-sketch');
+        var cnvTwo = createCanvas(width, height);
+        cnvTwo.parent('p5-sketch');
         curves = int(width/50);
     }
     

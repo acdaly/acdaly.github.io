@@ -22,6 +22,7 @@
   <script src="Libraries/p5/addons/p5.dom.min.js"></script>
   <script src="Libraries/p5/addons/p5.sound.min.js"></script>
   <script src="Libraries/p5/sketch.js"></script>
+  <script src="Libraries/p5/sketch-home.js"></script>
   <!-- fullpage (one page scrolling) -->
   <script type="text/javascript" src="Libraries/fullpage/scrolloverflow.min.js"></script>
   <link rel="stylesheet" type="text/css" href="Libraries/fullpage/jquery.fullPage.css" />
@@ -348,13 +349,25 @@
     </div>
   </div>
   
+
+
+
+
+
+
+
+
   <div id="fullpage">
     <!--This is the container for the grid in Bootstrap-->
     <div class="container-fluid">
       
       <!--HOME-->
       <div class="section" id="section0">
-        <div class="row">
+        
+      <div class ="col-sm-12" id="home-sketch"></div>
+        
+        <div class="row justify-content-center">
+
           <img id="arrow" src="Assets/images/home/arrow.png">
           <div id = "home-background" class = "col-sm-8">
             <h1 id = "home-ari">ARI DALY</h1>
@@ -363,13 +376,13 @@
               In striving to create meaningful experiences, I'm always looking to learn new tools to bring concepts one step closer to reality. Crossing fields of programming, digital fabrication, design, and art can create something worth feeling and remembering.
             </div>
           </div>
-          <div id = "home-image" class="col-sm-4">
+<!--           <div id = "home-image" class="col-sm-4">
             <div id="carouselExample" class="carousel slide carousel-fade" data-ride="carousel">
-              <div class="carousel-inner">
+              <div class="carousel-inner"> -->
 <!--                 <div class="carousel-item active">
                   <img class="d-block w-150" src="Assets/images/home/1.jpg" alt="First slide">
                 </div> -->
-                <div class="carousel-item active">
+<!--                 <div class="carousel-item active">
                   <img class="d-block w-150" src="Assets/images/home/2.jpg" alt="Second slide">
                 </div>
                 <div class="carousel-item" >
@@ -396,7 +409,7 @@
 
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
 
@@ -458,10 +471,10 @@
                 </ul>
               </div>
             </nav>
-            <div class="row">
-              <!-- <div class = "col-sm-12 spacer"></div> -->
+<!--             <div class="row">
+              <div class = "col-sm-12 spacer"></div>
             </div>
-              
+               -->
 
             <script id="portfolio-template"type="text/x-handlebars-template">
               <div id="portfolio-content" class="row justify-content-center loaded-portfolio">
