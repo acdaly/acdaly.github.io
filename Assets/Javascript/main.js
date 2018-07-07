@@ -6,37 +6,37 @@ var featured = {
             "name": "Light Prototype",
             "img": "Assets/images/featured/1.jpg",
             "id": "google-prototype",
-            "modalID": "#googleModal"
+            "modalID": "googleModal"
         },
         {
             "name": "Sandblox",
             "img": "Assets/images/featured/2.png",
             "id": "sandblox",
-            "modalID": "#sandbloxModal"
+            "modalID": "sandbloxModal"
         },
         {
             "name": "LED Controller",
             "img": "Assets/images/featured/3.jpg",
             "id": "led-controller",
-            "modalID": "#ledModal"
+            "modalID": "ledModal"
         },
         {
             "name": "Entanglement",
             "img": "Assets/images/featured/4.jpg",
             "id": "google-prototype",
-            "modalID": "#entanglementModal"
+            "modalID": "entanglementModal"
         },
         {
             "name": "Surround Sounds",
             "img": "Assets/images/featured/5.jpg",
             "id": "surround-sounds",
-            "modalID": "#surroundModal"
+            "modalID": "surroundModal"
         },
         {
             "name": "Dream",
             "img": "Assets/images/featured/6.jpg",
             "id": "dream",
-            "modalID": "#dreamModal"
+            "modalID": "dream-modal"
         }
     ]     
 }
@@ -348,11 +348,14 @@ $( document ).ready(function() {
     $('.carousel').carousel({interval: 4000});
     navBarConfiguration();
     modalFreezePageScrolling();
-    // fillPortfolioTemplate(featured);
+    fillPortfolioTemplate(featured);
     onPortfolioImgHover();
     $("#connect-icons").on('mouseenter', '#email', function(event){
         $('#email p').fadeTo(500, 1.0);
     });
+    $('.modal-link').on('click', function(){
+        $('#myModalContent').load('HTML/' +this.id + '.html');
+    })
 
        
  });
