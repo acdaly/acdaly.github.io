@@ -354,7 +354,7 @@ $( document ).ready(function() {
         $('#email p').fadeTo(500, 1.0);
     });
     $('.modal-link').on('click', function(){
-        $('#myModalContent').load('HTML/' +this.id + '.html');
+        $('#myModalContent').load('html/' +this.id + '.html');
     })
 
        
