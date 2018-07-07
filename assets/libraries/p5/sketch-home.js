@@ -40,33 +40,23 @@ var colorList = [colorGreen, colorTeal, colorLightBlue, colorBlue];
 var backgroundList = [colorLightBlue, colorSkyBlue];
 var twoDBackgroundList = [[colorBlack, colorDarkBlue], [colorLightBlue, colorSkyBlue], [colorBabyBlue, colorLightYellow], [colorGreen, colorPurple]];
 
-function setup() {
-    width = windowWidth;
-    height = windowHeight;
-    initialY = int(height*(2/3)) - 20;
-    var cnv = createCanvas(width, height);
-    cnv.parent('home-sketch');
-    
-    curves = int(width/50);
-    create2DNoiseList();
 
-}
 
-function createNoiseList(){
+function createNoiseList(p){
     var pointList = [];
     for (i = 0; i < 40 +1; i++) {
-        append(pointList, random(0, 500));
+        p.append(pointList, p.random(0, 500));
     }
     return pointList;
 }
 
-function create2DNoiseList() {
+function create2DNoiseList(p) {
     for (var i = 0; i<waveLayers; i++){
-        append(t, createNoiseList());
+        p.append(t, createNoiseList(p));
     }
 }
 
-function getTwean(c1, c2, progress, z) {
+function getTwean(c1, c2, progress, z, p) {
     //progress is 0 to 1
     var twean = {
     'r': 0,
@@ -74,7 +64,7 @@ function getTwean(c1, c2, progress, z) {
     'b': 0
 }
 
-    var noiseOffset = noise(t[z][1])*80 - 20;
+    var noiseOffset = p.noise(t[z][1])*80 - 20;
     twean.r = c1.r + (c2.r - c1.r)* progress + noiseOffset;
     twean.g = c1.g + (c2.g - c1.g)* progress + noiseOffset;
     twean.b = c1.b + (c2.b - c1.b)* progress + noiseOffset;
@@ -95,7 +85,7 @@ function getListTwean(c1, c2, progress) {
     return twean;
 }
 
-function updateList(progress, oceanTimeIndex, backgroundTimeIndex) {
+function updateList(progress, oceanTimeIndex, backgroundTimeIndex, p) {
     if (backgroundTimeIndex == twoDBackgroundList.length - 1){
         backgroundList[0] = getListTwean(twoDBackgroundList[backgroundTimeIndex][0], twoDBackgroundList[0][0], progress);
         backgroundList[1] = getListTwean(twoDBackgroundList[backgroundTimeIndex][1], twoDBackgroundList[0][1], progress);
@@ -117,38 +107,38 @@ function updateList(progress, oceanTimeIndex, backgroundTimeIndex) {
     
 }
 
-function getTimeProgress(){
+function getTimeProgress(p){
     // returns progress (0.0 - 1.0), the percentage between the lists in twoDColorLists
     var colorChangeSpeed = 500;
-    return ((millis() / colorChangeSpeed) % 100) * .01;
+    return ((p.millis() / colorChangeSpeed) % 100) * .01;
     
 }
 
-function getTimeIndex(list){ 
+function getTimeIndex(list, p){ 
     var colorChangeSpeed = 500;
-    return int(((millis() / colorChangeSpeed) % (100 * list.length)) * .01);
+    return p.int(((p.millis() / colorChangeSpeed) % (100 * list.length)) * .01);
 
 }
 
 
-function fillColor(z){
+function fillColor(z, p){
     //color progression of the waves
     //z=0 is the furthest in space
     var hue = 20*z + 80;
     var saturation = 8 * (z);
     var brightness = 70 + (z*2.5);
-    var hsbString='hsb('+str(hue)+','+str(saturation)+'%,'+str(brightness)+'%)';
+    var hsbString='hsb('+p.str(hue)+','+p.str(saturation)+'%,'+p.str(brightness)+'%)';
 
-    var index = int(z*((colorList.length -1)/waveLayers)); //index in colorList to get twean of
+    var index = p.int(z*((colorList.length -1)/waveLayers)); //index in colorList to get twean of
     var progressIndex = z % (waveLayers/(colorList.length - 1));
     var progress = progressIndex / (waveLayers/(colorList.length-1));
 
-    var newTwean = getTwean(colorList[index], colorList[index+1], progress, z);
-    var rgbString='rgb('+int(newTwean.r)+','+int(newTwean.g)+','+int(newTwean.b) +')';
-    return color(rgbString);
+    var newTwean = getTwean(colorList[index], colorList[index+1], progress, z, p);
+    var rgbString='rgb('+p.int(newTwean.r)+','+p.int(newTwean.g)+','+p.int(newTwean.b) +')';
+    return p.color(rgbString);
 }
 
-function drawOcean(){
+function drawOcean(p){
     var yOffset = 2;
     var yPower = 20;
     var xDist = width/curves;
@@ -156,67 +146,87 @@ function drawOcean(){
     var x, y;
     for (var z = 0; z < waveLayers; z++){
         
-        beginShape();
-        fill(fillColor(z));
-        curveVertex(0, height);
-        curveVertex(0, height);
+        p.beginShape();
+        p.fill(fillColor(z, p));
+        p.curveVertex(0, height);
+        p.curveVertex(0, height);
         for (var i = 0; i < curves + 1; i++) {
-            strokeWeight(0);
+            p.strokeWeight(0);
             x = (xDist+xDistOffset) * i;
             //initalY is portion of the screen the waves will cover,
             //yOffset is the change between each individual wave
-            y = initialY + yOffset +(yPower * noise(t[z][i]));
-            if (i==0){curveVertex(x, y + 10);}
-            curveVertex(x, y);
+            y = initialY + yOffset +(yPower * p.noise(t[z][i]));
+            if (i==0){p.curveVertex(x, y + 10);}
+            p.curveVertex(x, y);
             // strokeWeight(5);
-            point(x, y);
-            t[z][i] += (millis() - oldTime) / 4000
+            p.point(x, y);
+            t[z][i] += (p.millis() - oldTime) / 4000
         }
         
         // strokeWeight(1);
-        curveVertex(x, y);
-        curveVertex(x, height);
-        curveVertex(x, height);
-        endShape();
+        p.curveVertex(x, y);
+        p.curveVertex(x, height);
+        p.curveVertex(x, height);
+        p.endShape();
         yOffset*=1.09 + 0.5 ;
         yPower*= 1.15;
         xDistOffset*=1.6;
     }
-    oldTime = millis();
+    oldTime = p.millis();
 }
 
-function drawBackgroundGradient(x, y, w, h, color1, color2){
+function drawBackgroundGradient(x, y, w, h, color1, color2, p){
     //refrences code from https://p5js.org/examples/color-linear-gradient.html
-    var c1 = color(color1.r, color1.g, color1.b);
-    var c2 = color(color2.r, color2.g, color2.b);
-    strokeWeight(1);
+    var c1 = p.color(color1.r, color1.g, color1.b);
+    var c2 = p.color(color2.r, color2.g, color2.b);
+    p.strokeWeight(1);
     for (var i = y; i <= y+h; i++) {
-      var inter = map(i, y, y+h, 0, 1);
-      var c = lerpColor(c1, c2, inter);
-      stroke(c);
-      line(x, i, x+w, i);
+      var inter = p.map(i, y, y+h, 0, 1);
+      var c = p.lerpColor(c1, c2, inter);
+      p.stroke(c);
+      p.line(x, i, x+w, i);
     }
 }
 
-function draw() {
-    if (width != windowWidth || height != windowHeight){
-        width = windowWidth;
-        height = windowHeight;
-        var cnv = createCanvas(width, height);
-        cnv.parent('home-sketch');
-        curves = int(width/50);
+function p1Draw(p) {
+    if (width != p.windowWidth || height != p.windowHeight){
+        width = p.windowWidth;
+        height = p.windowHeight;
+        var cnv = p.createCanvas(width, height);
+        // cnv.parent('home-sketch');
+        curves = p.int(width/50);
     }
     
-    var oceanTimeIndex = getTimeIndex(twoDColorLists);
-    var backgroundTimeIndex = getTimeIndex(twoDBackgroundList);
-    var timeProgress = getTimeProgress();
-    updateList(timeProgress, oceanTimeIndex, backgroundTimeIndex);
-    if (millis() > oldTime +20){
-        drawBackgroundGradient(0, 0, width, initialY+ 25, backgroundList[0], backgroundList[1]);
-        drawOcean();
-    }
-
-    
-    
+    var oceanTimeIndex = getTimeIndex(twoDColorLists, p);
+    var backgroundTimeIndex = getTimeIndex(twoDBackgroundList, p);
+    var timeProgress = getTimeProgress(p);
+    updateList(timeProgress, oceanTimeIndex, backgroundTimeIndex, p);
+    if (p.millis() > oldTime +20){
+        drawBackgroundGradient(0, 0, width, initialY+ 25, backgroundList[0], backgroundList[1], p);
+        drawOcean(p);
+    } 
     
 }
+
+function p1Setup(p) {
+    width = p.windowWidth;
+    height = p.windowHeight;
+    initialY = p.int(height*(2/3)) - 20;
+    var cnv = p.createCanvas(width, height);
+    // cnv.parent('home-sketch');
+    
+    curves = p.int(width/50);
+    create2DNoiseList(p);
+
+}
+
+var s = function( p ) { // p could be any variable name
+  p.setup = function() {
+    p1Setup(p);
+  };
+
+  p.draw = function() {
+    p1Draw(p);
+  };
+};
+var myp5 = new p5(s, 'home-sketch');
