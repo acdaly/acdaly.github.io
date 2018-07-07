@@ -42,8 +42,13 @@
 </head>
 <body>
 
- 
+<div id="theModal" class="modal fade text-center">
+  <div class="modal-dialog">
+    <div id="myModalContent" class="modal-content">
 
+    </div>
+  </div>
+</div>
 
 
   <div id="fullpage">
@@ -131,11 +136,12 @@
             </div>
                -->
 
+
             <script id="portfolio-template"type="text/x-handlebars-template">
               <div id="portfolio-content" class="row justify-content-center loaded-portfolio">
                 {{#each projects}}
                 <div id={{ id }} class = "col-md-6 portfolio-img">
-                  <a id = {{modalID}} class="modal-link" data-toggle="modal" data-target=#the Modal>
+                  <a id = {{modalID}} class="modal-link" data-toggle="modal" data-target=#theModal>
                     <h2 class="portfolio-title">{{ name }}</h2>
                     <img src={{ img }}>
                   </a>
@@ -144,13 +150,7 @@
                  </div>
             </script>
 
-            <div id="theModal" class="modal fade text-center">
-              <div class="modal-dialog">
-                <div id="myModalContent" class="modal-content">
-
-                </div>
-              </div>
-            </div>
+            
 
   
           </div>
