@@ -1,0 +1,32 @@
+.modal-carousel-container{
+    height: auto;
+    padding: 0;
+}
+
+
+.modal-carousel {
+   margin: auto;    
+    display: block;
+    max-width: 400px;
+
+}
+
+.modal-carousel-width{
+    max-width: 640px;
+    margin: auto;
+    display:block;
+}
+
+#google-carousel-inner img{
+
+}
+
+.modal-text{
+    padding-left: 50px;
+    padding-right: 50px;
+
+}
+
+iframe {
+    width: 100%;
+}
