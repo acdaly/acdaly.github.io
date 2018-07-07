@@ -4,37 +4,37 @@ var featured = {
     "projects": [
         {
             "name": "Light Prototype",
-            "img": "Assets/images/featured/1.jpg",
+            "img": "assets/images/featured/1.jpg",
             "id": "google-prototype",
             "modalID": "google-modal"
         },
         {
             "name": "Sandblox",
-            "img": "Assets/images/featured/2.png",
+            "img": "assets/images/featured/2.png",
             "id": "sandblox",
             "modalID": "sandblox-modal"
         },
         {
             "name": "LED Controller",
-            "img": "Assets/images/featured/3.jpg",
+            "img": "assets/images/featured/3.jpg",
             "id": "led-controller",
             "modalID": "led-modal"
         },
         {
             "name": "Entanglement",
-            "img": "Assets/images/featured/4.jpg",
+            "img": "assets/images/featured/4.jpg",
             "id": "google-prototype",
             "modalID": "entanglement-modal"
         },
         {
             "name": "Surround Sounds",
-            "img": "Assets/images/featured/5.jpg",
+            "img": "assets/images/featured/5.jpg",
             "id": "surround-sounds",
             "modalID": "surround-modal"
         },
         {
             "name": "Dream",
-            "img": "Assets/images/featured/6.jpg",
+            "img": "assets/images/featured/6.jpg",
             "id": "dream",
             "modalID": "dream-modal"
         }
@@ -45,31 +45,31 @@ var creativeFrameworks = {
     "projects": [
         {
             "name": "Sandblox",
-            "img": "Assets/images/coding/sandblox.jpg",
+            "img": "assets/images/coding/sandblox.jpg",
             "id": "sandblox",
             "modalID": "#sandbloxModal"
         },
         {
             "name": "Plotter Drawing",
-            "img": "Assets/images/coding/plotter.jpg",
+            "img": "assets/images/coding/plotter.jpg",
             "id": "plotter",
             "modalID": "#plotterModal"
         },
         {
             "name": "Fireflies",
-            "img": "Assets/images/coding/fireflies.jpg",
+            "img": "assets/images/coding/fireflies.jpg",
             "id": "fireflies",
             "modalID": "#firefliesModal"
         },
         {
             "name": "Surround Sounds",
-            "img": "Assets/images/coding/surround-sounds.jpg",
+            "img": "assets/images/coding/surround-sounds.jpg",
             "id": "surround-sounds",
             "modalID": "#surroundModal"
         },
         {
             "name": "P5 Experiments",
-            "img": "Assets/images/coding/p5-experiments.jpg",
+            "img": "assets/images/coding/p5-experiments.jpg",
             "id": "p5-experiments",
             "modalID": "#p5Modal"
         }
@@ -80,25 +80,25 @@ var hardware = {
     "projects": [
         {
             "name": "Light Prototype",
-            "img": "Assets/images/coding/google-prototype.jpg",
+            "img": "assets/images/coding/google-prototype.jpg",
             "id": "google-prototype",
             "modalID": "#googleModal"
         },
         {
             "name": "LED Controller",
-            "img": "Assets/images/coding/led-controller.jpg",
+            "img": "assets/images/coding/led-controller.jpg",
             "id": "led-controller",
             "modalID": "#ledModal"
         },
         {
             "name": "Entanglement",
-            "img": "Assets/images/coding/entanglement.jpg",
+            "img": "assets/images/coding/entanglement.jpg",
             "id": "google-prototype",
             "modalID": "#entanglementModal"
         },
         {
             "name": "Light Capsule",
-            "img": "Assets/images/coding/light-capsule.jpg",
+            "img": "assets/images/coding/light-capsule.jpg",
             "id": "light-capsule",
             "modalID": "#capsuleModal"
         }
@@ -109,37 +109,37 @@ var fabrication = {
     "projects": [
         {
             "name": "Light Prototype",
-            "img": "Assets/images/fabrication/google-prototype.jpg",
+            "img": "assets/images/fabrication/google-prototype.jpg",
             "id": "google-prototype",
             "modalID": "#googleModal"
         },
         {
             "name": "Entanglement",
-            "img": "Assets/images/fabrication/entanglement.jpg",
+            "img": "assets/images/fabrication/entanglement.jpg",
             "id": "entanglement",
             "modalID": "#entanglementModal"
         },
         {
             "name": "Holder & Coaster",
-            "img": "Assets/images/fabrication/holder.jpg",
+            "img": "assets/images/fabrication/holder.jpg",
             "id": "holder-coaster",
             "modalID": "#holderModal"
         },
         {
             "name": "Within Our Reach",
-            "img": "Assets/images/fabrication/swing.jpg",
+            "img": "assets/images/fabrication/swing.jpg",
             "id": "swing",
             "modalID": "#swingModal"
         },
         {
             "name": "Enclosed",
-            "img": "Assets/images/fabrication/enclosed.jpg",
+            "img": "assets/images/fabrication/enclosed.jpg",
             "id": "enclosed",
             "modalID": "#enclosedModal"
         },
         {
             "name": "Memories",
-            "img": "Assets/images/fabrication/memories.jpg",
+            "img": "assets/images/fabrication/memories.jpg",
             "id": "memories",
             "modalID": "#memoriesModal"
         }
@@ -150,31 +150,31 @@ var dFab = {
     "projects": [
         {
             "name": "Google Light Prototype",
-            "img": "Assets/images/fabrication/google-prototype.jpg",
+            "img": "assets/images/fabrication/google-prototype.jpg",
             "id": "google-prototype",
             "modalID": "#googleModal"
         },
         {
             "name": "Entanglement",
-            "img": "Assets/images/fabrication/entanglement.jpg",
+            "img": "assets/images/fabrication/entanglement.jpg",
             "id": "entanglement",
             "modalID": "#entanglementModal"
         },
         {
             "name": "Holder & Coaster",
-            "img": "Assets/images/fabrication/holder.jpg",
+            "img": "assets/images/fabrication/holder.jpg",
             "id": "holder-coaster",
             "modalID": "#holderModal"
         },
         {
             "name": "Cast a Keychain",
-            "img": "Assets/images/fabrication/keychain.jpg",
+            "img": "assets/images/fabrication/keychain.jpg",
             "id": "swing",
             "modalID": "#swingModal"
         },
         {
             "name": "Eclipse",
-            "img": "Assets/images/fabrication/eclipse.jpg",
+            "img": "assets/images/fabrication/eclipse.jpg",
             "id": "eclipse",
             "modalID": "#eclipseModal"
         }
@@ -185,31 +185,31 @@ var woodMetal = {
     "projects": [
         {
             "name": "Within Our Reach",
-            "img": "Assets/images/fabrication/swing.jpg",
+            "img": "assets/images/fabrication/swing.jpg",
             "id": "swing",
             "modalID": "#swingModal"
         },
         {
             "name": "Enclosed",
-            "img": "Assets/images/fabrication/enclosed.jpg",
+            "img": "assets/images/fabrication/enclosed.jpg",
             "id": "enclosed",
             "modalID": "#enclosedModal"
         },
         {
             "name": "Memories",
-            "img": "Assets/images/fabrication/memories.jpg",
+            "img": "assets/images/fabrication/memories.jpg",
             "id": "memories",
             "modalID": "#memoriesModal"
         },
         {
             "name": "Valetines",
-            "img": "Assets/images/fabrication/flower.jpg",
+            "img": "assets/images/fabrication/flower.jpg",
             "id": "floweer",
             "modalID": "#flowerModal"
         },
         {
             "name": "Dead, Dying, Plant",
-            "img": "Assets/images/fabrication/plants.jpg",
+            "img": "assets/images/fabrication/plants.jpg",
             "id": "plant",
             "modalID": "#plantModal"
         }
