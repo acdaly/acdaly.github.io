@@ -348,7 +348,7 @@ $( document ).ready(function() {
     $('.carousel').carousel({interval: 4000});
     navBarConfiguration();
     modalFreezePageScrolling();
-    fillPortfolioTemplate(featured);
+    // fillPortfolioTemplate(featured);
     onPortfolioImgHover();
     $("#connect-icons").on('mouseenter', '#email', function(event){
         $('#email p').fadeTo(500, 1.0);
