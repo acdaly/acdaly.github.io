@@ -6,31 +6,31 @@ var featured = {
             "name": "Light Prototype",
             "img": "Assets/images/featured/1.jpg",
             "id": "google-prototype",
-            "modalID": "googleModal"
+            "modalID": "google-modal"
         },
         {
             "name": "Sandblox",
             "img": "Assets/images/featured/2.png",
             "id": "sandblox",
-            "modalID": "sandbloxModal"
+            "modalID": "sandblox-modal"
         },
         {
             "name": "LED Controller",
             "img": "Assets/images/featured/3.jpg",
             "id": "led-controller",
-            "modalID": "ledModal"
+            "modalID": "led-modal"
         },
         {
             "name": "Entanglement",
             "img": "Assets/images/featured/4.jpg",
             "id": "google-prototype",
-            "modalID": "entanglementModal"
+            "modalID": "entanglement-modal"
         },
         {
             "name": "Surround Sounds",
             "img": "Assets/images/featured/5.jpg",
             "id": "surround-sounds",
-            "modalID": "surroundModal"
+            "modalID": "surround-modal"
         },
         {
             "name": "Dream",
