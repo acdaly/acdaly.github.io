@@ -39,7 +39,7 @@
 #home-role {
     letter-spacing: .3em;
     font-size: 1.3em;
-    color: rgba(255, 255, 255, .8);
+    color: rgba(255, 255, 255, .9);
 }
 
 #home-profile {
@@ -48,7 +48,7 @@
     padding-right: 12%;
     font-size: .9em;
     letter-spacing: .02em;
-    color: rgba(255, 255, 255, .6);
+    color: rgba(255, 255, 255, .8);
     font-family: 'Lato', sans-serif;
     font-weight: 300;
 }

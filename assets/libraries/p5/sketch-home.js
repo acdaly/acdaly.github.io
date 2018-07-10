@@ -44,7 +44,7 @@ var twoDBackgroundList = [[colorBlack, colorDarkBlue], [colorLightBlue, colorSky
 
 function createNoiseList(p){
     var pointList = [];
-    for (i = 0; i < 40 +1; i++) {
+    for (var i = 0; i < 40 +1; i++) {
         p.append(pointList, p.random(0, 500));
     }
     return pointList;
@@ -201,8 +201,8 @@ function p1Draw(p) {
     var backgroundTimeIndex = getTimeIndex(twoDBackgroundList, p);
     var timeProgress = getTimeProgress(p);
     updateList(timeProgress, oceanTimeIndex, backgroundTimeIndex, p);
-    if (p.millis() > oldTime +20){
-        drawBackgroundGradient(0, 0, width, initialY+ 25, backgroundList[0], backgroundList[1], p);
+    if (p.millis() > oldTime +40){
+        drawBackgroundGradient(0, 0, width, initialY+ 80, backgroundList[0], backgroundList[1], p);
         drawOcean(p);
     } 
     
@@ -220,6 +220,8 @@ function p1Setup(p) {
 
 }
 
+
+
 var s = function( p ) { // p could be any variable name
   p.setup = function() {
     p1Setup(p);
@@ -230,3 +232,100 @@ var s = function( p ) { // p could be any variable name
   };
 };
 var myp5 = new p5(s, 'home-sketch');
+
+//SKETCH 2
+
+var p2width;
+var p2height;
+var p2curves;
+var p2waveLayers = 13;
+var p2t=[];
+var p2initialY;
+var p2skyColor;
+var p2oldTime = 0;
+
+function p2create2DNoiseList(p) {
+    for (var i = 0; i<p2waveLayers; i++){
+        p.append(p2t, createNoiseList(p));
+    }
+}
+
+function p2drawOcean(p){
+    var yOffset = 2;
+    var yPower = 20;
+    var xDist = p2width/p2curves;
+    var xDistOffset = 1;
+    var x, y;
+    for (var z = 0; z < p2waveLayers; z++){
+        
+        p.beginShape();
+        p.fill(p.color('#121721'));
+        p.curveVertex(0, p2height);
+        p.curveVertex(0, p2height);
+        for (var i = 0; i < p2curves + 1; i++) {
+            p.strokeWeight(2);
+            p.stroke('white');
+            x = (xDist+xDistOffset) * i;
+            //initalY is portion of the screen the waves will cover,
+            //yOffset is the change between each individual wave
+            y = p2initialY + yOffset +(yPower *p.noise(p2t[z][i]));
+            if (i==0){p.curveVertex(x, y + 10);}
+            p.curveVertex(x, y);
+            // strokeWeight(5);
+            // point(x, y);
+            p2t[z][i] += (p.millis() - p2oldTime) / 4000
+            
+            
+        }
+        // strokeWeight(1);
+        p.curveVertex(x, y);
+        p.curveVertex(x, p2height);
+        p.curveVertex(x, p2height);
+        p.endShape();
+        yOffset*=1.1 + 0.5 ;
+        yPower*= 1.15;
+        xDistOffset*=1.5;
+
+    }
+    p2oldTime = p.millis();
+}
+
+function p2Draw(p) {
+    if (p2width != p.windowWidth){
+        p2width = p.windowWidth;
+        var cnvTwo = p.createCanvas(p2width, p2height);
+        // cnvTwo.parent('p5-sketch');
+        p2curves = p.int(p2width/50);
+    }    
+    
+    if (p.millis() > p2oldTime +40){
+        p.background(p2skyColor);
+        p2drawOcean(p); 
+    }
+}
+
+function p2Setup(p) {
+    p2width = p.windowWidth;
+    p2height = 300;
+    p2initialY = p.int(p2height*(1/10));
+    var cnvTwo = p.createCanvas(p2width, p2height);
+    // cnvTwo.parent('p5-sketch');
+    p2curves = p.int(p2width/50);
+    p2skyColor = p.color('#121721');
+    p2create2DNoiseList(p);
+    p.background(p2skyColor);
+}
+
+var l = function( c ) { // p could be any variable name
+    
+    c.setup = function() {
+        p2Setup(c);
+    };
+
+    c.draw = function() {
+        p2Draw(c);
+    };
+};
+var myp5 = new p5(l, 'connect-sketch');
+
+

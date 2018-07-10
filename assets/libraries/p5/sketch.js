@@ -35,16 +35,6 @@ function create2DNoiseList() {
     }
 }
 
-function fillColor(z){
-    //color progression of the waves
-    //z=0 is the furthest in space
-    var hue = 20*z + 80;
-    var saturation = 8 * (z);
-    var brightness = 70 + (z*2.5);
-    var hsbString='hsb('+str(hue)+','+str(saturation)+'%,'+str(brightness)+'%)';
-    return color(hsbString);
-}
-
 function drawOcean(){
     var yOffset = 2;
     var yPower = 20;
@@ -88,10 +78,7 @@ function draw() {
         var cnvTwo = createCanvas(width, height);
         cnvTwo.parent('p5-sketch');
         curves = int(width/50);
-    }
-    
-        
+    }    
     background(skyColor);
-    drawOcean();
-    
+    drawOcean(); 
 }
