@@ -114,10 +114,10 @@
                       2D Media
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <a class="dropdown-item" href="#">Drawing</a>
-                      <a class="dropdown-item" href="#">Painting</a>
-                      <a class="dropdown-item" href="#">Photography</a>
-                      <a class="dropdown-item" href="#">Animation</a>
+                      <a id="drawing" class="dropdown-item" href="#">Drawing</a>
+                      <a id="painting" class="dropdown-item" href="#">Painting</a>
+                      <a id="photography" class="dropdown-item" href="#">Photography</a>
+                      <a id="animation" class="dropdown-item" href="#">Animation</a>
                     </div>
                   </li>
                 </ul>
@@ -138,7 +138,7 @@
 
 
             <script id="portfolio-template"type="text/x-handlebars-template">
-              <div id="portfolio-content" class="row justify-content-center loaded-portfolio">
+              <div id="portfolio-content" class="row loaded-portfolio">
                 {{#each projects}}
                 <div id={{ id }} class = "col-md-6 portfolio-img">
                   <a id = {{modalID}} class="modal-link" data-toggle="modal" data-target=#theModal>

@@ -47,31 +47,31 @@ var creativeFrameworks = {
             "name": "Sandblox",
             "img": "assets/images/coding/sandblox.jpg",
             "id": "sandblox",
-            "modalID": "#sandbloxModal"
+            "modalID": "sandblox-modal"
         },
         {
             "name": "Plotter Drawing",
             "img": "assets/images/coding/plotter.jpg",
             "id": "plotter",
-            "modalID": "#plotterModal"
+            "modalID": "plotter-modal"
         },
         {
             "name": "Fireflies",
             "img": "assets/images/coding/fireflies.jpg",
             "id": "fireflies",
-            "modalID": "#firefliesModal"
+            "modalID": "fireflies-modal"
         },
         {
             "name": "Surround Sounds",
             "img": "assets/images/coding/surround-sounds.jpg",
             "id": "surround-sounds",
-            "modalID": "#surroundModal"
+            "modalID": "surround-modal"
         },
         {
             "name": "P5 Experiments",
             "img": "assets/images/coding/p5-experiments.jpg",
             "id": "p5-experiments",
-            "modalID": "#p5Modal"
+            "modalID": "p5-modal"
         }
     ]     
 }
@@ -82,25 +82,25 @@ var hardware = {
             "name": "Light Prototype",
             "img": "assets/images/coding/google-prototype.jpg",
             "id": "google-prototype",
-            "modalID": "#googleModal"
+            "modalID": "google-modal"
         },
         {
             "name": "LED Controller",
             "img": "assets/images/coding/led-controller.jpg",
             "id": "led-controller",
-            "modalID": "#ledModal"
+            "modalID": "led-modal"
         },
         {
             "name": "Entanglement",
             "img": "assets/images/coding/entanglement.jpg",
             "id": "google-prototype",
-            "modalID": "#entanglementModal"
+            "modalID": "entanglement-modal"
         },
         {
             "name": "Light Capsule",
             "img": "assets/images/coding/light-capsule.jpg",
             "id": "light-capsule",
-            "modalID": "#capsuleModal"
+            "modalID": "capsule-modal"
         }
     ]     
 }
@@ -111,37 +111,37 @@ var fabrication = {
             "name": "Light Prototype",
             "img": "assets/images/fabrication/google-prototype.jpg",
             "id": "google-prototype",
-            "modalID": "#googleModal"
+            "modalID": "google-modal"
         },
         {
             "name": "Entanglement",
             "img": "assets/images/fabrication/entanglement.jpg",
             "id": "entanglement",
-            "modalID": "#entanglementModal"
+            "modalID": "entanglement-modal"
         },
         {
             "name": "Holder & Coaster",
             "img": "assets/images/fabrication/holder.jpg",
             "id": "holder-coaster",
-            "modalID": "#holderModal"
+            "modalID": "holder-modal"
         },
         {
             "name": "Within Our Reach",
             "img": "assets/images/fabrication/swing.jpg",
             "id": "swing",
-            "modalID": "#swingModal"
+            "modalID": "swing-modal"
         },
         {
             "name": "Enclosed",
             "img": "assets/images/fabrication/enclosed.jpg",
             "id": "enclosed",
-            "modalID": "#enclosedModal"
+            "modalID": "enclosed-modal"
         },
         {
             "name": "Memories",
             "img": "assets/images/fabrication/memories.jpg",
             "id": "memories",
-            "modalID": "#memoriesModal"
+            "modalID": "memories-modal"
         }
     ]     
 }
@@ -152,31 +152,31 @@ var dFab = {
             "name": "Google Light Prototype",
             "img": "assets/images/fabrication/google-prototype.jpg",
             "id": "google-prototype",
-            "modalID": "#googleModal"
+            "modalID": "google-modal"
         },
         {
             "name": "Entanglement",
             "img": "assets/images/fabrication/entanglement.jpg",
             "id": "entanglement",
-            "modalID": "#entanglementModal"
+            "modalID": "entanglement-modal"
         },
         {
             "name": "Holder & Coaster",
             "img": "assets/images/fabrication/holder.jpg",
             "id": "holder-coaster",
-            "modalID": "#holderModal"
+            "modalID": "holder-modal"
         },
         {
             "name": "Cast a Keychain",
             "img": "assets/images/fabrication/keychain.jpg",
             "id": "swing",
-            "modalID": "#swingModal"
+            "modalID": "swing-modal"
         },
         {
             "name": "Eclipse",
             "img": "assets/images/fabrication/eclipse.jpg",
             "id": "eclipse",
-            "modalID": "#eclipseModal"
+            "modalID": "eclipse-modal"
         }
     ]     
 }
@@ -187,34 +187,200 @@ var woodMetal = {
             "name": "Within Our Reach",
             "img": "assets/images/fabrication/swing.jpg",
             "id": "swing",
-            "modalID": "#swingModal"
+            "modalID": "swing-modal"
         },
         {
             "name": "Enclosed",
             "img": "assets/images/fabrication/enclosed.jpg",
             "id": "enclosed",
-            "modalID": "#enclosedModal"
+            "modalID": "enclosed-modal"
         },
         {
             "name": "Memories",
             "img": "assets/images/fabrication/memories.jpg",
             "id": "memories",
-            "modalID": "#memoriesModal"
+            "modalID": "memories-modal"
         },
         {
             "name": "Valetines",
             "img": "assets/images/fabrication/flower.jpg",
-            "id": "floweer",
-            "modalID": "#flowerModal"
+            "id": "flower",
+            "modalID": "flower-modal"
         },
         {
             "name": "Dead, Dying, Plant",
             "img": "assets/images/fabrication/plants.jpg",
             "id": "plant",
-            "modalID": "#plantModal"
+            "modalID": "plant-modal"
         }
     ]     
 }
+
+var webDev = {
+    "projects": [
+        {
+            "name": "Portfolio Website",
+            "img": "assets/images/coding/website.png",
+            "id": "website",
+            "modalID": "website-modal"
+        },
+        {
+            "name": "Waves",
+            "img": "assets/images/coding/waves.png",
+            "id": "floweer",
+            "modalID": "waves-modal"
+        },
+        {
+            "name": "P5 Experiments",
+            "img": "assets/images/coding/p5-experiments.jpg",
+            "id": "p5-experiments",
+            "modalID": "p5-modal"
+        }
+        
+    ]     
+}
+
+var drawing = {
+    "projects": [
+        {
+            "name": "Within Our Reach",
+            "img": "assets/images/fabrication/swing.jpg",
+            "id": "swing",
+            "modalID": "swing-modal"
+        },
+        {
+            "name": "Enclosed",
+            "img": "assets/images/fabrication/enclosed.jpg",
+            "id": "enclosed",
+            "modalID": "enclosed-modal"
+        },
+        {
+            "name": "Memories",
+            "img": "assets/images/fabrication/memories.jpg",
+            "id": "memories",
+            "modalID": "memories-modal"
+        },
+        {
+            "name": "Valetines",
+            "img": "assets/images/fabrication/flower.jpg",
+            "id": "floweer",
+            "modalID": "flower-modal"
+        },
+        {
+            "name": "Dead, Dying, Plant",
+            "img": "assets/images/fabrication/plants.jpg",
+            "id": "plant",
+            "modalID": "plant-modal"
+        }
+    ]     
+}
+
+var painting = {
+    "projects": [
+        {
+            "name": "Within Our Reach",
+            "img": "assets/images/fabrication/swing.jpg",
+            "id": "swing",
+            "modalID": "swing-modal"
+        },
+        {
+            "name": "Enclosed",
+            "img": "assets/images/fabrication/enclosed.jpg",
+            "id": "enclosed",
+            "modalID": "enclosed-modal"
+        },
+        {
+            "name": "Memories",
+            "img": "assets/images/fabrication/memories.jpg",
+            "id": "memories",
+            "modalID": "memories-modal"
+        },
+        {
+            "name": "Valetines",
+            "img": "assets/images/fabrication/flower.jpg",
+            "id": "floweer",
+            "modalID": "flower-modal"
+        },
+        {
+            "name": "Dead, Dying, Plant",
+            "img": "assets/images/fabrication/plants.jpg",
+            "id": "plant",
+            "modalID": "plant-modal"
+        }
+    ]     
+}
+
+var photography = {
+    "projects": [
+        {
+            "name": "Within Our Reach",
+            "img": "assets/images/fabrication/swing.jpg",
+            "id": "swing",
+            "modalID": "swing-modal"
+        },
+        {
+            "name": "Enclosed",
+            "img": "assets/images/fabrication/enclosed.jpg",
+            "id": "enclosed",
+            "modalID": "enclosed-modal"
+        },
+        {
+            "name": "Memories",
+            "img": "assets/images/fabrication/memories.jpg",
+            "id": "memories",
+            "modalID": "memories-modal"
+        },
+        {
+            "name": "Valetines",
+            "img": "assets/images/fabrication/flower.jpg",
+            "id": "floweer",
+            "modalID": "flower-modal"
+        },
+        {
+            "name": "Dead, Dying, Plant",
+            "img": "assets/images/fabrication/plants.jpg",
+            "id": "plant",
+            "modalID": "plant-modal"
+        }
+    ]     
+}
+
+var animation = {
+    "projects": [
+        {
+            "name": "Within Our Reach",
+            "img": "assets/images/fabrication/swing.jpg",
+            "id": "swing",
+            "modalID": "swing-modal"
+        },
+        {
+            "name": "Enclosed",
+            "img": "assets/images/fabrication/enclosed.jpg",
+            "id": "enclosed",
+            "modalID": "enclosed-modal"
+        },
+        {
+            "name": "Memories",
+            "img": "assets/images/fabrication/memories.jpg",
+            "id": "memories",
+            "modalID": "memories-modal"
+        },
+        {
+            "name": "Valetines",
+            "img": "assets/images/fabrication/flower.jpg",
+            "id": "floweer",
+            "modalID": "flower-modal"
+        },
+        {
+            "name": "Dead, Dying, Plant",
+            "img": "assets/images/fabrication/plants.jpg",
+            "id": "plant",
+            "modalID": "plant-modal"
+        }
+    ]     
+}
+
+
 
 function fillPortfolioTemplate(category){
     //Code from Programmable User Interfaces Lab
@@ -306,6 +472,26 @@ function navBarLoad(clickID){
           }
           else if (clickID == 'creative-frameworks'){
             fillPortfolioTemplate(creativeFrameworks);
+            $('#portfolio-content').css('opacity', 0);
+          }
+          else if (clickID == 'web-dev'){
+            fillPortfolioTemplate(webDev);
+            $('#portfolio-content').css('opacity', 0);
+          }
+          else if (clickID == 'drawing'){
+            fillPortfolioTemplate(drawing);
+            $('#portfolio-content').css('opacity', 0);
+          }
+          else if (clickID == 'painting'){
+            fillPortfolioTemplate(painting);
+            $('#portfolio-content').css('opacity', 0);
+          }
+          else if (clickID == 'photography'){
+            fillPortfolioTemplate(photography);
+            $('#portfolio-content').css('opacity', 0);
+          }
+          else if (clickID == 'animation'){
+            fillPortfolioTemplate(animation);
             $('#portfolio-content').css('opacity', 0);
           }
 
