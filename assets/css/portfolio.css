@@ -110,7 +110,7 @@
 }
 
 #myModalContent{
-    background-color: #121721;
+    background-color: #121721 !important;
     color: white;
 }
 
