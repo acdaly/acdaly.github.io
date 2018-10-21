@@ -109,7 +109,7 @@
     color: white;
 }
 
-#theModal{
+.modal-dialog{
     background-color: #121721;
     color: white;
 }
