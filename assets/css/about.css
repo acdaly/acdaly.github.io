@@ -2,7 +2,7 @@
     display: block;
     overflow: auto;
     min-height: 100vh;
-    background-color: white;
+    background-color: #121721;
     padding-left: 0;
     padding-right: 0;
     padding-bottom: 80px;
@@ -10,7 +10,7 @@
     font-family: 'Lato', sans-serif;
     font-weight: 300;
     overflow-x: hidden;
-
+    color: rgba(255, 255, 255, 0.8);
 
 }
 
@@ -26,7 +26,7 @@
 }
 
 #about-profile{
-    margin-left: 50px;
+    margin-left: 0px;
     margin-right: 50px;
     padding-left: 0;
     padding-right: 0;
@@ -42,8 +42,12 @@
 }
 
 h3{
-    
     padding-top: 30px;
+}
+
+#resume-link{
+    color: rgb(255, 186, 87);
+    font-weight: bold !important;
 }
 
 #hobbies{

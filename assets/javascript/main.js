@@ -333,7 +333,7 @@ var photography = {
         {
             "name": "Valetines",
             "img": "assets/images/fabrication/flower.jpg",
-            "id": "floweer",
+            "id": "flower",
             "modalID": "flower-modal"
         },
         {
@@ -382,10 +382,10 @@ var animation = {
 
 
 
-function fillPortfolioTemplate(category){
+function fillPortfolioTemplate(category, sourceElement="#portfolio-template"){
     //Code from Programmable User Interfaces Lab
     //get HTML template using jQuery
-    var source = $("#portfolio-template").html();
+    var source = $(sourceElement).html();
     //compile the template into a function
     var template = Handlebars.compile(source);
     //create new HTML using our data
@@ -408,18 +408,18 @@ function onPortfolioImgHover(){
 
 
 
-$(window).on('resize', function(){
-      var win = $(this);
-      if (win.width() <= 770) {$.fn.fullpage.setAutoScrolling(false);}
-      else {$.fn.fullpage.setAutoScrolling(true);}
-});
+// $(window).on('resize', function(){
+//       var win = $(this);
+//       if (win.width() <= 770) {$.fn.fullpage.setAutoScrolling(false);}
+//       else {$.fn.fullpage.setAutoScrolling(true);}
+// });
 
 
 
 function windowSizeOptions(){
 //when window with is narrow, disable autoscroll. Otherwise, enable autoscroll
-  var win = $(this);
-  if (win.width() <= 770) {
+  // var win = $(this);
+  // if (win.width() <= 770) {
     $('#fullpage').fullpage({
       autoScrolling: false,
       touchSensitivity: 10,
@@ -430,18 +430,18 @@ function windowSizeOptions(){
       anchors: ['Home-1', 'Portfolio-2', 'About-3', 'Connect-4'],
       scrollOverflow: true
     });
-  }
-  else {$('#fullpage').fullpage({
-    autoScrolling: true,
-    touchSensitivity: 10,
-    scrollingSpeed: 800,
-    navigation: true,
-    navigationPosition: 'left',
-    navigationTooltips: ['Home', 'Portfolio', 'About', 'Connect'],
-    anchors: ['Home-1', 'Portfolio-2', 'About-3', 'Connect-4'],
-    scrollOverflow: true
-    });
-  }
+  // }
+  // else {$('#fullpage').fullpage({
+  //   autoScrolling: true,
+  //   touchSensitivity: 10,
+  //   scrollingSpeed: 800,
+  //   navigation: true,
+  //   navigationPosition: 'left',
+  //   navigationTooltips: ['Home', 'Portfolio', 'About', 'Connect'],
+  //   anchors: ['Home-1', 'Portfolio-2', 'About-3', 'Connect-4'],
+  //   scrollOverflow: true
+  //   });
+  // }
 }
 
 function navBarLoad(clickID){
@@ -479,19 +479,19 @@ function navBarLoad(clickID){
             $('#portfolio-content').css('opacity', 0);
           }
           else if (clickID == 'drawing'){
-            fillPortfolioTemplate(drawing);
+            fillPortfolioTemplate(drawing, "#2D-template");
             $('#portfolio-content').css('opacity', 0);
           }
           else if (clickID == 'painting'){
-            fillPortfolioTemplate(painting);
+            fillPortfolioTemplate(painting, "#2D-template");
             $('#portfolio-content').css('opacity', 0);
           }
           else if (clickID == 'photography'){
-            fillPortfolioTemplate(photography);
+            fillPortfolioTemplate(photography, "#2D-template");
             $('#portfolio-content').css('opacity', 0);
           }
           else if (clickID == 'animation'){
-            fillPortfolioTemplate(animation);
+            fillPortfolioTemplate(animation, "#2D-template");
             $('#portfolio-content').css('opacity', 0);
           }
 

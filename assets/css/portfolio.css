@@ -2,7 +2,7 @@
     display: block;
     overflow: auto;
     min-height: 100vh;
-    background-color: white;
+    background-color: #121721;
     padding-left: 0;
     padding-right: 0;
     padding-bottom: 0px;
@@ -10,6 +10,11 @@
     font-weight: 300;
     overflow-x: hidden;
 
+}
+
+#portfolio-content{
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 .container-fluid {
@@ -24,8 +29,8 @@
 .navbar {
     padding-left: 35px;
     padding-right: 35px;
-    background-color: #121721 !important;
-    border-color: #121721 !important;
+    background-color: rgba(19, 23, 33, 0.5) !important;
+    border-color:  rgba(19, 23, 33, 0.5) !important;
     box-shadow: 0px 0px !important;
 }
 
@@ -38,33 +43,54 @@
     text-align: right;
 }
 
+/*resume button*/
 .btn-outline-secondary {
-    color: black;
-    background-color: white;
-    border-color: #343a40; /*set the color you want here*/
+    color: white;
+    background-color: #121721;
+    border-color: white; /*set the color you want here*/
 }
 .btn-outline-secondary:hover{
-    color: white;
-    background-color: #343a40;
-    border-color: white; /*set the color you want here*/
+    color: #121721;
+    background-color: white;
+    border-color: #121721; /*set the color you want here*/
 
+}
+
+#resume{
+    padding-left: 3px;
+    text-decoration:  bold;
 }
 
 .portfolio-img {
     min-height: 100px;
     height: 31vh;
 
-    padding: 0px;
+    padding: 20px;
     overflow: hidden;
 
+}
+
+.twod-img {
+    min-height: 100px;
+    height: 50vh;
+
+    padding: 0;
+    overflow: hidden;
+
+}
+
+.twod-img img{
+    height: 100%;
+
+}
+
+.thumbnail{
+    padding: 20px 10px;
 }
 
 .portfolio-img img {
     min-height: 100px;
     width: 100%;
-
-
-
 }
 
 .spacer {
@@ -81,6 +107,7 @@
     top: 48%;
     transform: translateX(-50%) translateY(-50%);
     text-align: center;
+    color: white;
 }
 
 .back{

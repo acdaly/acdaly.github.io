@@ -121,14 +121,14 @@
                     </div>
                   </li>
                 </ul>
-                <ul class="nav navbar-nav ml-auto">
+                <!-- <ul class="nav navbar-nav ml-auto">
                   <li class="nav-item">
                     <a target="_blank" href="assets/images/AriResume.pdf">
                       <button id="portfolio-resume" class="btn btn-sm btn-outline-secondary" type="button">Resume</button>
                     </a>
                     
                   </li>
-                </ul>
+                </ul> -->
               </div>
             </nav>
 <!--             <div class="row">
@@ -150,7 +150,26 @@
                  </div>
             </script>
 
-            
+            <script id="2D-template"type="text/x-handlebars-template">
+         <div id="portfolio-content" class="row justify-content-center">
+            <div class="row col-sm-11">
+                {{#each projects}}
+                
+                <div id={{ id }} class="col-md-3 twod-img">
+                  <div class="thumbnail" >
+                    <a href={{ img }}>
+                      <h2 class="portfolio-title">{{ name }}</h2>
+                      <img src={{ img }} alt="Lights" style="width:100%">
+                      
+                    </a>
+                  </div>
+                </div>
+              
+                {{/each}}
+                </div>
+              </div>    
+            </script>
+
 
   
           </div>
@@ -177,7 +196,16 @@
                 Third-year Carnegie Mellon student in Pittsburgh, Pennsylvania. <br>
                 <br>
                 I'm an artist in love with the rawness of wood and steel, the interactivity of coding and physical computing, and the infinite worlds of painting. From programming to welding, I'm always looking for something new to learn to bring concepts one step closer to reality.
+                <br>
+                <br>
+                Feel free to take a look at my <a id="resume-link" target="_blank" href="assets/images/AriResume.pdf">resume</a>.
+
+                <!-- <a id="resume" target="_blank" href="assets/images/AriResume.pdf">
+                      <button id="portfolio-resume" class="btn btn-sm btn-outline-secondary" type="button">Resume</button>
+              </a> -->
               </p>
+
+              
             </div>
             <div id="hobbies">
               <div class="row justify-content-center align-items-center">
@@ -185,22 +213,22 @@
               </div>
               <div id="hobby-content" class="row justify-content-center align-items-center">
                 <div class="col-sm-2">
-                  <img src="assets/images/about/hobby-1.jpg">
+                  <img src="assets/images/about/hobby-1.png">
                   <!--from https://it.freepik.com/icone-gratis/tacchi-a-spillo-formali_743514.html -->
                   <h5>Ballroom Dance</h5>
                 </div>
                 <div class="col-sm-2">
-                  <img src="assets/images/about/hobby-2.jpg">
+                  <img src="assets/images/about/hobby-2.png">
                   <!-- from http://alliesommerville.com/ -->
                   <h5>Cooking</h5>
                 </div>
                 <div class="col-sm-2">
-                  <img src="assets/images/about/hobby-3.jpg">
+                  <img src="assets/images/about/hobby-3.png">
                   <!-- from https://reslife.missouristate.edu/assets/reslife/Icon_-_LLC_-_Sustainability.png -->
                   <h5>Sustainability</h5>
                 </div>
                 <div class="col-sm-2">
-                  <img src="assets/images/about/hobby-4.jpg">
+                  <img src="assets/images/about/hobby-4.png">
                   <!-- from https://www.flaticon.com/free-icon/toolbox_31353 -->
                   <h5>Learning New Tools</h5>
                 </div>
