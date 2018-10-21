@@ -111,7 +111,7 @@
 
 #myModalContent{
     background-color: #121721 !important;
-    color: white;
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .back{
