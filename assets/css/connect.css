@@ -1,4 +1,6 @@
 #connect{
+    margin: 0;
+    padding: 0;
     height: 100vh;
     min-height: 700px;
     background-color: #121721;
@@ -29,7 +31,7 @@
 }
 
 #connect-sketch{
-    margin-left: -10;
+    margin-left: -1px;
     padding: 0;
     position: absolute;
     bottom: 0;

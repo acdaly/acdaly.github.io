@@ -14,6 +14,15 @@
 
 }
 
+p{
+    margin: 0;
+}
+
+#about-container{
+    height: 100%;
+}
+
+
 #about-img{
     background-color: black;
     padding: 0;
@@ -27,10 +36,10 @@
 
 #about-profile{
     margin-left: 0px;
-    margin-right: 50px;
+    margin-right: 10px;
     padding-left: 0;
     padding-right: 0;
-    font-family: 'Pontano Sans', sans-serif;
+    color: white;
     font-size: 1.1em;
 
 
@@ -47,29 +56,5 @@ h3{
 
 #resume-link{
     color: rgb(255, 186, 87);
-    font-weight: bold !important;
 }
 
-#hobbies{
-    padding-top: 60px;
-    text-align: center;
-
-}
-
-#hobby-content{
-    padding-top: 30px;
-    font-family: 'Pontano Sans', sans-serif;
-}
-
-#hobbies img{
-    height: 50px;
-}
-
-#hobbies h5 {
-    padding-top: 25px;
-    padding-bottom: 25px;
-    font-size: 1em;
-    font-weight: normal;
-    height: 20px;
-
-}

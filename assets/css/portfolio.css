@@ -8,11 +8,12 @@
     padding-bottom: 0px;
     font-family: 'Lato', sans-serif;
     font-weight: 300;
-    overflow-x: hidden;
+    
 
 }
 
 #portfolio-content{
+    padding-top: 0%;
     margin-left: 50px;
     margin-right: 50px;
 }
@@ -22,12 +23,14 @@
 }
 
 #nav {
+    
     margin-top: 50px;
     height: 50px;
 }
 
 .navbar {
-    padding-left: 35px;
+    padding-top: 2%;
+    padding-left: 10px;
     padding-right: 35px;
     background-color: rgba(19, 23, 33, 0.5) !important;
     border-color:  rgba(19, 23, 33, 0.5) !important;
@@ -61,13 +64,19 @@
 }
 
 .portfolio-img {
-    min-height: 100px;
-    height: 31vh;
-
-    padding: 20px;
+    
+    
+    height: 80vh;
+    padding: 10px;
     overflow: hidden;
 
 }
+
+.portfolio-img img { 
+    height:100%; 
+    width: 100%; 
+    object-fit: cover; 
+} 
 
 .twod-img {
     min-height: 100px;
@@ -87,10 +96,7 @@
     padding: 20px 10px;
 }
 
-.portfolio-img img {
-    min-height: 100px;
-    width: 100%;
-}
+
 
 .spacer {
     height: 30px;

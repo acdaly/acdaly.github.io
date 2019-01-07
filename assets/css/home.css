@@ -1,15 +1,24 @@
+.bold{
+    font-weight: bold;
+    color: white;
+}
+
 
 #home-background {
     height: 100vh;
+    width: 100%;
 /*    background-color: #121721;*/
     font-family: 'Josefin Sans', sans-serif;
     color: white;
     text-align: center;
 }
 
+.row{
+    margin: 0 !important;
+}
 
 #home-sketch{
-    margin-left: -10;
+    
     padding: 0;
     position: absolute;
     bottom: 0;
@@ -30,7 +39,7 @@
 }
 
 #home-ari {
-    padding-top: 15%;
+    padding-top: 25vh;
     font-size: 3em;
     letter-spacing: .3em;
     color: rgba(255, 255, 255, .9);

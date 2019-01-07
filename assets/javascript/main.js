@@ -31,12 +31,6 @@ var featured = {
             "img": "assets/images/featured/5.jpg",
             "id": "surround-sounds",
             "modalID": "surround-modal"
-        },
-        {
-            "name": "Dream",
-            "img": "assets/images/featured/6.jpg",
-            "id": "dream",
-            "modalID": "dream-modal"
         }
     ]     
 }
@@ -428,7 +422,7 @@ function windowSizeOptions(){
       navigationPosition: 'left',
       navigationTooltips: ['Home', 'Portfolio', 'About', 'Connect'],
       anchors: ['Home-1', 'Portfolio-2', 'About-3', 'Connect-4'],
-      scrollOverflow: true
+      scrollOverflow: false
     });
   // }
   // else {$('#fullpage').fullpage({

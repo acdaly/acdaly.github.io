@@ -20,7 +20,7 @@
   <!-- p5 -->
   <script src="assets/libraries/p5/p5.min.js"></script>
   <script src="assets/libraries/p5/addons/p5.dom.min.js"></script>
-  <script src="assets/libraries/p5/addons/p5.sound.min.js"></script>
+  
 <!--   <script src="assets/libraries/p5/sketch.js"></script> -->
   <script src="assets/libraries/p5/sketch-home.js"></script>
   <!-- fullpage (one page scrolling) -->
@@ -58,28 +58,25 @@
       <!--HOME-->
       <div class="section" id="section0">
         
-      <div class ="col-sm-12" id="home-sketch"></div>
+        <div class ="col-sm-12" id="home-sketch"></div>
         
-        <div class="row justify-content-center">
+        <div id="home-content" class="row justify-content-center">
 
           <a href="#Portfolio-2"> <img id="arrow" src="assets/images/home/arrow.png"></a>
           <div id = "home-background" class = "col-sm-8">
             <h1 id = "home-ari">ARI DALY</h1>
             <h3 id = "home-role"> CREATIVE TECHNOLOGIST</h3>
-            <div id = "home-profile">
-              In striving to create meaningful experiences, I'm always looking to learn new tools to bring concepts one step closer to reality. Crossing fields of programming, digital fabrication, design, and art can create something worth feeling and remembering.
-            </div>
           </div>
         </div>
       </div>
 
       <!--PORTFOLIO-->
       <div class="section" id="section1">
-
          <div class="row">
           <div id = "portfolio" class="col-sm-12">
-            <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-              <a class="navbar-brand" href="#">Portfolio</a>
+            <div class = "row justify-content-center">
+            <nav class="navbar navbar-expand-sm navbar-dark bg-dark col-sm-10">
+              <a class="navbar-brand" href="#">PORTFOLIO</a>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -89,7 +86,7 @@
                     <a id="featured" class="nav-link" href="#">Featured<span class="sr-only">(current)</span></a>
                   </li>
 
-                  <li class="nav-item dropdown">
+                  <!-- <li class="nav-item dropdown">
                     <a id="coding" class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       Coding
                     </a>
@@ -121,6 +118,7 @@
                     </div>
                   </li>
                 </ul>
+              -->
                 <!-- <ul class="nav navbar-nav ml-auto">
                   <li class="nav-item">
                     <a target="_blank" href="assets/images/AriResume.pdf">
@@ -131,6 +129,7 @@
                 </ul> -->
               </div>
             </nav>
+          </div>
 <!--             <div class="row">
               <div class = "col-sm-12 spacer"></div>
             </div>
@@ -138,9 +137,9 @@
 
 
             <script id="portfolio-template"type="text/x-handlebars-template">
-              <div id="portfolio-content" class="row loaded-portfolio">
+              <div id="portfolio-content" class="row justify-content-center loaded-portfolio ">
                 {{#each projects}}
-                <div id={{ id }} class = "col-md-6 portfolio-img">
+                <div id={{ id }} class = "col-md-2 portfolio-img">
                   <a id = {{modalID}} class="modal-link" data-toggle="modal" data-target=#theModal>
                     <h2 class="portfolio-title">{{ name }}</h2>
                     <img src={{ img }}>
@@ -182,58 +181,35 @@
       <div class="section">
         <div class="row">
           <div id="about" class="col-sm-12">
-            <div class="row">
-                <div class = "col-sm-12 spacer"></div>
-            </div>
-            <div class="row justify-content-center align-items-center">
-              <div class="col-md-4">
+            
+            <div id="about-container" class="row justify-content-center align-items-center">
+              <div class="col-md-4 align-middle">
                 <div id = "about-img" class="rounded-circle">
                   <img src="assets/images/about/about-img.jpg">
                 </div>
               </div>
               <div class="col-md-1 spacer"></div>
-              <p id="about-profile" class="col-md-4">
-                Third-year Carnegie Mellon student in Pittsburgh, Pennsylvania. <br>
+              <div id="about-profile" class="col-md-4">
+                <p class="bold">I’m Ari Daly, a senior Carnegie Mellon student 
+                studying Electronic and Time Based Media.</p>
                 <br>
-                I'm an artist in love with the rawness of wood and steel, the interactivity of coding and physical computing, and the infinite worlds of painting. From programming to welding, I'm always looking for something new to learn to bring concepts one step closer to reality.
-                <br>
-                <br>
-                Feel free to take a look at my <a id="resume-link" target="_blank" href="assets/images/AriResume.pdf">resume</a>.
-
-                <!-- <a id="resume" target="_blank" href="assets/images/AriResume.pdf">
-                      <button id="portfolio-resume" class="btn btn-sm btn-outline-secondary" type="button">Resume</button>
-              </a> -->
-              </p>
+                In striving to create meaningful experiences, I’m always 
+                looking to learn new tools to bring concepts one step 
+                closer to reality. Crossing fields of design, 
+                programming, and art can create something worth 
+                feeling and remembering.
+                <br><br>
+                Outside of work I enjoy ballroom dance, cooking, 
+                and sustainable practices.
+                <br><br>
+                <a id="resume" target="_blank" href="assets/images/Ari_Resume.pdf">
+                      <button id="portfolio-resume" class="btn btn-sm btn-outline-secondary" type="button">RESUME</button>
+              </a>
+              </div>
 
               
             </div>
-            <div id="hobbies">
-              <div class="row justify-content-center align-items-center">
-                <h3 class="col-md-5">Hobbies &AMP; Interests</h3>
-              </div>
-              <div id="hobby-content" class="row justify-content-center align-items-center">
-                <div class="col-sm-2">
-                  <img src="assets/images/about/hobby-1.png">
-                  <!--from https://it.freepik.com/icone-gratis/tacchi-a-spillo-formali_743514.html -->
-                  <h5>Ballroom Dance</h5>
-                </div>
-                <div class="col-sm-2">
-                  <img src="assets/images/about/hobby-2.png">
-                  <!-- from http://alliesommerville.com/ -->
-                  <h5>Cooking</h5>
-                </div>
-                <div class="col-sm-2">
-                  <img src="assets/images/about/hobby-3.png">
-                  <!-- from https://reslife.missouristate.edu/assets/reslife/Icon_-_LLC_-_Sustainability.png -->
-                  <h5>Sustainability</h5>
-                </div>
-                <div class="col-sm-2">
-                  <img src="assets/images/about/hobby-4.png">
-                  <!-- from https://www.flaticon.com/free-icon/toolbox_31353 -->
-                  <h5>Learning New Tools</h5>
-                </div>
-              </div>
-            </div>
+            
 
           </div>
         </div>
