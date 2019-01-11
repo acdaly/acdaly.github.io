@@ -50,6 +50,20 @@ p{
     
 }
 
+@media screen and (max-width: 1000px) {
+  #about-profile{
+    padding-left: 20px;
+    padding-right: 0px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #about-profile{
+    padding-left: 50px;
+    padding-right: 30px;
+  }
+}
+
 h3{
     padding-top: 30px;
 }

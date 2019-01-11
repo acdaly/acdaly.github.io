@@ -38,10 +38,22 @@
     opacity: .5;
 }
 
+
+@media all and (max-width: 500px) {
+#home-ari {
+    letter-spacing: .2em;
+
+}
+}
+@media all and (min-width: 500px) {
+#home-ari {
+    letter-spacing: .3em;
+
+}
+}
 #home-ari {
     padding-top: 25vh;
     font-size: 3em;
-    letter-spacing: .3em;
     color: rgba(255, 255, 255, .9);
 }
 
