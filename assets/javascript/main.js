@@ -8,9 +8,6 @@ var featured = {
             "id": "river",
             "modalID": "river-modal"
         },
-        
-        
-        
         {
             "name": "Light Prototype",
             "img": "assets/images/featured/1.jpg",
