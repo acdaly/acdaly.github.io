@@ -3,22 +3,24 @@
 var featured = {
     "projects": [
         {
-            "name": "Light Prototype",
-            "img": "assets/images/featured/1.jpg",
-            "id": "google-prototype",
-            "modalID": "google-modal"
+            "name": "teamLab River Prototype",
+            "img": "assets/images/featured/7.jpg",
+            "id": "river",
+            "modalID": "river-modal"
         },
-        {
-            "name": "Sandblox",
-            "img": "assets/images/featured/2.png",
-            "id": "sandblox",
-            "modalID": "sandblox-modal"
-        },
+        
+        
         {
             "name": "LED Controller",
             "img": "assets/images/featured/3.jpg",
             "id": "led-controller",
             "modalID": "led-modal"
+        },
+        {
+            "name": "Light Prototype",
+            "img": "assets/images/featured/1.jpg",
+            "id": "google-prototype",
+            "modalID": "google-modal"
         },
         {
             "name": "Entanglement",
