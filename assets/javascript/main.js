@@ -10,12 +10,7 @@ var featured = {
         },
         
         
-        {
-            "name": "LED Controller",
-            "img": "assets/images/featured/3.jpg",
-            "id": "led-controller",
-            "modalID": "led-modal"
-        },
+        
         {
             "name": "Light Prototype",
             "img": "assets/images/featured/1.jpg",
@@ -33,6 +28,12 @@ var featured = {
             "img": "assets/images/featured/5.jpg",
             "id": "surround-sounds",
             "modalID": "surround-modal"
+        },
+        {
+            "name": "LED Controller",
+            "img": "assets/images/featured/3.jpg",
+            "id": "led-controller",
+            "modalID": "led-modal"
         }
     ]     
 }
