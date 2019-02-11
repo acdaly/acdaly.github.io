@@ -515,7 +515,7 @@ function modalFreezePageScrolling(){
   $(".modal").on("hidden.bs.modal", function () {
       $.fn.fullpage.setAllowScrolling(true);
       $.fn.fullpage.setKeyboardScrolling(true);
-      $.fn.fullpage.setMouseWheelScrolling(true);
+      
       $("body").removeClass("modal-open")
 
     });
@@ -523,7 +523,7 @@ function modalFreezePageScrolling(){
     $(".modal").on("show.bs.modal", function () {
       $.fn.fullpage.setAllowScrolling(false);
       $.fn.fullpage.setKeyboardScrolling(false);
-      $.fn.fullpage.setMouseWheelScrolling(false);
+      
       $("body").addClass("modal-open");
     });
 }
