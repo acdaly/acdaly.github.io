@@ -12,6 +12,10 @@
 
 }
 
+.modal-open {
+    overflow: hidden;
+}
+
 #portfolio-content{
     padding-top: 0%;
     margin-left: 50px;

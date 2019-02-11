@@ -515,11 +515,13 @@ function modalFreezePageScrolling(){
   $(".modal").on("hidden.bs.modal", function () {
       $.fn.fullpage.setAllowScrolling(true);
       $.fn.fullpage.setKeyboardScrolling(true);
+      $("body").removeClass("modal-open")
     });
 
     $(".modal").on("show.bs.modal", function () {
       $.fn.fullpage.setAllowScrolling(false);
       $.fn.fullpage.setKeyboardScrolling(false);
+      $("body").addClass("modal-open");
     });
 }
 
