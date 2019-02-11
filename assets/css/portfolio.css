@@ -13,7 +13,7 @@
 }
 
 .modal-open {
-    overflow: hidden;
+    overflow: hidden !important;
 }
 
 #portfolio-content{
@@ -68,8 +68,6 @@
 }
 
 .portfolio-img {
-    
-    
     height: 80vh;
     padding: 10px;
     overflow: hidden;
