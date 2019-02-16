@@ -9,16 +9,16 @@ var featured = {
             "modalID": "river-modal"
         },
         {
+            "name": "Portfolio Website",
+            "img": "assets/images/featured/portfolio.png",
+            "id": "portfolio-doc",
+            "modalID": "porfolio"
+        },
+        {
             "name": "Light Prototype",
             "img": "assets/images/featured/1.jpg",
             "id": "google-prototype",
             "modalID": "google-modal"
-        },
-        {
-            "name": "Entanglement",
-            "img": "assets/images/featured/4.jpg",
-            "id": "google-prototype",
-            "modalID": "entanglement-modal"
         },
         {
             "name": "Surround Sounds",
@@ -27,11 +27,13 @@ var featured = {
             "modalID": "surround-modal"
         },
         {
-            "name": "LED Controller",
-            "img": "assets/images/featured/3.jpg",
-            "id": "led-controller",
-            "modalID": "led-modal"
+            "name": "Entanglement",
+            "img": "assets/images/featured/4.jpg",
+            "id": "google-prototype",
+            "modalID": "entanglement-modal"
         }
+        
+        
     ]     
 }
 
