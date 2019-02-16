@@ -12,7 +12,7 @@ var featured = {
             "name": "Portfolio Website",
             "img": "assets/images/featured/portfolio.png",
             "id": "portfolio-doc",
-            "modalID": "porfolio"
+            "modalID": "porfolio-modal"
         },
         {
             "name": "Light Prototype",
