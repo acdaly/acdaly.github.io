@@ -12,6 +12,9 @@
 
 }
 
+.centered {
+    text-align: center;
+}
 
 .carousel-inner {
     overflow: hidden;
@@ -24,6 +27,9 @@
     object-fit: cover; 
 } 
 
+.persona{
+    padding: 20px 30px 20px 30px;
+}
 
 .close{
     color: white;

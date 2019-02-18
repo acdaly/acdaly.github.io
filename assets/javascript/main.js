@@ -9,11 +9,12 @@ var featured = {
             "modalID": "river-modal"
         },
         {
-            "name": "Portfolio Website",
-            "img": "assets/images/featured/portfolio.png",
-            "id": "portfolio-doc",
-            "modalID": "portfolio-modal"
+            "name": "Transportation Display",
+            "img": "assets/images/featured/ptf.jpg",
+            "id": "ptf",
+            "modalID": "ptf-modal"
         },
+        
         {
             "name": "Light Prototype",
             "img": "assets/images/featured/1.jpg",
@@ -21,11 +22,12 @@ var featured = {
             "modalID": "google-modal"
         },
         {
-            "name": "Surround Sounds",
-            "img": "assets/images/featured/5.jpg",
-            "id": "surround-sounds",
-            "modalID": "surround-modal"
+            "name": "Portfolio Website",
+            "img": "assets/images/featured/portfolio.png",
+            "id": "portfolio-doc",
+            "modalID": "portfolio-modal"
         },
+        
         {
             "name": "Entanglement",
             "img": "assets/images/featured/4.jpg",
