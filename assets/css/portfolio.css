@@ -12,6 +12,14 @@
 
 }
 
+.width-100{
+    width:100%;
+}
+
+a{
+    color: rgb(119, 170, 255);
+}
+
 .centered {
     text-align: center;
 }

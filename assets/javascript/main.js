@@ -2,12 +2,7 @@
 
 var featured = {
     "projects": [
-        {
-            "name": "teamLab River Prototype",
-            "img": "assets/images/featured/7.jpg",
-            "id": "river",
-            "modalID": "river-modal"
-        },
+        
         {
             "name": "Transportation Display",
             "img": "assets/images/featured/ptf.jpg",
@@ -16,10 +11,10 @@ var featured = {
         },
         
         {
-            "name": "Light Prototype",
-            "img": "assets/images/featured/1.jpg",
-            "id": "google-prototype",
-            "modalID": "google-modal"
+            "name": "teamLab River Prototype",
+            "img": "assets/images/featured/7.jpg",
+            "id": "river",
+            "modalID": "river-modal"
         },
         {
             "name": "Portfolio Website",
@@ -27,6 +22,13 @@ var featured = {
             "id": "portfolio-doc",
             "modalID": "portfolio-modal"
         },
+        {
+            "name": "Light Prototype",
+            "img": "assets/images/featured/1.jpg",
+            "id": "google-prototype",
+            "modalID": "google-modal"
+        },
+        
         
         {
             "name": "Entanglement",

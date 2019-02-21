@@ -1,4 +1,5 @@
 
+
 <div class="modal-header">
   <h5 class="modal-title" id="exampleModalLongTitle">teamLab River Prototype</h5>
   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -6,51 +7,16 @@
   </button>
 </div>
 <div class="modal-body">
-<iframe src="https://player.vimeo.com/video/312207116" width="640" height="424" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-  <p class="modal-text">
-    <br>
-    Made with Unity <br>
-    <br>
-    As a <a href="https://www.teamlab.art/">teamLab</a> interactive team intern, 
-    I was tasked with creating a new projection prototype for the 
-    <a href="https://www.teamlab.art/w/colored-birds">Aerial Climbing exhibit</a>
-    at their <a href="https://borderless.teamlab.art/"> Borderless Museum</a> in
-     Tokyo. The exhibit features paths of connected swing-like boards. Visitors 
-     can walk along these suspended paths, and the surrounding projection will
-     change in response to their movements in real time.
-     <br>
-     <br>
-  </p>
+  <div class="row justify-content-center">
+<iframe class="col-md-10" src="https://player.vimeo.com/video/312207116" width="640" height="424" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
+<br><br>
+  As a <a href="https://www.teamlab.art/">teamLab</a> interactive team intern, 
+  I was tasked with creating a proposal for a new projection in the
+  <a href="https://www.teamlab.art/w/colored-birds">Aerial Climbing exhibit</a>
+  at their Tokyo <a href="https://borderless.teamlab.art/"> Borderless Museum</a>. This prototype was created in Unity over 3 weeks.
+<br><br>
 
-<iframe class="youtube-video" width="640" height="424" src="https://www.youtube.com/embed/C_MLsuaqKSo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  <p class="modal-text">
-     <br>
-     <br>
-     ^ The Aerial Climbing exhibit with the original projection 
-     <br>
-     <br>
-     The projected birds currently avoid the visitors, but this interaction is
-     nonobvious. 
-
-     My proposal for the content was instead to create a river on the paths
-     where users walk. 
-
-     The flow of the river increases as more people walk along
-     the given path, and decreases overtime if no one visits it.
-      <br>
-      <br>
-    </p>
-      <img class="river-image" src="assets/images/river/idea.jpg" alt="Prototype idea">
-    <p class="modal-text">
-      <br>
-      <br>
-     Each visitor is given a particular color when they enter the space. Their color
-     will flow through the river ahead of them. 
-
-     As they walk, flowers will bloom
-     along the sides of the river, and then disperse as they pass.
-     <br>
-     <br>
      The visitors are simulated through the movements of the blue capsule. 
      The river flow changes based off of the visitor/capsule position and 
      velocity. 
@@ -60,7 +26,184 @@
      of the prototype were created from scratch.
      <br>
      <br>
-     The full process documentation can be seen <a href="https://docs.google.com/presentation/d/1Nw48uQMimRFS9d_g4z5b2gJZHPxo8drSBr7SaVzhk54/edit?usp=sharing"> here.</a>
+
+  <div class="row justify-content-center">
+<div class="line"></div>
+  <p class="modal-text">
+    <br>
+    <div><h3 class="centered">Context</h3><div>
+    <br>
+    <div class="row justify-content-center align-items-center">
+      <a class="col-md-3 height-100" href="https://www.teamlab.art/"><img class="width-100" src="assets/images/river/logo.png"></a>
+      
+      <p class="col-md-7">is an interdisciplinary art collective that explores the relationship between nature and humans through digital technology.</p>
+      <br>
+     <br>
+    </div>
+    <br>
+    At their <a href="https://borderless.teamlab.art/"> Borderless Museum</a>, artworks fluidly move between rooms and influence one another. The movements of the visitors can change the artworks-- flowers bloom as you walk and a stream of water dynamically moves around the visitors feet.
+    <br><br>
+    The <a href="https://www.teamlab.art/w/colored-birds">Aerial Climbing exhibit</a> features paths of connected swing-like boards. Visitors 
+     can walk along these suspended paths, and the surrounding projection will
+     change in response to their movements in real time.
+     <br>
+     <br>
+  </p>
+<div class="row justify-content-center">
+    <p class="col-md-10"> The Aerial Climbing exhibit's original projection is of birds flying around the room and avoiding the visitors. The visitors have different colors projected onto them, so the birds will change into their respective colors when they fly nearby.</p>
+<iframe class="col-md-10" width="640" height="424" src="https://www.youtube.com/embed/C_MLsuaqKSo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+</div>
+<br>
+     <div class="row justify-content-center">
+       <div class="col-md-10">
+    <div class="bold">Problem: </div>The problem with this projection is that the interaction between the visitors and birds isn't obvious. Though the projection is dynamic, updating in real time based on the visitors' positions, it's not particularly noticable that the animation isn't pre-recorded.
+    <br><br>
+    <div class="bold">Goal: </div>
+    My task was to create a proposal and prototype for a new projection in which the interaction is much clearer.
+    <br><br><br>
+  </div>
+  <br><br>
+<div class="row justify-content-center">
+  
+
+</div>
+  <p class="modal-text">
+    <div><h3 class="centered">Analysis</h3><div>
+    <br><br>
+    I first thought about what was working for the original projection. Though the birds seem to be flying in outer space, the birds themselves connect with teamLab's greater theme of nature. The darkness of the projection also helps give the illusion that the swings are suspended higher in the air. In a brighter environment, it would be much easier to see the floor and perceive depth. The colorful circles marking the visitor's location also seems like a positive feature, since it clearly shows that the exhibit is following the position.
+
+    <br><br>
+    But what wasn't going right? I took a closer look at the video and made some observations.
+    <br><br>
+    <div class="row justify-content-center">
+      <img class="height-100 col-md-5" src="assets/images/river/feet1.jpg" alt="First Wireframe">
+      <img class="height-100 col-md-5" src="assets/images/river/feet2.jpg" alt="Second Wireframe">
+      
+    </div>
+    <br><br>
+    <div class="row justify-content-center">
+  
+        <div class="col-md-10">
+          I first noticed that the visitors were looking down at their feet. The birds avoid the visitors and are mostly on the walls, so the most interesting part of the projection is often missed. It therefore makes sense that the main visual feature of the projection would happen around the visitors' feet.
+        </div>
+    </div>
+    <br>
+    I also made some observations on what makes the Aerial Climbing exhibit unqiue. Most teamLab exhibitions use computer vision to track visitors position in the gallery space, so it felt important to focus on the unqiue qualities of this particular exhibit in my new proposal.
+    <br><br>
+    <div class="row justify-content-center">
+      <img class="height-100 col-md-10" src="assets/images/river/observations.png" alt="Observations">
+      <div class="col-md-10">
+        <br>
+        The exhibition has set routes that people can travel down, which is very different from the other exhibitions where people can walk around anywhere in the room.
+        <br><br>
+        People also generally move forward in one direction, the projection could encourage people to move forward and flow through exhibition. 
+
+
+      </div>
+    </div>
+    <br><br>
+
+
+
+    <div><h3 class="centered">Ideation</h3><div>
+      <br><br>
+      I thought about what could happen along the branching paths that also aligned with teamLab's greater interest in the interaction of humans and nature. I first thought about making use of the original birds, and having them fly along these paths more directly. The more acute angles in the path however could make the motion of the birds somewhat robotic looking. I then thought about flowers, but teamLab already has several exhibits with the growth of static flowers. When thinking about nature in motion, I felt that having a river flowing through the paths would be a great fit for the exhibit.
+      <br><br>
+    </p>
+      <img class="river-image" src="assets/images/river/idea.jpg" alt="Prototype idea">
+    <p class="modal-text">
+      <br>
+
+     <div class="row justify-content-center">
+        <div class="height-100 col-md-11">
+        My proposal for the content was instead to create a river on the paths
+         where users walk.
+
+         The flow of the river increases as more people walk along
+         the given path, and decreases overtime if no one visits it.
+         Each visitor is given a particular color when they enter the space. Their color will flow through the river ahead of them. 
+
+         As they walk, flowers will bloom along the sides of the river, and then disperse as they pass.
+          <br>
+          <br>
+        </div>
+            <div class="height-100 col-md-11">
+              This proposal accomplishes the following: 
+              <ul>
+                
+                <div class="bullet">The most exciting part of the projection happens in the places the visitors are most likely to look-- below the vistors' feet and in the illuminated paths just ahead of them </div>
+                <div class="bullet">The visitors can see more directly how they affect the projection as the flow of the river changes with their steps</div>
+                <div class="bullet">The visitors can see their particular color flow down the river. This communicates that their location is being followed by the projection in a more interesting way</div>
+                
+                
+              </ul>
+            </div>
+      </div>
+      <br>
+          <div><h3 class="centered">Implementation</h3></div>
+            <br><br>
+            <div class="row justify-content-center align-items-center">
+              <div class="col-md-6"">
+                I first had to make a simulation of people moving through the exhibit paths, since it wouldn't be practical to test with real people as I made it.
+                The blue capsules represent the moving people. 
+    <!--             <ul>
+                  
+                  <div class="bullet">Create a simulation of people moving through the paths </div>
+                  <div class="bullet">The visitors can see more directly how they affect the projection as the flow of the river changes with their steps</div>
+                  <div class="bullet">The visitors can see their particular color flow down the river. This communicates that their location is being followed by the projection in a more interesting way</div>
+                  
+                  
+              </ul> -->
+
+              </div>
+              <img class="height-100 col-md-6" src="assets/images/river/simulator.gif">
+            </div>
+            <br><br>
+          <div class="row justify-content-center align-items-center">
+              <p class="col-md-6"">
+                A river is created along the paths people walk on. The river is visually similar to the water in other teamLab exhibitions, as seen <a href="https://www.teamlab.art/w/iwa-waterparticles/">here</a>.
+              </p>
+              <img class="height-100 col-md-6" src="assets/images/river/1.gif">
+          </div>
+          <br><br>
+          <div class="row justify-content-center align-items-center">
+              <p class="col-md-6"">
+                Though the simulated people walk robotically, the prototype is programmed so that the river dynamically forms no matter where the person walks. I've also add some noise to the river flow so it's more wavy.
+              </p>
+              <img class="height-100 col-md-6" src="assets/images/river/freemove.gif">
+          </div>
+          <br><br>
+          <div class="row justify-content-center align-items-center">
+              <p class="col-md-6"">
+                The exhibit should have a river flowing through the paths before anyone starts walking on it, so I made it possible to save the river data and then load it when you start up the exhibition. You can also see here the river flow is stronger on the paths that the visitor walks on.
+              </p>
+              <img class="height-100 col-md-6" src="assets/images/river/load.gif">
+          </div>
+          <br><br>
+          <div class="row justify-content-center align-items-center">
+              <p class="col-md-6"">
+                Each visitor is given a color. As they walk through the exhibit, their color will flow forward in the river.
+              </p>
+              <img class="height-100 col-md-6" src="assets/images/river/color.gif">
+          </div>
+          <br><br>
+          <div><h3 class="centered">Final Prototype</h3></div>
+          <br>
+            <div class="row justify-content-center">
+              <div class="">The final component was adding flowers that bloomed along the river as visitors walked. The flower assets were created by other employees at teamLab. The flowers bloom and then die as you walk. 
+              <br><br>
+            </div>
+              <iframe class="col-md-10" src="https://player.vimeo.com/video/312207116" width="640" height="424" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+              <div class="col-md-10">
+                <br>
+     <br>
+     The video includes three views: one long ditance perspective, one from the visitor's perspective, and one from the top to see what the projection would look like.
+   </div>
+            </div>
+     
+     <br><br>
+     For more details on the implementation, more documentation can be seen <a href="https://docs.google.com/presentation/d/1Nw48uQMimRFS9d_g4z5b2gJZHPxo8drSBr7SaVzhk54/edit?usp=sharing"> here.</a>
      <br>
      <br>
   </p>
@@ -71,4 +214,3 @@
 <div class="modal-footer">
   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 </div>
-
