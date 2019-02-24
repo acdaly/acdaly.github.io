@@ -12,6 +12,10 @@
 
 }
 
+.modal-lg {
+    max-width: 85vw !important;
+}   
+
 .width-100{
     width:100%;
 }
