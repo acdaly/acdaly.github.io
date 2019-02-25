@@ -57,6 +57,7 @@ a{
 
 .modal-open {
     overflow: hidden !important;
+    -webkit-overflow-scrolling: touch !important;
 }
 
 #portfolio-content{
@@ -168,6 +169,11 @@ ul .bullet::before {
 .spacer {
     height: 30px;
     padding-right: 0;
+}
+
+#google-carousel-inner{
+    max-height: 500px !important;
+    width: 100% !important;
 }
 
 .portfolio-title{
