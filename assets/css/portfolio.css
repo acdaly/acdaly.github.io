@@ -65,6 +65,10 @@ a{
     margin-right: 50px;
 }
 
+.padding-0{
+    padding: 0 !important;
+}
+
 .container-fluid {
     padding: 0;
 }
