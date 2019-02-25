@@ -25,260 +25,307 @@
     <div id="myModalContent" class="modal-content">
 
 
-<div class="modal-header">
-  <h5 class="modal-title" id="exampleModalLongTitle">teamLab River Prototype</h5>
-  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button>
-</div>
-<div class="modal-body">
-  <div class="row justify-content-center">
-    <iframe class="col-md-10" src="https://player.vimeo.com/video/312207116" width="800" height="530" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-  </div>
-<div class="row justify-content-center">
-  <div class="col-md-10">
-    <br>
-      As a <a href="https://www.teamlab.art/">teamLab</a> interactive team intern, 
-      I was tasked with creating a proposal for a new projection in the
-      <a href="https://www.teamlab.art/w/colored-birds">Aerial Climbing exhibit</a>
-      at their Tokyo <a href="https://borderless.teamlab.art/"> Borderless Museum</a>. This prototype was created in Unity over 3 weeks.
-    <br><br>
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Transportation Display</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div id="ptf-detail">
+          <div class="row justify-content-center">
+            <div class="height-100 col-md-10">
+           <!-- Carousel
+              copied from bootstrap documentation\
+                https://getbootstrap.com/docs/4.0/components/carousel/ -->
+              <div id="ptf-carousel" class="modal-carousel-width carousel slide" data-ride="carousel" data-interval="10000">
+                <ol class="carousel-indicators">
+                  <li data-target="#ptf-carousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#ptf-carousel" data-slide-to="1"></li>
+                  <li data-target="#ptf-carousel" data-slide-to="2"></li>
+                  <li data-target="#ptf-carousel" data-slide-to="3"></li>
+                  
+                </ol>
+                <div id="ptf-carousel-inner" class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img class="d-block w-100" src="assets/images/ptf/home.png" alt="Home page">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="assets/images/ptf/lopez.png">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="assets/images/ptf/right.gif">
+                  </div>
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="assets/images/ptf/left.gif">
+                  </div>
+                  
+                </div>
+                <a class="carousel-control-prev" href="#ptf-carousel" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#ptf-carousel" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+          <!-- End of Carousel -->
 
-     The visitors are simulated through the movements of the blue capsule. 
-     The river flow changes based off of the visitor/capsule position and 
-     velocity. 
+          <p class="modal-text">
+            <br>
+             A new interactive display for the fictional transportation hub, “Atlantis Transportation Hub”, to show their plane, ferry, and train transportation data. The hub connects to the San Juan Islands off the coast of Washington State.
+            <br><br>
+            The hub has come out with a new program, the “PTF Pass”, that customers can use to combine plane, train, and ferry connections.
+            <br><br>
+            The display is touch screen, and is about 22.5 in x 36 in.
+            <br><br>
+          </div>
+        </div>
+          <div class="line"></div>
+          
+          <div class="row justify-content-center">
 
-     I worked individually to conceptualize and program the prototype.
-     The flower assets were created previously by teamLab, but all other elements
-     of the prototype were created from scratch.
-     <br>
-     <br>
-    </div>
-  </div>
+            <div class="col-md-10">
+              <br>
+          <div><h2>Stakeholders & Personas</h2></div>
+          <br><br>
+            <div class="row justify-content-center">
+              <div class="height-100 col-md-4">
 
-  <div class="row justify-content-center">
-<div class="line"></div>
-</div>
-<br>
-  <p class="modal-text">
-    <div class="row justify-content-center">
-      
-        
-        <div class="col-sm-10"><h2>Context</h2></div>
-        <br>
-      
-    </div>
-    <div class="row justify-content-center align-items-center">
-      <a class="col-sm-3 height-100" href="https://www.teamlab.art/"><img class="width-100" src="assets/images/river/logo.png"></a>
-      
-      <p class="col-sm-7">is an interdisciplinary art collective that explores the relationship between nature and humans through digital technology.</p>
-      <br>
-     <br>
-     </p>
-    
-    <div class="row justify-content-center">
-      <div class="col-md-10">
-      <br>
-      At their <a href="https://borderless.teamlab.art/"> Borderless Museum</a>, artworks fluidly move between rooms and influence one another. The movements of the visitors can change the artworks-- flowers bloom as you walk and a stream of water dynamically moves around the visitors feet.
-      <br><br>
-      The <a href="https://www.teamlab.art/w/colored-birds">Aerial Climbing exhibit</a> features paths of connected swing-like boards. Visitors 
-       can walk along these suspended paths, and the surrounding projection will
-       change in response to their movements in real time.
-       <br>
-       <br>
-  </div>
-</div>
-<div class="row justify-content-center">
-    <p class="col-md-10"> The Aerial Climbing exhibit's original projection is of birds flying around the room and avoiding the visitors. The visitors have different colors projected onto them, so the birds will change into their respective colors when they fly nearby.</p>
-<iframe class="col-md-10" width="640" height="424" src="https://www.youtube.com/embed/C_MLsuaqKSo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h5 class="centered">Stakeholder Persona: Elizabeth Duarte</h5>
+                <img class="d-block w-100 rounded-circle persona" src="assets/images/ptf/elizabeth.png">
+                Transportation Director of the Municipality of San Juan Islands
+                <br><br>
+                Elizabeth Duarte wants to educate the public on the how the new PTF program can be used to easily combine plane, train, and ferry transportation.
+              </div>
+              <div class="height-100 col-md-4">
+                <h5 class="centered">User Persona: <br>George Shimko</h5>
+                <img class="d-block w-100 rounded-circle persona" src="assets/images/ptf/george.png">
+                Property owner and retired resident of the San Juan Islands
+                <br><br>
+                George Shimko wants to give his children and grandchildren the PTF passes so that they can travel throughout the San Juan Islands to visit his home and cabins, as well as make fun tourist itineraries.
+              </div>
+              <div class="height-100 col-md-4">
+                <h5 class="centered">User Persona: <br>Patrick Mulvaney</h5>
+                <img class="d-block w-100 rounded-circle persona" src="assets/images/ptf/patrick.png">
+                EnCo Environmental Engineer and Seattle resident
+                <br>
+                <br><br>
+                Patrick Mulvaney frequently travels to the San Juan Islands for work. He is interested in the flexibility of the PTF Pass for changing itineraries on-the-fly due to weather related delays and cancellations.
 
-</div>
-<br>
- <div class="row justify-content-center">
-   <div class="col-md-10">
-    <div class="bold">Problem: </div>The problem with this projection is that the interaction between the visitors and birds isn't obvious. Though the projection is dynamic, updating in real time based on the visitors' positions, it's not particularly noticable that the animation isn't pre-recorded.
-    <br><br>
-    <div class="bold">Goal: </div>
-    My task was to create a proposal and prototype for a new projection in which the interaction is much clearer.
-    <br><br><br>
-  </div>
-  <br><br>
-</div>
-  <p class="modal-text">
-
-    
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+          <br><br>
+          <div><h2>Atlantis Hub Data Analysis</h2></div>
+          <br><br>
+          I was given transportation data for the three different modes of transport: plane, train, and ferry.
+          <br><br> 
+          <img class="d-block w-100" src="assets/images/ptf/data.png">
+          <br><br>
+          I then started to analyze the transportation and persona data to find patterns, to find ways of grouping the info, and to determine which information was important and relevant. My findings are below:
+          <br><br>
+        </div>
+      </div>
       <div class="row justify-content-center">
-       <div class="col-md-10">
-        <div><h2>Analysis</h2></div>
-        <br><br>
-        I first thought about what was working for the original projection. Though the birds seem to be flying in outer space, the birds themselves connect with teamLab's greater theme of nature. The darkness of the projection also helps give the illusion that the swings are suspended higher in the air. In a brighter environment, it would be much easier to see the floor and perceive depth. The colorful circles marking the visitor's location also seems like a positive feature, since it clearly shows that the exhibit is following the position.
-
-        <br><br>
-        But what wasn't going right? I took a closer look at the video and made some observations.
-        <br><br>
-      </div>
-    </div>
-    <div class="row justify-content-center">
-      <img class="height-100 col-sm-4" src="assets/images/river/feet1.jpg" alt="First Wireframe">
-      <img class="height-100 col-sm-4" src="assets/images/river/feet2.jpg" alt="Second Wireframe">
-      
-    </div>
-    <br><br>
-    <div class="row justify-content-center">
-      <div class="col-md-10">
-        I first noticed that the visitors were looking down at their feet. The birds avoid the visitors and are mostly on the walls, so the most interesting part of the projection is often missed. It therefore makes sense that the main visual feature of the projection would happen around the visitors' feet.
-      </div>
-    </div>
-    <div class="row justify-content-center">
-       <div class="col-md-10">
-        <br>
-        I also made some observations on what makes the Aerial Climbing exhibit unqiue. Most teamLab exhibitions use computer vision to track visitors position in the gallery space, so it felt important to focus on the unqiue qualities of this particular exhibit in my new proposal.
-        <br><br>
-    </div>
-  </div>
-  <div class="row justify-content-center">
-    <img class="height-100 col-md-10" src="assets/images/river/observations.png" alt="Observations">
-    <div class="col-md-10">
-      <br>
-      The exhibition has set routes that people can travel down, which is very different from the other exhibitions where people can walk around anywhere in the room.
-      <br><br>
-      People also generally move forward in one direction, the projection could encourage people to move forward and flow through exhibition. 
-
-
-      </div>
-    </div>
-
-    <div class="row justify-content-center">
-      <div class="col-md-10">
-      <br><br>
-      <div><h2>Ideation</h2></div>
-      <br><br>
-      I thought about what could happen along the branching paths that also aligned with teamLab's greater interest in the interaction of humans and nature. I first thought about making use of the original birds, and having them fly along these paths more directly. The more acute angles in the path however could make the motion of the birds somewhat robotic looking. I then thought about flowers, but teamLab already has several exhibits with the growth of static flowers. When thinking about nature in motion, I felt that having a river flowing through the paths would be a great fit for the exhibit.
-      <br><br>
-    </div>
-  </div>
-    </p>
-    <div class="row justify-content-center">
-       <div class="col-md-10">
-      <img class="river-image" src="assets/images/river/idea.jpg" alt="Prototype idea">
-    </div>
-    <p class="modal-text">
-           <div class="row justify-content-center">
         <div class="col-md-10">
-      <br>
-
-
-        My proposal for the content was instead to create a river on the paths
-         where users walk.
-
-         The flow of the river increases as more people walk along
-         the given path, and decreases overtime if no one visits it.
-         Each visitor is given a particular color when they enter the space. Their color will flow through the river ahead of them. 
-
-         As they walk, flowers will bloom along the sides of the river, and then disperse as they pass.
+          <ul>
+            <h5>General:</h5>
+            <div class="bullet">There are a total of 8 destinations from the Atlantis Hub</div>
+            <div class="bullet">Highlighting how modes of transport can be easily combined is important for all stakeholders</div>
+            <div class="bullet">Highlighting the delayed and cancelled flights is particularly important for Patrick Mulvaney</div>
+            
+          </ul>
+            
+          
           <br>
-          <br>
-        </div>
-      </div>
-        </div>
-           <div class="row justify-content-center">
-        <div class="col-md-10">
-              This proposal accomplishes the following: 
+
+
+            <div class="row justify-content-center">
+            <div class="col-md-4">
               <ul>
-                
-                <div class="bullet">The most exciting part of the projection happens in the places the visitors are most likely to look-- below the vistors' feet and in the illuminated paths just ahead of them </div>
-                <div class="bullet">The visitors can see more directly how they affect the projection as the flow of the river changes with their steps</div>
-                <div class="bullet">The visitors can see their particular color flow down the river. This communicates that their location is being followed by the projection in a more interesting way</div>
-                
+                <h5>Plane:</h5>
+                <div class="bullet">Only American Airlines flights are not included in the PTF package</div>
+                <div class="bullet">The departure times for the flights are much closer together, so it's important that more flight information is visible</div>
                 
               </ul>
             </div>
-          </div>
+            <div class="col-md-4">
+              <ul>
+                <h5>Train:</h5>
+                <div class="bullet">There are only 2 train routes</div>
+                <div class="bullet">The platform is the same for each route</div>
+                <div class="bullet">The trains depart every 3 hours and return to the Atlantis Hub</div>
+                
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <ul>
+                <h5>Ferry:</h5>
+                <div class="bullet">The ferries don't leave from the Atlantis Hub</div>
+                <div class="bullet">The ferries can be grouped by where they depart from, as there are only 3 different locations</div>
+                <div class="bullet">Only Friday Harbour -> Shaw or Orcas Islands have train connections</div>
+                
 
-       
-        </p>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-md-10">
-          <br>
-          <div><h2>Implementation</h2></div>
-          <br><br>
-        </div>
-      </div>
-            <div class="row justify-content-center align-items-center">
-              <div class="col-md-5">
-                I first had to make a simulation of people moving through the exhibit paths, since it wouldn't be practical to test with real people as I made it.
-                The blue capsules represent the moving people. 
-    <!--             <ul>
-                  
-                  <div class="bullet">Create a simulation of people moving through the paths </div>
-                  <div class="bullet">The visitors can see more directly how they affect the projection as the flow of the river changes with their steps</div>
-                  <div class="bullet">The visitors can see their particular color flow down the river. This communicates that their location is being followed by the projection in a more interesting way</div>
-                  
-                  
-              </ul> -->
-
-              </div>
-              <img class="height-100 col-md-5" src="assets/images/river/simulator.gif">
+                
+              </ul>
+            </div>
             </div>
             <br><br>
-          <div class="row justify-content-center align-items-center">
-              <p class="col-md-5"">
-                A river is created along the paths people walk on. The river is visually similar to the water in other teamLab exhibitions, as seen <a href="https://www.teamlab.art/w/iwa-waterparticles/">here</a>.
-              </p>
-              <img class="height-100 col-md-5" src="assets/images/river/1.gif">
+          <div><h2>Wireframes</h2></div>
+          <br>
+          <div>I started to brainstorm different ways to organize the data with a few different wireframes.</div>
+          <br><br>
+          </div>
+        </div>
+        
+          
+          
+          <div class="row justify-content-center">
+            <div class="height-100 col-md-10"><p class="bold">Wireframe 1:</p> I first tried to organize the departures by destination. If someone hadn't already planned their trip, it would be easier to plan when the display is ordered by destination, since the viewer could look through just the relevant connections and compare their departure times.  </div>
+          </div>
+          <br>
+          <div class="row justify-content-center">
+            <img class="height-100 col-md-5" src="assets/images/ptf/sketch1.jpg" alt="First Wireframe">
+            <img class="height-100 col-md-5" src="assets/images/ptf/sketch2.jpg" alt="Second Wireframe">
           </div>
           <br><br>
-          <div class="row justify-content-center align-items-center">
-              <p class="col-md-5">
-                Though the simulated people walk robotically, the prototype is programmed so that the river dynamically forms no matter where the person walks. I've also add some noise to the river flow so it's more wavy.
-              </p>
-              <img class="height-100 col-md-5" src="assets/images/river/freemove.gif">
+          <div class="row justify-content-center">
+            <div class="height-100 col-md-10"><p class="bold">Wireframe 2: </p>
+            I then thought that it would be better to take some of the work off of the users. In my previous prototype, the users would need to look at the map and then figure out for themselves how to connect the different legs of the trip together to get to their destination. 
+            <br><br>
+            In this prototype, the user would just need to select their final destination and the next screen would show the different ways they could be connected together. The icons would show if you could get to the destination directly, and which modes of transport would need to be used and combined. </div>
+          </div>
+          <br>
+          <div class="row justify-content-center">
+            <img class="height-100 col-md-5" src="assets/images/ptf/sketch2.jpg" alt="Third Wireframe">
+            <img class="height-100 col-md-5" src="assets/images/ptf/sketch4.jpg" alt="Fourth Wireframe">
           </div>
           <br><br>
-          <div class="row justify-content-center align-items-center">
-              <p class="col-md-5">
-                The exhibit should have a river flowing through the paths before anyone starts walking on it, so I made it possible to save the river data and then load it when you start up the exhibition. You can also see here the river flow is stronger on the paths that the visitor walks on.
-              </p>
-              <img class="height-100 col-md-5" src="assets/images/river/load.gif">
+          <div class="row justify-content-center">
+            <div class="height-100 col-md-10"><p class="bold">Wireframe 3:</p>
+            The grid of the previous iteration made the user have to skim through both horizontally and vertically to find their destination. It was also visually confusing with the many icons.
+            <br><br>
+            In this iteration, it's very clear that the user can interact with the user interface because there are obvious buttons to press. This design is much cleaner than the previous ones, though it does use arrows to indicate whether the destination can be reached directly or with a connection.
+          </div>
+          </div>
+          <br>
+          <div class="row justify-content-center">
+            <img class="height-100 col-md-5" src="assets/images/ptf/sketch5.jpg" alt="Fifth Wireframe">
           </div>
           <br><br>
-          <div class="row justify-content-center align-items-center">
-              <p class="col-md-5">
-                Each visitor is given a color. As they walk through the exhibit, their color will flow forward in the river.
-              </p>
-              <img class="height-100 col-md-5" src="assets/images/river/color.gif">
+          <div class="row justify-content-center">
+            <div class="col-md-10">
+          <div><h2>Black and White Designs</h2></div>
+            <br>
+          </div>
+        </div>
+          <div class="row justify-content-center">
+            <div class="col-md-10"><p class="bold">Iteration 1:</p>
+            
+            I took this last iteration and made a black and white digital version. To take advantage of the screen real estate, I added a non-interaction display of the data on the left side. This way, multiple users can look at the display and find their information even if someone is interacting with it. It also allows users that are looking for one particular connection (for instance if they already bought their tickets) and immediately find it without having to go to a different page.
+            <br><br>
+            I made some smaller changes as well-- I removed the arrow icons, as they were unintuitive, added the "Have the PTF Pass?" text to make it clear the flights found on the portal accept the pass, and changed the "Choose your destination" to "Choose your final destination" so it's clear that users should enter final destination as opposed to their next connection.
+            <br><br>
+          </div>
+            <img class="height-100 col-md-10" src="assets/images/ptf/bw1.jpg" alt="Black and white sketch 1">
+          </div>
+          <br>
+          <div class="row justify-content-center">
+            <img class="height-100 col-md-10" src="assets/images/ptf/bw2.jpg" alt="Black and white sketch 2">
+          </div>
+          <br>
+
+          <div class="row justify-content-center">
+            <div class="col-md-10"><p class="bold">Iteration 2:</p></div>
+            <br><br>
+            <div class="col-md-10">
+            I added a gutter between the left and middle columns to make each section more distinct. I also added an asterisk to the relevant rows to make the note at the bottom more noticable when necessary, and gave the ferry departures their own box to make the sub-sections more clear. In addition, the columns are left aligned to give make them easier to scan down.
+            <br><br>
+            </div>
+            
+            <img class="height-100 col-md-10" src="assets/images/ptf/bw3.jpg" alt="Black and white sketch 3">
           </div>
           
             <div class="row justify-content-center">
               <div class="col-md-10">
                 <br><br>
-                <div><h2>Final Prototype</h2></div>
+                <div><h2>Color Designs</h2></div>
                 <br>
-                The final component was adding flowers that bloomed along the river as visitors walked. The flower assets were created by other employees at teamLab. The flowers bloom and then die as you walk. 
+                <p class="bold">Color Prototypes:</p></div>
+              <div class="col-md-10">
+              I added color to differentiate the sections for the different modes of transport, to make the important flight statuses stand out (boarding, delayed, and cancelled), and to emphasize the * notes. I also created more hierarchy in the text.
               <br><br>
             </div>
-              <iframe class="col-md-10" src="https://player.vimeo.com/video/312207116" width="640" height="424" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-              <div class="col-md-10">
-                <br>
-     <br>
-     The video includes three views: one long ditance perspective, one from the visitor's perspective, and one from the top to see what the projection would look like.
-     <br><br>
-     For more details on the implementation, more documentation can be seen <a href="https://docs.google.com/presentation/d/1Nw48uQMimRFS9d_g4z5b2gJZHPxo8drSBr7SaVzhk54/edit?usp=sharing"> here.</a>
-     <br>
-     <br>
-   </div>
+              <img class="height-100 col-md-10" src="assets/images/ptf/color1.jpg" alt="Color sketch 1">
             </div>
-     
-     
-  </p>
+            <br><br>
+            <div class="row justify-content-center">
+              <img class="height-100 col-md-10" src="assets/images/ptf/color2.jpg" alt="Color sketch 2">
+            </div>
+            <br>
+            <div class="row justify-content-center">
+              <div class="height-100 col-md-10">
+              I tried out adding different colors to the right side of the screen, but ultimately felt that this made the screen too colorful. It isn't necessary to reference the sections on the left side of the screen when using the far right interactive one, so I ended up leaving the right side monochromatic.
+              <br><br>
+            </div>
+              <br><br>
+              <img class="height-100 col-md-10" src="assets/images/ptf/color3.jpg" alt="Color sketch 3">
+            </div>
+            <br><br>
 
-  
-</div>
+            <div class="row justify-content-center">
+              <div class="height-100 col-md-10"><p class="bold">Final Design:</p></div>
+              <div class="height-100 col-md-10">
+              
+              In the final design I altered the section colors to be more blue to make the overall color palette more cohesive. The section colors are now more vibrant to greater differentiate them from each other, and the background is darker so the white text is more legible. I added a scroll bar to the detail page so that users can plan their trips later in the day. There were a few other minor changes made, such as tweaking text alignment.
+              <br><br>
+            </div>
 
-<div class="modal-footer">
-  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-</div>
+              <img class="height-100 col-md-10" src="assets/images/ptf/home.jpg" alt="Final Design 1">
+            </div>
+            <br><br>
+            <div class="row justify-content-center">
+              <img class="height-100 col-md-10" src="assets/images/ptf/lopez.jpg" alt="Final Design 2">
+              
+            </div>
+            
+            
+            <div class="row justify-content-center">
+              <div class="col-md-10">
+              <br><br>
+              <div><h2>Motion Design</h2></div>
+              <br>
+              Since this touch screen display updates with the changing data and user interaction, my final task was to create some animations to demonstrate the way the display updates. The user gets some feedback when they press a button through the darker button color, and is then able to scroll through the information just as they would on their phone.
+              <br><br>
+            </div>
+              <img class="height-100 col-md-10" src="assets/images/ptf/right.gif">
+            </div>
+            <div class="row justify-content-center">
+              <div class="height-100 col-md-10">
+              <br>
+              The information on the left side slowly fades in and out so the user has time to see the update, and the flight information moves upward so the user can see that the rest of the information stays the same.
+              <br><br>
+            </div>
+              <img class="height-100 col-md-10" src="assets/images/ptf/left.gif">
+            
+            </div>
+            <br><br>
+ 
+          </p>
+        </div>
+            
+          
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        
+      </div>
+
 
 
     </div>
