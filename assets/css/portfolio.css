@@ -1,4 +1,4 @@
-#portfolio{
+.portfolio{
     display: block;
     overflow: auto;
     min-height: 100vh;
@@ -10,6 +10,10 @@
     font-weight: 300;
     
 
+}
+
+.italics{
+    font-style: italic;
 }
 
 .modal-lg {
@@ -121,6 +125,19 @@ a{
     overflow: hidden;
 
 }
+
+.design-img {
+    height: 40vh;
+    padding: 10px;
+    overflow: hidden;
+
+}
+
+.design-img img { 
+    height:100%; 
+    width: 100%; 
+    object-fit: cover; 
+} 
 
 .portfolio-img img { 
     height:100%; 

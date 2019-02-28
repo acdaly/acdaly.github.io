@@ -1,4 +1,4 @@
-#about{
+#about-section{
     display: block;
     overflow: auto;
     min-height: 100vh;
@@ -12,6 +12,10 @@
     overflow-x: hidden;
     color: rgba(255, 255, 255, 0.8);
 
+}
+
+.right-align{
+    text-align: right;
 }
 
 p{

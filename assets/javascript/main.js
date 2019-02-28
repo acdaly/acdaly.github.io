@@ -3,39 +3,86 @@
 var featured = {
     "projects": [
         
-        {
-            "name": "Transportation Display",
-            "img": "assets/images/featured/ptf.jpg",
-            "id": "ptf",
-            "modalID": "ptf-modal"
-        },
+
         
-        {
-            "name": "teamLab River Prototype",
-            "img": "assets/images/featured/7.jpg",
-            "id": "river",
-            "modalID": "river-modal"
-        },
-        {
-            "name": "Portfolio Website",
-            "img": "assets/images/featured/portfolio.png",
-            "id": "portfolio-doc",
-            "modalID": "portfolio-modal"
-        },
+
+
+       
         {
             "name": "Light Prototype",
             "img": "assets/images/featured/1.jpg",
             "id": "google-prototype",
             "modalID": "google-modal"
         },
+        {
+            "name": "Searching",
+            "img": "assets/images/featured/searching.png",
+            "id": "searching",
+            "modalID": "searching-modal"
+        },
         
         
         {
+            "name": "Surround Sounds",
+            "img": "assets/images/coding/surround-sounds.jpg",
+            "id": "surround-sounds",
+            "modalID": "surround-modal"
+        },
+        {
+            "name": "Cramp",
+            "img": "assets/images/featured/cramp.png",
+            "id": "cramp",
+            "modalID": "cramp-modal"
+        },
+        
+         
+        {
             "name": "Entanglement",
             "img": "assets/images/featured/4.jpg",
-            "id": "google-prototype",
+            "id": "entanglement",
             "modalID": "entanglement-modal"
         }
+        
+        
+        
+        
+        
+        
+        
+    ]     
+}
+
+var design = {
+    "projects": [
+        
+        {
+            "name": "Transportation Display",
+            "img": "assets/images/design/ptf.jpg",
+            "id": "ptf",
+            "modalID": "ptf-modal"
+        },
+        {
+            "name": "teamLab River Prototype",
+            "img": "assets/images/design/teamlab.jpg",
+            "id": "river",
+            "modalID": "river-modal"
+        },
+        {
+            "name": "Food Truck Website",
+            "img": "assets/images/design/foodtruck-thumbnail.jpg",
+            "id": "google-prototype",
+            "modalID": "google-modal"
+        },
+        
+        
+        {
+            "name": "Portfolio Website",
+            "img": "assets/images/design/portfolio.jpg",
+            "id": "portfolio-doc",
+            "modalID": "portfolio-modal"
+        }
+        
+        
         
         
     ]     
@@ -382,7 +429,7 @@ var animation = {
 
 
 
-function fillPortfolioTemplate(category, sourceElement="#portfolio-template"){
+function fillPortfolioTemplate(category, idString="#portfolio", sourceElement="#portfolio-template"){
     //Code from Programmable User Interfaces Lab
     //get HTML template using jQuery
     var source = $(sourceElement).html();
@@ -391,13 +438,13 @@ function fillPortfolioTemplate(category, sourceElement="#portfolio-template"){
     //create new HTML using our data
     var newHTML = template(category);
     //add the new HTML to the page
-    $("#portfolio").append(newHTML);
+    $(idString).append(newHTML);
 
 }
 
-function onPortfolioImgHover(){
+function onPortfolioImgHover(idString=".portfolio-img"){
     //Displays project title when hovering on project image in portfolio
-    $(".portfolio-img").on('mouseenter', 'img', function(event){
+    $(idString).on('mouseenter', 'img', function(event){
         $(this).fadeTo(200, 0);
         $(this).parent().children('h2').fadeTo(200, 1);
     }).on('mouseleave', 'img', function(event){
@@ -426,8 +473,8 @@ function windowSizeOptions(){
       scrollingSpeed: 800,
       navigation: true,
       navigationPosition: 'left',
-      navigationTooltips: ['Home', 'Portfolio', 'About', 'Connect'],
-      anchors: ['Home-1', 'Portfolio-2', 'About-3', 'Connect-4'],
+      navigationTooltips: ['Home', 'UI/UX Design','Experimental', 'About', 'Connect'],
+      anchors: ['home', 'ui-ux','experimental', 'about', 'connect'],
       scrollOverflow: false
     });
   // }
@@ -529,8 +576,11 @@ function modalFreezePageScrolling(){
     $(".modal").on("show.bs.modal", function () {
       $.fn.fullpage.setAllowScrolling(false);
       $.fn.fullpage.setKeyboardScrolling(false);
+
       
       $("body").addClass("modal-open");
+      $('input').focus();
+
     });
 }
 
@@ -540,14 +590,19 @@ $( document ).ready(function() {
     navBarConfiguration();
     modalFreezePageScrolling();
     fillPortfolioTemplate(featured);
+    fillPortfolioTemplate(design, '#ui-ux-section', "#design-template")
     onPortfolioImgHover();
+    onPortfolioImgHover(".design-img")
     $("#connect-icons").on('mouseenter', '#email', function(event){
         $('#email p').fadeTo(500, 1.0);
     });
     $('.modal-link').on('click', function(){
         $('#myModalContent').load('assets/html/' +this.id + '.html');
     })
-
+    //focus searchbar when searching modal is clicked
+    // $('#searching').on('shown.bs.modal', function () {
+    //     $('input').focus();
+    // })
        
  });
 

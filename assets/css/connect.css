@@ -1,4 +1,4 @@
-#connect{
+#connect-section{
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -22,7 +22,7 @@
     padding-top: 100px;
 }
 
-#connect img{
+#connect-section img{
     height: 60px;
 }
 
