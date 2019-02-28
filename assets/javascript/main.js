@@ -70,8 +70,8 @@ var design = {
         {
             "name": "Food Truck Website",
             "img": "assets/images/design/foodtruck-thumbnail.jpg",
-            "id": "google-prototype",
-            "modalID": "google-modal"
+            "id": "foodtruck",
+            "modalID": "foodtruck-modal"
         },
         
         
