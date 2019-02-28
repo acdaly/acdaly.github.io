@@ -600,9 +600,9 @@ $( document ).ready(function() {
         $('#myModalContent').load('assets/html/' +this.id + '.html');
     })
     //focus searchbar when searching modal is clicked
-    // $('#searching').on('shown.bs.modal', function () {
-    //     $('input').focus();
-    // })
+    $('#theModal').on('shown.bs.modal', function () {
+        $('input').focus();
+    })
        
  });
 
