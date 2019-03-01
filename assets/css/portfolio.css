@@ -12,6 +12,14 @@
 
 }
 
+.white{
+    color: white !important;
+}
+
+.inline{
+    display: inline !important;
+}
+
 .italics{
     font-style: italic;
 }
@@ -19,6 +27,10 @@
 .modal-lg {
     max-width: 85vw !important;
 }   
+
+.modal-title{
+    width: 100%;
+}
 
 .width-100{
     width:100%;
@@ -72,6 +84,14 @@ a{
 
 .padding-0{
     padding: 0 !important;
+}
+
+.margin-0{
+    margin: 0 !important;
+}
+
+.modal-title{
+    padding:  0px 15px 0px 15px;
 }
 
 .container-fluid {
