@@ -2,8 +2,34 @@ $('#main-bar').animate({left:0,duration:'slow',complete:focusFunction});
 
 function focusFunction(){$('#main-bar').focus();}
 
+function modalFreezePageScrolling(){
+    //disable main page scrolling when modal is open
+  $(".modal").on("hidden.bs.modal", function () {
+      // $.fn.fullpage.setAllowScrolling(true);
+      // $.fn.fullpage.setKeyboardScrolling(true);
+      
+      $("body").removeClass("modal-open")
+
+    });
+
+    $(".modal").on("show.bs.modal", function () {
+      // $.fn.fullpage.setAllowScrolling(false);
+      // $.fn.fullpage.setKeyboardScrolling(false);
+
+      
+      $("body").addClass("modal-open");
+      $('input').focus();
+
+    });
+}
+
 $( document ).ready(function() {
-    
+    modalFreezePageScrolling();
+    $(document).on('hidden.bs.modal', function (event) {
+        if ($('.modal:visible').length) {
+            $('body').addClass('modal-open');
+        }
+    });
     $('.modal-link').on('click', function(){
         console.log( "ready!" );
         focusFunction();

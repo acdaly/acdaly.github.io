@@ -12,6 +12,10 @@
 
 }
 
+.z-index-2000{
+    z-index: 2000 !important;
+}
+
 .white{
     color: white !important;
 }
@@ -71,6 +75,12 @@ a{
     text-shadow: 0 1px 0 #121721 !important;
 }
 
+.nested-close{
+    position: absolute;
+    z-index: 5;
+    right: 20px;
+    top: 10px;
+}
 .modal-open {
     overflow: hidden !important;
     -webkit-overflow-scrolling: touch !important;
