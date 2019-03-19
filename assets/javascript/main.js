@@ -602,6 +602,7 @@ $( document ).ready(function() {
     //focus searchbar when searching modal is clicked
     $('#theModal').on('shown.bs.modal', function () {
         $('input').focus();
+        
     })
        
  });
