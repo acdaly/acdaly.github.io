@@ -589,6 +589,11 @@ $( document ).ready(function() {
     $('.carousel').carousel({interval: 4000});
     navBarConfiguration();
     modalFreezePageScrolling();
+    $(document).on('hidden.bs.modal', function (event) {
+        if ($('.modal:visible').length) {
+            $('body').addClass('modal-open');
+        }
+    });
     fillPortfolioTemplate(featured);
     fillPortfolioTemplate(design, '#ui-ux-section', "#design-template")
     onPortfolioImgHover();
