@@ -68,7 +68,7 @@ var design = {
             "modalID": "river-modal"
         },
         {
-            "name": "Food Truck Website",
+            "name": "CMU To Go",
             "img": "assets/images/design/foodtruck-thumbnail.jpg",
             "id": "foodtruck",
             "modalID": "foodtruck-modal"
@@ -602,7 +602,7 @@ $( document ).ready(function() {
     //focus searchbar when searching modal is clicked
     $('#theModal').on('shown.bs.modal', function () {
         $('input').focus();
-        
+
     })
        
  });

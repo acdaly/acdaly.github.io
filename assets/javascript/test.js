@@ -13,9 +13,9 @@ function modalFreezePageScrolling(){
     });
 
     $(".modal").on("show.bs.modal", function () {
-            console.log("pushed history1");
-      history.pushState({id:'homepage'}, 'Home Test', 'http://aridaly.com/test-index.html/?p=homepage' )
-      console.log("pushed history2");
+      //       console.log("pushed history1");
+      // history.pushState({id:'homepage'}, 'Home Test', 'http://aridaly.com/test-index.html/?p=homepage' )
+      // console.log("pushed history2");
       // $.fn.fullpage.setAllowScrolling(false);
       // $.fn.fullpage.setKeyboardScrolling(false);
 
