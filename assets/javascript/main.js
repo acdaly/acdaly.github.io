@@ -5,7 +5,12 @@ var featured = {
         
 
         
-
+{
+            "name": "teamLab River Prototype",
+            "img": "assets/images/featured/7.jpg",
+            "id": "river",
+            "modalID": "river-modal"
+        },
 
        
         {
@@ -22,12 +27,7 @@ var featured = {
         },
         
         
-        {
-            "name": "Surround Sounds",
-            "img": "assets/images/coding/surround-sounds.jpg",
-            "id": "surround-sounds",
-            "modalID": "surround-modal"
-        },
+        
         {
             "name": "Cramp",
             "img": "assets/images/featured/cramp.png",
@@ -54,19 +54,19 @@ var featured = {
 
 var design = {
     "projects": [
-        
+        {
+            "name": "Swift Shift",
+            "img": "assets/images/design/swift_shift.jpg",
+            "id": "shift",
+            "modalID": "shift-modal"
+        },
         {
             "name": "Transportation Display",
             "img": "assets/images/design/ptf.jpg",
             "id": "ptf",
             "modalID": "ptf-modal"
         },
-        {
-            "name": "teamLab River Prototype",
-            "img": "assets/images/design/teamlab.jpg",
-            "id": "river",
-            "modalID": "river-modal"
-        },
+        
         {
             "name": "CMU To Go",
             "img": "assets/images/design/foodtruck-thumbnail.jpg",
