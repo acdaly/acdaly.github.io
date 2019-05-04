@@ -12,6 +12,10 @@
 
 }
 
+.modal-header{
+    font-family: 'Lato', sans-serif;
+}
+
 .z-index-2000{
     z-index: 2000 !important;
 }
