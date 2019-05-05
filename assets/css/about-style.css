@@ -2,11 +2,11 @@
     display: block;
     overflow: auto;
     min-height: 100vh;
-    background-color: #121721;
+/*    background-color: #121721;*/
     padding-left: 0;
     padding-right: 0;
-    padding-bottom: 80px;
-    padding-top: 50px;
+    padding-bottom: 0px;
+    padding-top: 0px;
     font-family: 'Lato', sans-serif;
     font-weight: 300;
     overflow-x: hidden;

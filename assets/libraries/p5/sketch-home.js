@@ -5,6 +5,7 @@ var waveLayers = 11;
 var t=[];
 var oldTime = 0;
 var initialY;
+var randomStartTime = 0;
 
 function RGB(r, g, b) {
     this.r = r;
@@ -65,6 +66,9 @@ function getTwean(c1, c2, progress, z, p) {
 }
 
     var noiseOffset = p.noise(t[z][1])*80 - 20;
+    // if (z == waveLayers - 1){
+    //     noiseOffset = 0;
+    // }
     twean.r = c1.r + (c2.r - c1.r)* progress + noiseOffset;
     twean.g = c1.g + (c2.g - c1.g)* progress + noiseOffset;
     twean.b = c1.b + (c2.b - c1.b)* progress + noiseOffset;
@@ -110,31 +114,104 @@ function updateList(progress, oceanTimeIndex, backgroundTimeIndex, p) {
 function getTimeProgress(p){
     // returns progress (0.0 - 1.0), the percentage between the lists in twoDColorLists
     var colorChangeSpeed = 500;
-    return ((p.millis() / colorChangeSpeed) % 100) * .01;
+    return (( (p.millis()  + randomStartTime)/ colorChangeSpeed) % 100) * .01;
     
 }
 
 function getTimeIndex(list, p){ 
     var colorChangeSpeed = 500;
-    return p.int(((p.millis() / colorChangeSpeed) % (100 * list.length)) * .01);
+    return p.int((( (p.millis() + randomStartTime) / colorChangeSpeed) % (100 * list.length)) * .01);
 
 }
 
+/* 
+ * from https://stackoverflow.com/questions/17242144/javascript-convert-hsb-hsv-color-to-rgb-accurately
+ * accepts parameters
+ * r  Object = {r:x, g:y, b:z}
+ * OR 
+ * r, g, b
+*/
+function RGBtoHSV(r, g, b) {
+    if (arguments.length === 1) {
+        g = r.g, b = r.b, r = r.r;
+    }
+    var max = Math.max(r, g, b), min = Math.min(r, g, b),
+        d = max - min,
+        h,
+        s = (max === 0 ? 0 : d / max),
+        v = max / 255;
+
+    switch (max) {
+        case min: h = 0; break;
+        case r: h = (g - b) + d * (g < b ? 6: 0); h /= 6 * d; break;
+        case g: h = (b - r) + d * 2; h /= 6 * d; break;
+        case b: h = (r - g) + d * 4; h /= 6 * d; break;
+    }
+
+    return {
+        h: h,
+        s: s,
+        v: v
+    };
+}
+
+function HSVtoRGB(h, s, v) {
+    var r, g, b, i, f, p, q, t;
+    if (arguments.length === 1) {
+        s = h.s, v = h.v, h = h.h;
+    }
+    i = Math.floor(h * 6);
+    f = h * 6 - i;
+    p = v * (1 - s);
+    q = v * (1 - f * s);
+    t = v * (1 - (1 - f) * s);
+    switch (i % 6) {
+        case 0: r = v, g = t, b = p; break;
+        case 1: r = q, g = v, b = p; break;
+        case 2: r = p, g = v, b = t; break;
+        case 3: r = p, g = q, b = v; break;
+        case 4: r = t, g = p, b = v; break;
+        case 5: r = v, g = p, b = q; break;
+    }
+    return {
+        r: Math.round(r * 255),
+        g: Math.round(g * 255),
+        b: Math.round(b * 255)
+    };
+}
 
 function fillColor(z, p){
     //color progression of the waves
     //z=0 is the furthest in space
-    var hue = 20*z + 80;
-    var saturation = 8 * (z);
-    var brightness = 70 + (z*2.5);
-    var hsbString='hsb('+p.str(hue)+','+p.str(saturation)+'%,'+p.str(brightness)+'%)';
+    // var hue = 20*z + 80;
+    // var saturation = 8 * (z);
+    // var brightness = 70 + (z*2.5);
+    // if (z == waveLayers - 1){
+    //     saturation = 8 * (z - 3);
+    //     brightness = 20;
+    // }
+
+    // var hsbString='hsb('+p.str(hue)+','+p.str(saturation)+'%,'+p.str(brightness)+'%)';
 
     var index = p.int(z*((colorList.length -1)/waveLayers)); //index in colorList to get twean of
     var progressIndex = z % (waveLayers/(colorList.length - 1));
     var progress = progressIndex / (waveLayers/(colorList.length-1));
 
     var newTwean = getTwean(colorList[index], colorList[index+1], progress, z, p);
+
+    if (z == waveLayers - 1){
+        var hsvTwean = RGBtoHSV(newTwean);
+        hsvTwean.s -= 0.1;
+        hsvTwean.v -= 0.2;
+        newTwean = HSVtoRGB(hsvTwean);
+    }
     var rgbString='rgb('+p.int(newTwean.r)+','+p.int(newTwean.g)+','+p.int(newTwean.b) +')';
+
+
+
+    //update background of lower div
+    $('#background').css('background-image', 'linear-gradient('+ rgbString +', #121721)');
+
     return p.color(rgbString);
 }
 
@@ -212,6 +289,7 @@ function p1Setup(p) {
     width = p.windowWidth;
     height = p.windowHeight;
     initialY = p.int(height*(2/3)) - 20;
+    randomStartTime  = p.random(0, 100000);
     var cnv = p.createCanvas(width, height);
     // cnv.parent('home-sketch');
     
@@ -254,7 +332,7 @@ function p2drawOcean(p){
     var yOffset = 2;
     var yPower = 20;
     var xDist = p2width/p2curves;
-    var xDistOffset = 1;
+    var xDistOffset = 2;
     var x, y;
     for (var z = 0; z < p2waveLayers; z++){
         
@@ -283,7 +361,7 @@ function p2drawOcean(p){
         p.curveVertex(x, p2height);
         p.endShape();
         yOffset*=1.1 + 0.5 ;
-        yPower*= 1.15;
+        yPower*= 1.05;
         xDistOffset*=1.5;
 
     }

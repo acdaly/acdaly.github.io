@@ -3,6 +3,13 @@
     color: white;
 }
 
+#background{
+    position: absolute;
+    height: 300vh;
+    width: 100%;
+    background-image: linear-gradient(white, #121721);
+/*    z-index: -1;*/
+}
 
 #home-background {
     height: 100vh;
