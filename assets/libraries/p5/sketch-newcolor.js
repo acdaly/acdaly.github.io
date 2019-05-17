@@ -56,7 +56,7 @@ var orangeTealList = [dirtyOrange, offTeal, darkerTeal, blueEmerald];
 var orangeTealSky = [skyTurq, skyOrange]
 
 //clearest daytime
-var healthyTop = new RGB(27, 122, 196);
+var healthyTop = new RGB(37, 167, 198);
 var healthyBottom = new RGB(132, 186, 223);
 
 var clearBlue1 = new RGB(56, 150, 176);
