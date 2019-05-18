@@ -1,15 +1,31 @@
+body{
+    background-color: #121721;
+}
+
 .bold{
-    font-weight: bold;
+    font-weight: 400;
     color: white;
 }
 .regular{
-    font-weight: normal;
+    font-weight: 300;
     color: white;
 }
 
+.thin{
+    font-weight: 100;
+    color: white;
+}
+
+.underline{
+    padding-bottom: 5px;
+    width: 55%;
+    border-bottom: 1.5px solid rgb(255, 255, 255, 0.5);
+}
+
+
 #background{
     position: absolute;
-    height: 300vh;
+    height: 250vh;
     width: 100%;
     background-image: linear-gradient(white, #121721);
 /*    z-index: -1;*/

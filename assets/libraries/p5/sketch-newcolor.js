@@ -435,7 +435,7 @@ var myp5 = new p5(s, 'home-sketch');
 var p2width;
 var p2height;
 var p2curves;
-var p2waveLayers = 13;
+var p2waveLayers = 10;
 var p2t=[];
 var p2initialY;
 var p2skyColor;
@@ -503,7 +503,7 @@ function p2Draw(p) {
 
 function p2Setup(p) {
     p2width = p.windowWidth;
-    p2height = 300;
+    p2height = 250;
     p2initialY = p.int(p2height*(1/6));
     var cnvTwo = p.createCanvas(p2width, p2height);
     // cnvTwo.parent('p5-sketch');

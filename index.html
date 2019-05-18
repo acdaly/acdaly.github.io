@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Pontano+Sans" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400" rel="stylesheet">
   <!--jQuery must also be linked for Bootstrap to function-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <!-- This website uses Bootstrap JS and CSS through links to MaxCDN's CDN supported version-->
@@ -90,225 +90,76 @@
       <!--UI/UX PORTFOLIO-->
       <div class="section">
          <div class="row">
+
           <div id = "ui-ux-section" class="col-sm-12 portfolio">
-            <div class = "row justify-content-center">
-            <nav class="navbar navbar-expand-sm navbar-dark bg-dark col-sm-10">
-              <a class="navbar-brand" href="#">UI / UX DESIGN</a>
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                  <li class="nav-item active">
-                    <!-- <a id="featured" class="nav-link" href="#">Featured<span class="sr-only">(current)</span></a> -->
-                  </li>
+             <div  class="row justify-content-center portfolio-content ">
+              <h2 class="portfolio-title col-sm-12">I create
+                <p class="bold inline">UI / UX Design</p>
+                 as a <br>
 
-                  <!-- <li class="nav-item dropdown">
-                    <a id="coding" class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Coding
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <a id="creative-frameworks" class="dropdown-item" href="#">Creative Frameworks</a>
-                      <a id="hardware" class="dropdown-item" href="#">Hardware</a>
-                      <a id="web-dev" class="dropdown-item" href="#">Web Development</a>
-                    </div>
-                  </li>
-                   <li class="nav-item dropdown">
-                    <a id="fabrication" class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Fabrication
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <a id="d-fab" class="dropdown-item" href="#">Digital Fabrication</a>
-                      <a id="wood-metal" class="dropdown-item" href="#">Wood &AMP; Metal</a>
-                      
-                    </div>
-                  </li>
-                   <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      2D Media
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <a id="drawing" class="dropdown-item" href="#">Drawing</a>
-                      <a id="painting" class="dropdown-item" href="#">Painting</a>
-                      <a id="photography" class="dropdown-item" href="#">Photography</a>
-                      <a id="animation" class="dropdown-item" href="#">Animation</a>
-                    </div>
-                  </li>
-                </ul>
-              -->
-                <!-- <ul class="nav navbar-nav ml-auto">
-                  <li class="nav-item">
-                    <a target="_blank" href="assets/images/AriResume.pdf">
-                      <button id="portfolio-resume" class="btn btn-sm btn-outline-secondary" type="button">Resume</button>
-                    </a>
+                <a class="regular inline underline" href="https://hcii.cmu.edu/academics/mhci" target="_blank" >Carnegie Mellon MHCI</a> student
+                 and previously as a <a class="regular inline underline" href="http://learnsphere.org/" target="_blank" >LearnSphere</a>
+                  intern.</h2>
+                <div class = "col-md-10 ui-design-img">
                     
-                  </li>
-                </ul> -->
+                  <img id="swift-shift-img" class="project-img" src="assets/images/design/swift_shift.jpg">
+                  <img id="transit-hub-img" class="project-img" src="assets/images/design/ptf.jpg">
+                  <img id="cmu-to-go-img" class="project-img" src="assets/images/design/foodtruck-thumbnail.jpg">
+                  <img class="default-img" src="assets/images/design/swift_shift.jpg">
+                </div>
               </div>
-            </nav>
-          </div>
-<!--             <div class="row">
-              <div class = "col-sm-12 spacer"></div>
+            <div class="row justify-content-center">
+              <div id="swift-shift" class = "col-md-3 design-project">
+                <a id = "shift-modal" class="modal-link" data-toggle="modal" data-target=#theModal>SWIFT SHIFT</a>
+              </div>
+              <div id="transit-hub" class = "col-md-3 design-project">
+                <a id = "ptf-modal" class="modal-link" data-toggle="modal" data-target=#theModal>TRANSIT HUB</a>
+              </div>
+              <div id="cmu-to-go" class = "col-md-3 design-project">
+                <a id = "foodtruck-modal" class="modal-link" data-toggle="modal" data-target=#theModal>CMU TO GO</a>
+              </div>
             </div>
-               -->
-
-
-            <script id="portfolio-template"type="text/x-handlebars-template">
-              <div id="portfolio-content" class="row justify-content-center loaded-portfolio ">
-                {{#each projects}}
-                <div id={{ id }} class = "col-md-2 portfolio-img">
-                  <a id = {{modalID}} class="modal-link" data-toggle="modal" data-target=#theModal>
-                    <h2 class="portfolio-title">{{ name }}</h2>
-                    <img src={{ img }}>
-                  </a>
-                </div>
-                {{/each}}
-                 </div>
-            </script>
-
-            <script id="2D-template"type="text/x-handlebars-template">
-         <div id="portfolio-content" class="row justify-content-center">
-            <div class="row col-sm-11">
-                {{#each projects}}
-                
-                <div id={{ id }} class="col-md-3 twod-img">
-                  <div class="thumbnail" >
-                    <a href={{ img }}>
-                      <h2 class="portfolio-title">{{ name }}</h2>
-                      <img src={{ img }} alt="Lights" style="width:100%">
-                      
-                    </a>
-                  </div>
-                </div>
-              
-                {{/each}}
-                </div>
-              </div>    
-            </script>
-
-
-  
           </div>
+
         </div>
       </div>
+ 
 
       <!--PORTFOLIO-->
-      <div class="section" id="section1">
-         <div class="row">
-          <div id = "portfolio" class="col-sm-12 portfolio">
-            <div class = "row justify-content-center">
-            <nav class="navbar navbar-expand-sm navbar-dark bg-dark col-sm-10">
-              <a class="navbar-brand" href="#">EXPERIMENTAL</a>
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                  <li class="nav-item active">
-                    <!-- <a id="featured" class="nav-link" href="#">Featured<span class="sr-only">(current)</span></a> -->
-                  </li>
-
-                  <!-- <li class="nav-item dropdown">
-                    <a id="coding" class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Coding
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <a id="creative-frameworks" class="dropdown-item" href="#">Creative Frameworks</a>
-                      <a id="hardware" class="dropdown-item" href="#">Hardware</a>
-                      <a id="web-dev" class="dropdown-item" href="#">Web Development</a>
-                    </div>
-                  </li>
-                   <li class="nav-item dropdown">
-                    <a id="fabrication" class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Fabrication
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <a id="d-fab" class="dropdown-item" href="#">Digital Fabrication</a>
-                      <a id="wood-metal" class="dropdown-item" href="#">Wood &AMP; Metal</a>
-                      
-                    </div>
-                  </li>
-                   <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      2D Media
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <a id="drawing" class="dropdown-item" href="#">Drawing</a>
-                      <a id="painting" class="dropdown-item" href="#">Painting</a>
-                      <a id="photography" class="dropdown-item" href="#">Photography</a>
-                      <a id="animation" class="dropdown-item" href="#">Animation</a>
-                    </div>
-                  </li>
-                </ul>
-              -->
-                <!-- <ul class="nav navbar-nav ml-auto">
-                  <li class="nav-item">
-                    <a target="_blank" href="assets/images/AriResume.pdf">
-                      <button id="portfolio-resume" class="btn btn-sm btn-outline-secondary" type="button">Resume</button>
-                    </a>
+      <div class="section">
+        <div class="row">
+          <div id = "experimental-section" class="col-sm-12 portfolio">
+            
+            <div class="row justify-content-center portfolio-content">
+              <h2 class="portfolio-title col-sm-12">
+                With my background in
+                <p class="bold inline">Interactive and Computational Art</p>,<br>
+                 I’ve created prototypes for 
+                 <a class="regular inline underline" href="https://www.teamlab.art/" target="_blank">teamLab</a> and <a class="regular inline underline" href="https://www.iontank.com/" target="_blank">Iontank</a>.
+              </h2>
+              <div class = "col-md-10 ui-design-img">
                     
-                  </li>
-                </ul> -->
+                  <img class="default-img" src="assets/images/featured/7.jpg">
+                  <img id="teamlab-river-img" class="project-img" src="assets/images/featured/7.jpg">
+                  <img id="searching-img" class="project-img" src="assets/images/featured/searching.png">
+                  <img id="google-img" class="project-img" src="assets/images/featured/1.jpg">
               </div>
-            </nav>
-          </div>
-<!--             <div class="row">
-              <div class = "col-sm-12 spacer"></div>
             </div>
-               -->
+            <div class="row justify-content-center">
+              <div id="teamlab-river" class = "col-md-3 design-project">
+                <a id = "river-modal" class="modal-link" data-toggle="modal" data-target=#theModal>TEAMLAB RIVER</a>
+              </div>
+              <div id="searching" class = "col-md-3 design-project">
+                <a id = "searching-modal" class="modal-link" data-toggle="modal" data-target=#theModal>SEARCHING</a>
+              </div>
+              <div id="google" class = "col-md-3 design-project">
+                <a id = "google-modal" class="modal-link" data-toggle="modal" data-target=#theModal>LIGHT PROTOTYPE</a>
+              </div>
+            </div>
+         </div>
 
-
-            <script id="portfolio-template"type="text/x-handlebars-template">
-              <div id="portfolio-content" class="row justify-content-center loaded-portfolio ">
-                {{#each projects}}
-                <div id={{ id }} class = "col-md-2 portfolio-img">
-                  <a id = {{modalID}} class="modal-link" data-toggle="modal" data-target=#theModal>
-                    <h2 class="portfolio-title">{{ name }}</h2>
-                    <img src={{ img }}>
-                  </a>
-                </div>
-                {{/each}}
-                 </div>
-            </script>
-
-            <script id="design-template"type="text/x-handlebars-template">
-              <div id="portfolio-content" class="row justify-content-center loaded-portfolio ">
-                {{#each projects}}
-                <div id={{ id }} class = "col-md-5 design-img">
-                  <a id = {{modalID}} class="modal-link" data-toggle="modal" data-target=#theModal>
-                    <h2 class="portfolio-title">{{ name }}</h2>
-                    <img src={{ img }}>
-                  </a>
-                </div>
-                {{/each}}
-                 </div>
-            </script>
-
-            <script id="2D-template"type="text/x-handlebars-template">
-         <div id="portfolio-content" class="row justify-content-center">
-            <div class="row col-sm-11">
-                {{#each projects}}
-                
-                <div id={{ id }} class="col-md-3 twod-img">
-                  <div class="thumbnail" >
-                    <a href={{ img }}>
-                      <h2 class="portfolio-title">{{ name }}</h2>
-                      <img src={{ img }} alt="Lights" style="width:100%">
-                      
-                    </a>
-                  </div>
-                </div>
-              
-                {{/each}}
-                </div>
-              </div>    
-            </script>
-
-
-  
-          </div>
-        </div>
       </div>
+    </div>
 
 
       
@@ -317,35 +168,54 @@
       <!--ABOUT-->
       <div class="section">
         <div class="row">
+
           <div id="about-section" class="col-sm-12">
             
             <div id="about-container" class="row justify-content-center align-items-center">
+
               <div class="col-md-4 align-middle">
-                <div id = "about-img" class="rounded-circle">
-                  <img src="assets/images/about/about-img.jpg">
+                <div id = "about-placeholder" class="rounded-circle">
+                  <!-- <img src="assets/images/about/about-img.jpg"> -->
                 </div>
+
               </div>
-              <div class="col-md-1 spacer"></div>
+              <div class="col-md-1"></div>
               <div id="about-profile" class="col-md-4">
-                <p class="regular">I’m Ari, an incoming Master of Human-Computer Interaction student at Carnegie Mellon University with a background in interactive and computational art.</p>
+                <p class="regular">Hi, I’m Ari. Thanks for stopping by!</p>
                 <br>
                 As our lives become further entangled with technology, I see UI and UX design as an increasingly important pathway to creating meaningful daily experiences. Through my work I strive to create positive user relationships with technology through intuitive and innovative design. 
                 <br><br>
-                I also enjoy ballroom dance, cooking, 
-                and sustainable practices.
+                I also enjoy ballroom dance, cooking, and sustainable practices. 
                 <br><br><br>
-                <div class="row justify-content-center">
-                
-                <div class="col-md-5 row justify-content-center">
-                <a id="resume" target="_blank" href="assets/images/Daly_Ari_Resume.pdf">
-                      <button id="portfolio-resume" class="btn btn-md btn-outline-secondary col-md-12" type="button">RESUME</button>
-              </a>
-              </div>
+                <div class="row">
+                <div id = "linkedin" class="col-sm-2 connect-icon">
+                    <a href="https://www.linkedin.com/in/aridaly/" target="_blank">
+                      <img src="assets/images/connect/linkedin.png">
+                    </a>
+                  </div>
+                  <div id="email" class="col-sm-2 connect-icon">
+                    <a href="mailto:acdaly@andrew.cmu.edu">
+                      <img src="assets/images/connect/email.png">
+                    </a>
+                  </div>
+                  <div id="github" class="col-sm-2 connect-icon">
+                    <a href="https://github.com/acdaly" target="_blank">
+                      <img src="assets/images/connect/github.png">
+                    </a>
+                  </div>
+                  <div class="col-md-5 row justify-content-center">
+                  <a id="resume" target="_blank" href="assets/images/Daly_Ari_Resume.pdf">
+                        <button id="portfolio-resume" class="btn btn-md btn-outline-secondary col-md-12" type="button">RESUME</button>
+                  </a>
+                  </div>
+                </div>
+
             </div>
-              </div>
+            
 
-
-              
+            </div>
+            <div class="row">
+                  <div class ="col-sm-12" id="connect-sketch"></div>
             </div>
             
 
@@ -353,7 +223,7 @@
         </div>
       </div>
       <!--CONNECT-->
-      <div class="section">
+<!--       <div class="section">
         <div class="row">
           <div id="connect-section" class="col-sm-12">
             <div class="row">
@@ -387,7 +257,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
     </div>
   </div>

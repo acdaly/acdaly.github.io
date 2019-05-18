@@ -108,8 +108,8 @@ a{
     -webkit-overflow-scrolling: touch !important;
 }
 
-#portfolio-content{
-    padding-top: 0%;
+.portfolio-content{
+    margin-top: -50px;
     margin-left: 50px;
     margin-right: 50px;
 }
@@ -180,12 +180,68 @@ a{
 
 }
 
+
+a:hover{
+    color: rgb(119, 170, 255);
+    text-decoration: none;
+    transition: .2s;
+}
+
+.ui-design-img {
+
+    height: 82vh;
+    padding-top: 90px;
+    overflow: hidden;
+    
+}
+
+.project-img { 
+    position: absolute;
+    top:0;
+    left:0;
+    padding-top: 90px;
+    padding-left: 15px;
+    padding-right: 15px;
+    height:100%; 
+    width: 100%; 
+    object-fit: cover;
+
+    opacity: 0;
+    z-index: 3;
+}
+
+/*#experimental-img { */
+/*    position: absolute;
+    top:0;
+    left:0;*/
+/*    padding-top: 90px;
+    padding-left: 15px;
+    padding-right: 15px;*/
+/*    height:100%; 
+    width: 100%; 
+    object-fit: cover; 
+    opacity: 0.5;
+    z-index: 2 !important;
+}  */
+
+.default-img { 
+    position: absolute;
+    top:0;
+    left:0;
+    padding-top: 90px;
+    padding-left: 15px;
+    padding-right: 15px;
+    height:100%; 
+    width: 100%; 
+    object-fit: cover; 
+    opacity: 0.1;
+    z-index: 2 !important;
+} 
+
 .design-img {
     height: 40vh;
     padding: 10px;
     overflow: hidden;
-
-
 }
 
 .design-img img { 
@@ -250,17 +306,40 @@ ul .bullet::before {
     width: 100% !important;
 }
 
+
+
 .portfolio-title{
     /* references
     https://stackoverflow.com/questions/42068785/center-align-position-absolute-object-horizontally */
-    opacity: 0;
+    font-family: 'Lato', sans-serif;
     position: absolute;
     left: 50%;
     top: 48%;
     transform: translateX(-50%) translateY(-50%);
     text-align: center;
     font-weight: 100 !important;
+    font-size: 1.1em !important;
+    line-height: 35px;
+    letter-spacing: 1px;
     color: white;
+    z-index: 5;
+}
+
+
+
+.design-project:hover {
+    text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.8);
+}
+
+.design-project{
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    margin-top: 40px;
+    letter-spacing: 2px;
+    font-size: .9em;
+    text-align: center;
+    color: white;
+    transition:.1s ease-out, .15s ease-in;
 }
 
 #myModalContent{

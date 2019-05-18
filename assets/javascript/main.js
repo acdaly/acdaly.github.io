@@ -453,6 +453,22 @@ function onPortfolioImgHover(idString=".portfolio-img"){
         });
 };
 
+function onPortfolioTitleHover(){
+    //Displays project title when hovering on project image in portfolio
+    var imgTitle;
+    $(".design-project").on('mouseenter', function(event){
+        imgTitle = "#" + this.id + "-img";
+        console.log(imgTitle)
+        $(imgTitle).css("z-index", "10");
+        $(imgTitle).fadeTo(200, 1);
+    }).on('mouseleave', function(event){
+            
+            $(imgTitle).fadeTo(200, 0);
+            $(imgTitle).css("z-index", "3");
+            
+        });
+};
+
 
 
 // $(window).on('resize', function(){
@@ -594,10 +610,10 @@ $( document ).ready(function() {
             $('body').addClass('modal-open');
         }
     });
-    fillPortfolioTemplate(featured);
-    fillPortfolioTemplate(design, '#ui-ux-section', "#design-template")
-    onPortfolioImgHover();
-    onPortfolioImgHover(".design-img")
+    // fillPortfolioTemplate(featured);
+    // fillPortfolioTemplate(design, '#ui-ux-section', "#design-template")
+    onPortfolioTitleHover();
+    // onPortfolioImgHover(".design-img")
     $("#connect-icons").on('mouseenter', '#email', function(event){
         $('#email p').fadeTo(500, 1.0);
     });
