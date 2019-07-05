@@ -480,7 +480,6 @@ function onPortfolioTitleHover(){
 
 
 function windowSizeOptions(){
-//when window with is narrow, disable autoscroll. Otherwise, enable autoscroll
   var win = $(this);
   if (win.width() >= 600) {
     $('#fullpage').fullpage({
@@ -600,8 +599,23 @@ function modalFreezePageScrolling(){
     });
 }
 
+function onResize(){
+    var win = $(this);
+    //Desktop
+    if (win.width() >= 600) {
+        $('#fp-nav').css('display', 'block');
+    }
+    //Mobile
+    else{
+        $('#fp-nav').css('display', 'none');
+    }
+}
+
 $( document ).ready(function() {
     windowSizeOptions();
+    $(window).on('resize', function(){
+        onResize();
+    });
     $('.carousel').carousel({interval: 4000});
     navBarConfiguration();
     modalFreezePageScrolling();
