@@ -60,9 +60,26 @@ body{
     position: absolute;
     left: 0; 
     right: 0;
-    bottom: 30px;
     z-index: 10;
     opacity: .5;
+}
+
+/*Desktop*/
+@media all and (min-width: 500px) {
+#arrow {
+
+    bottom: 30px;
+
+}
+}
+
+/*Phone*/
+@media all and (max-width: 500px) {
+#arrow {
+
+    bottom: 70px;
+
+}
 }
 
 

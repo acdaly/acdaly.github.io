@@ -481,8 +481,8 @@ function onPortfolioTitleHover(){
 
 function windowSizeOptions(){
 //when window with is narrow, disable autoscroll. Otherwise, enable autoscroll
-  // var win = $(this);
-  // if (win.width() <= 770) {
+  var win = $(this);
+  if (win.width() >= 600) {
     $('#fullpage').fullpage({
       autoScrolling: false,
       touchSensitivity: 10,
@@ -493,18 +493,18 @@ function windowSizeOptions(){
       anchors: ['home', 'ui-ux','experimental', 'about', 'connect'],
       scrollOverflow: false
     });
-  // }
-  // else {$('#fullpage').fullpage({
-  //   autoScrolling: true,
-  //   touchSensitivity: 10,
-  //   scrollingSpeed: 800,
-  //   navigation: true,
-  //   navigationPosition: 'left',
-  //   navigationTooltips: ['Home', 'Portfolio', 'About', 'Connect'],
-  //   anchors: ['Home-1', 'Portfolio-2', 'About-3', 'Connect-4'],
-  //   scrollOverflow: true
-  //   });
-  // }
+  }
+  else {$('#fullpage').fullpage({
+    autoScrolling: false,
+    touchSensitivity: 10,
+    scrollingSpeed: 800,
+    navigation: false,
+    navigationPosition: 'left',
+    navigationTooltips: ['Home', 'UI/UX Design','Experimental', 'About', 'Connect'],
+    anchors: ['home', 'ui-ux','experimental', 'about', 'connect'],
+    scrollOverflow: false
+    });
+  }
 }
 
 function navBarLoad(clickID){
