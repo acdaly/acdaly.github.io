@@ -632,7 +632,8 @@ function carouselOptions(){
           // options
             cellSelector: '.gallery-cell',
             imagesLoaded: true,
-            prevNextButtons: false
+            prevNextButtons: false,
+            wrapAround: true
         });
         
 
@@ -676,7 +677,7 @@ $( document ).ready(function() {
         $('#email p').fadeTo(500, 1.0);
     });
     $('.modal-link').on('click', function(){
-        $('#myModalContent').load('assets/html/' +this.modal + '.html');
+        $('#myModalContent').load('assets/html/' +this.getAttribute('modal') + '.html');
     })
     //focus searchbar when searching modal is clicked
     $('#theModal').on('shown.bs.modal', function () {
