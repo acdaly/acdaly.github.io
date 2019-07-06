@@ -330,7 +330,7 @@ function fillColor(z, p){
 
     //update background of lower div
     $('#background').css('background-image', 'linear-gradient('+ rgbString +', #121721)');
-
+    $('#home-sketch').css('background', rgbString);
     return p.color(rgbString);
 }
 
@@ -385,9 +385,11 @@ function drawBackgroundGradient(x, y, w, h, color1, color2, p){
 }
 
 function p1Draw(p) {
-    if (width != p.windowWidth || height != p.windowHeight){
+    if (width < p.windowWidth - 50 || width > p.windowWidth + 50 
+        || height > p.windowHeight + 50 || height < p.windowHeight - 50){
         width = p.windowWidth;
         height = p.windowHeight;
+        initialY = p.int(height*(2/3)) - 20;
         var cnv = p.createCanvas(width, height);
         // cnv.parent('home-sketch');
         curves = p.int(width/50);
