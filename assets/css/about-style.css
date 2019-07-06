@@ -30,8 +30,17 @@
 }
 
 #resume{
-        padding-left: 0px;
-    padding-right: 0px
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-top: 35px;
+    z-index: 5;
+
+}
+
+#portfolio-resume{
+    letter-spacing: 2px;
+    font-size:.8em;
+    border-width: 2px;
 }
 
 .right-align{

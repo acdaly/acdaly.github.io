@@ -604,19 +604,63 @@ function onResize(){
     //Desktop
     if (win.width() >= 600) {
         $('#fp-nav').css('display', 'block');
+        $('#ui-ux-section').css('display', 'block');
+        $('#ui-ux-carousel').css('display', 'none');
+        $('#experimental-carousel').css('display', 'none');
+        $('#experimental-section').css('display', 'block');
+        $('#about-placeholder').css('display', 'block');
     }
     //Mobile
     else{
         $('#fp-nav').css('display', 'none');
+        $('#ui-ux-section').css('display', 'none');
+        $('#ui-ux-carousel').css('display', 'block');
+        $('#experimental-carousel').css('display', 'block');
+        $('#experimental-section').css('display', 'none');
+        $('#about-placeholder').css('display', 'none');
     }
 }
 
+function carouselOptions(){
+    var count = 0;
+    $('.carousel-container').each( function( i, container ) {
+        
+        count++;
+
+        var $container = $( container );
+        var carousel = $container.find('.main-gallery').flickity({
+          // options
+            cellSelector: '.gallery-cell',
+            imagesLoaded: true,
+            prevNextButtons: false
+        });
+        
+
+        // Flickity instance
+        carousel.on( 'select.flickity', function() {
+          // set image caption using img's alt
+          var flkty = carousel.data('flickity');
+          var caption = $container.find('.caption');
+          var elem = flkty.selectedElement;
+          caption.text(elem.getAttribute("alt"));
+
+          var description = $container.find('.description');
+            description.text(elem.getAttribute("desc"));
+        });
+
+
+    });
+}
+
 $( document ).ready(function() {
+    carouselOptions();
     windowSizeOptions();
+    onResize();
+
     $(window).on('resize', function(){
         onResize();
     });
-    $('.carousel').carousel({interval: 4000});
+    // $('.carousel').carousel({interval: 4000});
     navBarConfiguration();
     modalFreezePageScrolling();
     $(document).on('hidden.bs.modal', function (event) {
@@ -632,14 +676,14 @@ $( document ).ready(function() {
         $('#email p').fadeTo(500, 1.0);
     });
     $('.modal-link').on('click', function(){
-        $('#myModalContent').load('assets/html/' +this.id + '.html');
+        $('#myModalContent').load('assets/html/' +this.modal + '.html');
     })
     //focus searchbar when searching modal is clicked
     $('#theModal').on('shown.bs.modal', function () {
         $('input').focus();
 
-    })
-       
+    });
+
  });
 
 

@@ -29,15 +29,41 @@
 
 
 
-#connect-icons {
-    padding-top: 15vh;
+.connect-icon {
+    text-align: center;
+}
+
+#connect-icon-group {
+    margin-top: -50px;
+    justify-content: center;
 }
 
 #connect-sketch{
-    margin-left: -1px;
+    margin-left: -16px;
+}
+
+#connect-sketch-holder{
+
     padding: 0;
     position: absolute;
-    bottom: 0;
     width: 100%;
     height: 260px;
+    bottom: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+
+/*Desktop*/
+@media all and (min-width: 500px) {
+    #connect-sketch{
+        bottom: 0;
+    }
+}
+
+/*Phone*/
+@media all and (max-width: 500px) {
+    #connect-sketch{
+        bottom: -100px;
+
+    }
 }

@@ -28,10 +28,17 @@
   <link rel="stylesheet" type="text/css" href="assets/libraries/fullpage/jquery.fullPage.css" />
   <script type="text/javascript" src="assets/libraries/fullpage/jquery.fullPage.js"></script>
 
+  <!-- flickity-->
+  <script src="assets/libraries/flickity-docs/flickity.pkgd.min.js"></script>
+  <link rel="stylesheet" href="assets/libraries/flickity-docs/flickity.css" media="screen">
+
+
+
   <!-- custom JavaScript -->
   <script src="assets/javascript/main.js"></script>
   <script src="assets/javascript/searching.js"></script>
   <!-- custom CSS -->
+    <link href="assets/css/carousel.css" rel="stylesheet">
   <link href="assets/css/sidebar.css" rel="stylesheet">
   <link href="assets/css/home.css" rel="stylesheet">
   <link href="assets/css/portfolio.css" rel="stylesheet">
@@ -82,14 +89,35 @@
           <div id = "home-background" class = "col-sm-8">
             <h1 id = "home-ari">ARI DALY</h1>
             <h3 id = "home-role">UI/UX DESIGNER</h3>
-            
           </div>
         </div>
       </div>
       <div id="background"></div>
       <!--UI/UX PORTFOLIO-->
       <div class="section">
+        <div id="ui-ux-carousel">
+          <div class="carousel-container">
+            <h5 class="carousel-title">UI / UX DESIGN </h5>
+            <!-- Flickity HTML init -->
+            <div  class="main-gallery">
+              <div class="gallery-cell modal-link" modal="shift-modal-modal" data-toggle="modal" data-target=#theModal alt="Swift Shift" desc="A mobile app design for shift swapping in the workplace">
+                <img src="assets/images/design/ui-ux.jpg" >
+              </div>
+              <div class="gallery-cell modal-link" modal="ptf-modal" data-toggle="modal" data-target=#theModal alt="Transit Display" desc="A display for plane, train, and ferry data" >
+                <img src="assets/images/design/ptf1.jpg">
+              </div>
+              <div class="gallery-cell modal-link" modal="foodtruck-modal" data-toggle="modal" data-target=#theModal alt="CMU To Go" desc="A responsive website for food trucks on Carnegie Mellon campus">
+                <img src="assets/images/design/foodtruck-thumbnail1.jpg" >
+              </div>
+            </div>
+            <p class="caption">&nbsp;</p>
+            <p class="description">&nbsp;</p>
+          </div>
+          
+        </div>
          <div class="row">
+
+
 
           <div id = "ui-ux-section" class="col-sm-12 portfolio">
              <div  class="row justify-content-center portfolio-content ">
@@ -109,24 +137,45 @@
                 </div>
               </div>
             <div class="row justify-content-center">
-              <div id="swift-shift" class = "col-md-3 design-project">
-                <a id = "shift-modal" class="modal-link" data-toggle="modal" data-target=#theModal>SWIFT SHIFT</a>
+              <div id="swift-shift" class = "col-3 design-project">
+                <a id = "shift-modal" class="modal-link" modal="shift-modal" data-toggle="modal" data-target=#theModal>SWIFT SHIFT</a>
               </div>
-              <div id="transit-hub" class = "col-md-3 design-project">
-                <a id = "ptf-modal" class="modal-link" data-toggle="modal" data-target=#theModal>TRANSIT HUB</a>
+              <div id="transit-hub" class = "col-3 design-project">
+                <a id = "ptf-modal" class="modal-link" modal="ptf-modal"data-toggle="modal" data-target=#theModal>TRANSIT HUB</a>
               </div>
-              <div id="cmu-to-go" class = "col-md-3 design-project">
-                <a id = "foodtruck-modal" class="modal-link" data-toggle="modal" data-target=#theModal>CMU TO GO</a>
+              <div id="cmu-to-go" class = "col-3 design-project">
+                <a id = "foodtruck-modal" class="modal-link" modal="foodtruck-modal" data-toggle="modal" data-target=#theModal>CMU TO GO</a>
               </div>
             </div>
           </div>
 
-        </div>
+        </div> 
       </div>
  
 
       <!--PORTFOLIO-->
       <div class="section">
+        <div id="experimental-carousel">
+          <div class="carousel-container">
+            <h5 class="carousel-title">INTERACTION DESIGN </h5>
+            <div  class="main-gallery">
+              <div class="gallery-cell modal-link" modal="river-modal" data-toggle="modal" data-target=#theModal alt="teamLab River" desc="A projection prototype in Unity for teamLab’s Borderless Museum">
+                <img src="assets/images/featured/7.jpg">
+              </div>
+              <div class="gallery-cell modal-link" modal="searching-modal" data-toggle="modal" data-target=#theModal alt="Searching" desc="Alternative storytelling through a website's searchbar">
+                <img src="assets/images/featured/searching-phone.png">
+              </div>
+              <div class="gallery-cell modal-link" modal="google-modal" data-toggle="modal" data-target=#theModal alt="Iontank Prototype" desc="Installation prototype for Iontank's client project">
+                <img src="assets/images/featured/tall.jpg">
+              </div>
+            </div>
+            <p class="caption">&nbsp;</p>
+            <p class="description">&nbsp;</p>
+          </div>
+          
+        </div>
+
+
         <div class="row">
           <div id = "experimental-section" class="col-sm-12 portfolio">
             
@@ -137,8 +186,9 @@
                  I’ve created prototypes for 
                  <a class="regular inline underline" href="https://www.teamlab.art/" target="_blank">teamLab</a> and <a class="regular inline underline" href="https://www.iontank.com/" target="_blank">Iontank</a>.
               </h2>
+
+
               <div class = "col-md-10 ui-design-img">
-                    
                   <img class="default-img" src="assets/images/featured/7.jpg">
                   <img id="teamlab-river-img" class="project-img" src="assets/images/featured/7.jpg">
                   <img id="searching-img" class="project-img" src="assets/images/featured/searching.png">
@@ -146,14 +196,14 @@
               </div>
             </div>
             <div class="row justify-content-center">
-              <div id="teamlab-river" class = "col-md-3 design-project">
-                <a id = "river-modal" class="modal-link" data-toggle="modal" data-target=#theModal>TEAMLAB RIVER</a>
+              <div id="teamlab-river" class = "col-3 design-project">
+                <a id = "river-modal" class="modal-link" modal="river-modal" data-toggle="modal" data-target=#theModal>TEAMLAB RIVER</a>
               </div>
-              <div id="searching" class = "col-md-3 design-project">
-                <a id = "searching-modal" class="modal-link" data-toggle="modal" data-target=#theModal>SEARCHING</a>
+              <div id="searching" class = "col-3 design-project">
+                <a id = "searching-modal" class="modal-link" modal="searching-modal" data-toggle="modal" data-target=#theModal>SEARCHING</a>
               </div>
-              <div id="google" class = "col-md-3 design-project">
-                <a id = "google-modal" class="modal-link" data-toggle="modal" data-target=#theModal>LIGHT PROTOTYPE</a>
+              <div id="google" class = "col-3 design-project">
+                <a id = "google-modal" class="modal-link" modal="google-modal" data-toggle="modal" data-target=#theModal>LIGHT PROTOTYPE</a>
               </div>
             </div>
          </div>
@@ -167,6 +217,7 @@
 
       <!--ABOUT-->
       <div class="section">
+
         <div class="row">
 
           <div id="about-section" class="col-sm-12">
@@ -186,19 +237,19 @@
                 As our lives become further entangled with technology, I see UI and UX design as an increasingly important pathway to creating meaningful daily experiences. Through my work I strive to create positive user relationships with technology through intuitive and innovative design. 
                 <br><br>
                 I also enjoy ballroom dance, cooking, and sustainable practices. 
-                <br><br><br>
-                <div class="row">
-                <div id = "linkedin" class="col-sm-2 connect-icon">
+                <br><br>
+                <div id="connect-icon-group" class="row">
+                <div id = "linkedin" class="col-3 connect-icon">
                     <a href="https://www.linkedin.com/in/aridaly/" target="_blank">
                       <img src="assets/images/connect/linkedin.png">
                     </a>
                   </div>
-                  <div id="email" class="col-sm-2 connect-icon">
+                  <div id="email" class="col-3 connect-icon">
                     <a href="mailto:acdaly@andrew.cmu.edu">
                       <img src="assets/images/connect/email.png">
                     </a>
                   </div>
-                  <div id="github" class="col-sm-2 connect-icon">
+                  <div id="github" class="col-3 connect-icon">
                     <a href="https://github.com/acdaly" target="_blank">
                       <img src="assets/images/connect/github.png">
                     </a>
@@ -215,7 +266,9 @@
 
             </div>
             <div class="row">
+                <div id="connect-sketch-holder">
                   <div class ="col-sm-12" id="connect-sketch"></div>
+                </div>
             </div>
             
 
