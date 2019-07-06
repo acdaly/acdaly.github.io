@@ -16,7 +16,7 @@ body { font-family: sans-serif; }
     letter-spacing: 2px;
     padding-bottom: 20px;
     font-weight: 300;
-    margin-top: 10px;
+    margin-top: 30px;
 }
 
 .caption {
@@ -42,7 +42,7 @@ body { font-family: sans-serif; }
 }
 
 .flickity-page-dots {
-  bottom: -100px;
+  bottom: -120px;
 }
 
 .gallery-cell {
