@@ -622,13 +622,14 @@ function onResize(){
 }
 
 function carouselOptions(){
-    var count = 0;
+
+    //setup Flickity Carousel
     $('.carousel-container').each( function( i, container ) {
         
-        count++;
+ 
 
         var $container = $( container );
-        var carousel = $container.find('.main-gallery').flickity({
+        var $carousel = $container.find('.main-gallery').flickity({
           // options
             cellSelector: '.gallery-cell',
             imagesLoaded: true,
@@ -638,9 +639,9 @@ function carouselOptions(){
         
 
         // Flickity instance
-        carousel.on( 'select.flickity', function() {
+        $carousel.on( 'select.flickity', function() {
           // set image caption using img's alt
-          var flkty = carousel.data('flickity');
+          var flkty = $carousel.data('flickity');
           var caption = $container.find('.caption');
           var elem = flkty.selectedElement;
           caption.text(elem.getAttribute("alt"));
@@ -649,8 +650,22 @@ function carouselOptions(){
             description.text(elem.getAttribute("desc"));
         });
 
+        //no vertical scroll on carousel swipe
+
+        $carousel.on( 'dragStart.flickity', function( event, pointer ) {
+        document.ontouchmove = function (e) {
+            e.preventDefault();
+        }
+        });
+        $carousel.on( 'dragEnd.flickity', function( event, pointer ) {
+            document.ontouchmove = function (e) {
+                return true;
+            }
+        });
 
     });
+
+
 }
 
 $( document ).ready(function() {
