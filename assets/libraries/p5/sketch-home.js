@@ -266,13 +266,13 @@ function drawBackgroundGradient(x, y, w, h, color1, color2, p){
 }
 
 function p1Draw(p) {
-    // if (width != p.windowWidth || height != p.windowHeight){
-    //     width = p.windowWidth;
-    //     height = p.windowHeight;
-    //     //var cnv = p.createCanvas(width, height);
-    //     // cnv.parent('home-sketch');
-    //     curves = p.int(width/50);
-    // }
+    if (width != p.windowWidth || height != p.windowHeight){
+        width = p.windowWidth;
+        height = p.windowHeight;
+        var cnv = p.createCanvas(width, height);
+        // cnv.parent('home-sketch');
+        curves = p.int(width/50);
+    }
     
     var oceanTimeIndex = getTimeIndex(twoDColorLists, p);
     var backgroundTimeIndex = getTimeIndex(twoDBackgroundList, p);
@@ -369,7 +369,7 @@ function p2drawOcean(p){
 }
 
 function p2Draw(p) {
-    if (p2width < p.windowWidth - 50 || p2width > p.windowWidth + 50){
+    if (p2width != p.windowWidth){
         p2width = p.windowWidth;
         var cnvTwo = p.createCanvas(p2width, p2height);
         // cnvTwo.parent('p5-sketch');
