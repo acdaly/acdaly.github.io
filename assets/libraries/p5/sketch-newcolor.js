@@ -386,10 +386,10 @@ function drawBackgroundGradient(x, y, w, h, color1, color2, p){
 
 function p1Draw(p) {
     if (width < p.windowWidth - 50 || width > p.windowWidth + 50 
-        || height > p.windowHeight + 50 || height < p.windowHeight - 50){
+        || height > p.windowHeight + 50 || height < p.windowHeight - 80){
         width = p.windowWidth;
         height = p.windowHeight;
-        initialY = p.int(height*(2/3)) - 20;
+        resize(p);
         var cnv = p.createCanvas(width, height);
         // cnv.parent('home-sketch');
         curves = p.int(width/50);
@@ -406,10 +406,21 @@ function p1Draw(p) {
     
 }
 
+function resize(p){
+    //Phone
+    if (width < 500){
+        initialY = p.int(height*(9/12)) - 20;
+    }
+    //Desktop
+    else{
+        initialY = p.int(height*(2/3)) - 20;
+    }
+}
+
 function p1Setup(p) {
     width = p.windowWidth;
     height = p.windowHeight;
-    initialY = p.int(height*(2/3)) - 20;
+    resize(p);
     randomStartTime  = p.random(0, 100000);
     var cnv = p.createCanvas(width, height);
     // cnv.parent('home-sketch');
