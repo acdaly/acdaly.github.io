@@ -47,23 +47,24 @@
     padding: 0;
     position: absolute;
     width: 100%;
-    height: 260px;
+
     bottom: 0;
     overflow: hidden;
     z-index: -1;
+    bottom: 0;
 }
 
 /*Desktop*/
 @media all and (min-width: 500px) {
-    #connect-sketch{
-        bottom: 0;
+    #connect-sketch-holder{
+            height: 260px;
     }
 }
 
 /*Phone*/
 @media all and (max-width: 500px) {
     #connect-sketch{
-        bottom: -100px;
+    height: 160px;
 
     }
 }

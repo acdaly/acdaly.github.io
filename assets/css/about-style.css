@@ -11,7 +11,12 @@
     overflow-x: hidden;
     color: rgba(255, 255, 255, 0.8);
 
+/*    display: flex;
+    flex-direction: column;*/
+
 }
+
+
 
 .connect-icon{
         padding-left: 0px;
@@ -38,7 +43,7 @@
 
 #portfolio-resume{
     letter-spacing: 2px;
-    font-size:.8em;
+    font-size:.7em;
     border-width: 2px;
 }
 
@@ -50,9 +55,7 @@ p{
     margin: 0;
 }
 
-#about-container{
-/*    height: 100%;*/
-}
+
 
 #github{
     width: 27px;
@@ -73,6 +76,11 @@ p{
     display: block;
     margin-right: auto;
     margin-left: auto;
+}
+
+#about-container{
+    align-content: center;
+
 }
 
 #middle{
@@ -98,6 +106,7 @@ p{
     padding-right: 0;
     color: white;
     font-size: 1.1em;
+    padding-top: 20px;
 
 
 
@@ -110,10 +119,17 @@ p{
 
 /*Desktop*/
 @media screen and (min-width: 500px) {
-    #about-section{
+/*    #about-section{
         padding-top: 120px;
+    }*/
+    #about-container{
+        height: calc(100vh - 220px);
     }
 
+    #about-img-container{
+
+        display: block;
+    }
     #about-intro{
         font-weight: 300;
     }
@@ -124,16 +140,23 @@ p{
         font-weight: 100;
     }
     #resume{
-    margin-top: -2px;
+        margin-top: -2px;
     }
 }
 
 /*Phone*/
 @media screen and (max-width: 500px) {
-    #about-section{
+/*    #about-section{
         padding-top: 30px;
     }
+*/
+    #about-container{
+        height: calc(100vh - 120px);
+    }
 
+    #about-img-container{
+        display: none;
+    }
     #about-intro{
         font-weight: 400;
     }
