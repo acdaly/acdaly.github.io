@@ -1,6 +1,6 @@
 #fp-nav ul li a span, .fp-slidesNav ul li a span {
 /* All dots */
-    background-color: black;
+    background-color: transparent;
     border-radius: 50%;
     border: solid 2px white;
 
@@ -20,7 +20,8 @@
     margin: -7px 0 0 -7px;
     background-color: white;
     box-sizing: border-box;
-    box-shadow: 0px 0px 0px 2px #121721;
+/*    box-shadow: 0px 0px 0px 2px #121721;*/
+/*    border: none;*/
 
 }
 
@@ -31,6 +32,7 @@
     background-color: rgba(0, 0, 0, .45);
     border-radius: 25px;
     padding: 5px;
+
 }
 
 #sidebar {
@@ -49,7 +51,7 @@
 .dot {
     height: 12px;
     width: 12px;
-    background-color: black;
+    background-color: transparent;
     border-radius: 50%;
     display: inline-block;
     border: solid 2px white;
