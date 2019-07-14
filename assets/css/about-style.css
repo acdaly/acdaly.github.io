@@ -98,7 +98,7 @@ p{
     padding-right: 0;
     color: white;
     font-size: 1.1em;
-    font-weight: 100;
+
 
 
 }
@@ -114,12 +114,17 @@ p{
         padding-top: 120px;
     }
 
+    #about-intro{
+        font-weight: 300;
+    }
+
     #about-profile{
         padding-left: 20px;
         padding-right: 0px;
+        font-weight: 100;
     }
     #resume{
-    margin-top: 0px;
+    margin-top: -2px;
     }
 }
 
@@ -129,13 +134,18 @@ p{
         padding-top: 30px;
     }
 
+    #about-intro{
+        font-weight: 400;
+    }
 
-  #about-profile{
-    padding-left: 50px;
-    padding-right: 30px;
-  }
+    #about-profile{
+        padding-left: 50px;
+        padding-right: 30px;
+        font-weight: 300;
+    }
+
     #resume{
-        margin-top: 15px;
+        margin-top: 30px;
     }
 
 }
