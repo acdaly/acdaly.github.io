@@ -118,6 +118,9 @@ p{
         padding-left: 20px;
         padding-right: 0px;
     }
+    #resume{
+    margin-top: 0px;
+    }
 }
 
 /*Phone*/
@@ -131,6 +134,10 @@ p{
     padding-left: 50px;
     padding-right: 30px;
   }
+    #resume{
+        margin-top: 15px;
+    }
+
 }
 
 h3{
