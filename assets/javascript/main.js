@@ -599,10 +599,17 @@ function modalFreezePageScrolling(){
     });
 }
 
+//from https://coderwall.com/p/i817wa/one-line-function-to-detect-mobile-devices-with-javascript
+function isMobileDevice() {
+    //console.log((typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1))
+    return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+};
+
 function onResize(){
     var win = $(this);
     //Desktop
-    if (win.width() >= 600) {
+    // if (win.width() >= 600) {
+    if (!isMobileDevice()){
         $('#fp-nav').css('display', 'block');
         $('#ui-ux-section').css('display', 'block');
         $('#ui-ux-carousel').css('display', 'none');
@@ -610,14 +617,18 @@ function onResize(){
         $('#experimental-section').css('display', 'block');
         $('#about-placeholder').css('display', 'block');
     }
-    //Mobile
+    //Touch Screen
     else{
         $('#fp-nav').css('display', 'none');
         $('#ui-ux-section').css('display', 'none');
         $('#ui-ux-carousel').css('display', 'block');
         $('#experimental-carousel').css('display', 'block');
         $('#experimental-section').css('display', 'none');
-        $('#about-placeholder').css('display', 'none');
+        //Mobile
+        if (win.width() <= 600){
+            $('#about-placeholder').css('display', 'none');
+        }
+        
     }
 }
 
