@@ -142,10 +142,16 @@ p{
     #resume{
         margin-top: -2px;
     }
+/*    #about-img{
+
+        width: 300px;
+        height: 300px;
+
+    }*/
 }
 
 /*Phone*/
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 575px) {
 /*    #about-section{
         padding-top: 30px;
     }
@@ -172,6 +178,38 @@ p{
     }
 
 }
+
+
+@media screen and (min-width: 575px)
+and (max-width: 1000px) {
+    #about-img{
+
+        width: 250px;
+        height: 250px;
+
+    }
+    #about-placeholder{
+
+        width: 250px;
+        height: 250px;
+
+    }
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px)
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+    #about-placeholder{
+
+        margin-bottom: 50px;
+
+    }
+}
+
+
 
 h3{
     padding-top: 30px;

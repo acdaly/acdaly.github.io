@@ -27,7 +27,7 @@ body{
     position: absolute;
     height: 250vh;
     width: 100%;
-    background-image: linear-gradient(white, #121721);
+    background-image: linear-gradient(#121721, #121721);
 /*    z-index: -1;*/
 }
 

@@ -609,6 +609,9 @@ function onResize(){
     var win = $(this);
     //Desktop
     // if (win.width() >= 600) {
+
+
+    
     if (!isMobileDevice()){
         $('#fp-nav').css('display', 'block');
         $('#ui-ux-section').css('display', 'block');
@@ -624,11 +627,22 @@ function onResize(){
         $('#ui-ux-carousel').css('display', 'block');
         $('#experimental-carousel').css('display', 'block');
         $('#experimental-section').css('display', 'none');
-        //Mobile
-        if (win.width() <= 600){
-            $('#about-placeholder').css('display', 'none');
-        }
-        
+    
+    }
+    //Remove about image if screen is too narrow
+    if (win.width() <= 750){
+        $('#about-placeholder').css('display', 'none');
+    }
+    else{
+        $('#about-placeholder').css('display', 'block');
+    }
+
+    //if portrait, make about text wide
+    if (win.height() + 220 > win.width()){
+        $( "#about-profile" ).removeClass( "col-md-4" ).addClass( "col-md-8" );
+    }
+    else{
+        $( "#about-profile" ).removeClass( "col-md-8" ).addClass( "col-md-4" );
     }
 }
 
