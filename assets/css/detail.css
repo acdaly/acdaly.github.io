@@ -9,7 +9,7 @@
     z-index: 100; 
 }
 
-#theModal{
+.centering-modal-container{
     display: flex;
     justify-content: center;
 }
