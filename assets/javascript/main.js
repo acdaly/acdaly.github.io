@@ -701,13 +701,10 @@ function carouselOptions(){
         });
 
     });
-
-
 }
 
 $( document ).ready(function() {
 
-    $('body').removeClass('fade-out');
 
     carouselOptions();
     windowSizeOptions();
@@ -739,7 +736,6 @@ $( document ).ready(function() {
             });
         }
     });
-    // $('.carousel').carousel({interval: 4000});
     navBarConfiguration();
     modalFreezePageScrolling();
     $(document).on('hidden.bs.modal', function (event) {
@@ -747,10 +743,7 @@ $( document ).ready(function() {
             $('body').addClass('modal-open');
         }
     });
-    // fillPortfolioTemplate(featured);
-    // fillPortfolioTemplate(design, '#ui-ux-section', "#design-template")
     onPortfolioTitleHover();
-    // onPortfolioImgHover(".design-img")
     $("#connect-icons").on('mouseenter', '#email', function(event){
         $('#email p').fadeTo(500, 1.0);
     });
@@ -762,9 +755,11 @@ $( document ).ready(function() {
         $('input').focus();
 
     });
+    
+    //fade in home screen
+    $('body').removeClass('fade-out');
 
  });
-
 
 
 
