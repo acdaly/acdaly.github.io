@@ -36,7 +36,7 @@ $(document).on("click", function () {
     //sticky detail page header
     $('.modal').scroll(function(){ 
         var pxToTop = $(this).scrollTop();                         
-        if ($(this).scrollTop() > 50) {
+        if ($(this).scrollTop() > 5) {
             $('.modal-header').css({
               'border-radius': '0',
               'box-shadow': '0px 2px 8px rgb(0, 0, 0, 0.5)',
