@@ -1,5 +1,13 @@
 body{
     background-color: #121721;
+    opacity: 1;
+    transition: 1.5s opacity;
+
+}
+
+body.fade-out {
+    opacity: 0;
+    transition: none;
 }
 
 .bold{

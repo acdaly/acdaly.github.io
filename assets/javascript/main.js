@@ -706,6 +706,9 @@ function carouselOptions(){
 }
 
 $( document ).ready(function() {
+
+    $('body').removeClass('fade-out');
+
     carouselOptions();
     windowSizeOptions();
     onResize();
