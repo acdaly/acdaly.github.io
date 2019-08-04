@@ -26,7 +26,44 @@ function modalFreezePageScrolling(){
     });
 }
 
+
+
 $( document ).ready(function() {
+$(document).on("click", function () {
+   var clickedBtnID = $(this); // or var clickedBtnID = this.id
+   console.log('you clicked on button #' + clickedBtnID);
+});
+    //sticky detail page header
+    $('.modal').scroll(function(){ 
+        var pxToTop = $(this).scrollTop();                         
+        if ($(this).scrollTop() > 50) {
+            $('.modal-header').css({
+              'border-radius': '0',
+              'box-shadow': '0px 2px 8px rgb(0, 0, 0, 0.5)',
+              'background-color': '#191C22',
+              'transition': '0.2s',
+              'opacity': '1'
+
+              });
+
+        } else {
+            $('.modal-header').css({
+              'border-radius': '20px 20px 0px 0px',
+              'box-shadow': 'none',
+              'background-color': '#121924',
+              'transition': '0.2s'
+
+            });
+        }
+    });
+    $('.x-hover').on('click', function(){
+      console.log("x clicked")
+      // modal('hide')
+    } );
+    $('.x-btn').on('click', function(){
+      console.log("x clicked")
+      // modal('hide')
+    } );
     modalFreezePageScrolling();
     $(document).on('hidden.bs.modal', function (event) {
         if ($('.modal:visible').length) {

@@ -580,22 +580,34 @@ function navBarConfiguration(){
 
 function modalFreezePageScrolling(){
     //disable main page scrolling when modal is open
-  $(".modal").on("hidden.bs.modal", function () {
-      $.fn.fullpage.setAllowScrolling(true);
-      $.fn.fullpage.setKeyboardScrolling(true);
+    $(".modal").on("hidden.bs.modal", function () {
+        $.fn.fullpage.setAllowScrolling(true);
+        $.fn.fullpage.setKeyboardScrolling(true);
       
-      $("body").removeClass("modal-open")
+        $("body").removeClass("modal-open")
+
+        //unblur nav
+        $("#fp-nav").css({
+            "filter": "none",
+            "transition": "0.3s"
+        });
+      
 
     });
 
     $(".modal").on("show.bs.modal", function () {
-      $.fn.fullpage.setAllowScrolling(false);
-      $.fn.fullpage.setKeyboardScrolling(false);
+        $.fn.fullpage.setAllowScrolling(false);
+        $.fn.fullpage.setKeyboardScrolling(false);
 
       
-      $("body").addClass("modal-open");
-      $('input').focus();
+        $("body").addClass("modal-open");
+        $('input').focus();
 
+        //blur nav
+        $("#fp-nav").css({
+            "filter": "blur(2px)",
+            "transition": "0.3s"
+        });
     });
 }
 
@@ -700,6 +712,14 @@ $( document ).ready(function() {
 
     $(window).on('resize', function(){
         onResize();
+    });
+    //sticky detail page header
+    $(window).scroll(function(){                          
+        if ($('#modal-header').scrollTop() > 200) {
+            console.log("header at top!")
+        } else {
+            console.log("not at top")
+        }
     });
     // $('.carousel').carousel({interval: 4000});
     navBarConfiguration();
