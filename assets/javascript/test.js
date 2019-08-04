@@ -56,14 +56,7 @@ $(document).on("click", function () {
             });
         }
     });
-    $('.x-hover').on('click', function(){
-      console.log("x clicked")
-      // modal('hide')
-    } );
-    $('.x-btn').on('click', function(){
-      console.log("x clicked")
-      // modal('hide')
-    } );
+
     modalFreezePageScrolling();
     $(document).on('hidden.bs.modal', function (event) {
         if ($('.modal:visible').length) {

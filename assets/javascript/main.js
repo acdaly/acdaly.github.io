@@ -714,11 +714,26 @@ $( document ).ready(function() {
         onResize();
     });
     //sticky detail page header
-    $(window).scroll(function(){                          
-        if ($('#modal-header').scrollTop() > 200) {
-            console.log("header at top!")
+    $('.modal').scroll(function(){ 
+        var pxToTop = $(this).scrollTop();                         
+        if ($(this).scrollTop() > 50) {
+            $('.modal-header').css({
+              'border-radius': '0',
+              'box-shadow': '0px 2px 8px rgb(0, 0, 0, 0.5)',
+              'background-color': '#191C22',
+              'transition': '0.2s',
+              'opacity': '1'
+
+              });
+
         } else {
-            console.log("not at top")
+            $('.modal-header').css({
+              'border-radius': '20px 20px 0px 0px',
+              'box-shadow': 'none',
+              'background-color': '#121924',
+              'transition': '0.2s'
+
+            });
         }
     });
     // $('.carousel').carousel({interval: 4000});
