@@ -458,7 +458,6 @@ function onPortfolioTitleHover(){
     var imgTitle;
     $(".design-project").on('mouseenter', function(event){
         imgTitle = "#" + this.id + "-img";
-        console.log(imgTitle)
         $(imgTitle).css("z-index", "10");
         $(imgTitle).fadeTo(200, 1);
     }).on('mouseleave', function(event){
