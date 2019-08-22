@@ -19,19 +19,19 @@ body { font-family: sans-serif; }
 
 #ui-ux-desktop .is-selected.gallery-cell, #experimental-desktop .is-selected.gallery-cell{
   height: 70vh !important;
-  transition: 0.4s;
+  transition: 0.2s;
 
 }
 
 #ui-ux-desktop .is-selected.gallery-cell img, #experimental-desktop .is-selected.gallery-cell img{
     filter: blur(0px);
     opacity: 1;
-    transition: 0.5s;
+/*    transition: 0.5s;*/
   }
 
   
 #ui-ux-desktop .gallery-cell img:hover{
-/*    filter: none;*/
+    filter: blur(0px);
     opacity: 0.85;
     transition: ease-in 0.2s;
 }
