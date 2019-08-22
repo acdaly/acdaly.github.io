@@ -25,15 +25,20 @@ body { font-family: sans-serif; }
 
 #ui-ux-desktop .is-selected.gallery-cell img, #experimental-desktop .is-selected.gallery-cell img{
     filter: blur(0px);
-    opacity: 1;
+    opacity: 0.95;
 /*    transition: 0.5s;*/
   }
 
+
+#ui-ux-desktop .is-selected.gallery-cell img:hover, #experimental-desktop .is-selected.gallery-cell img:hover{
+    opacity: 1 !important;
+
+  }
   
 #ui-ux-desktop .gallery-cell img:hover{
     filter: blur(0px);
     opacity: 0.85;
-    transition: ease-in 0.2s;
+    transition: 0.2s;
 }
 
 #ui-ux-desktop .gallery-cell:hover{
