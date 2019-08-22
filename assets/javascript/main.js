@@ -672,8 +672,6 @@ function carouselOptions(){
     $('.carousel-container').each( function( i, container ) {
         
         var $container = $( container );
-        console.log($container);
-        console.log($container.find('.main-gallery').hasClass('desktop'));
 
 
         // var $carousel = $container.find('#ui-ux-mobile.main-gallery').flickity({
@@ -707,18 +705,14 @@ function carouselOptions(){
         //change selected modal if left or right is clicked
         $('.modal-link').on('click', function(){
             if ($(this).hasClass('is-selected')){
-                console.log("yay")
                 $('#theModal').modal('show');
                 $('#myModalContent').load('assets/html/' +this.getAttribute('modal') + '.html');
              }
              else{
                 var index = $(this).index();
-                console.log(index);
                 setTimeout(function() {
-
-                    
                     $carousel.flickity( 'select', index );
-                }, 100);
+                }, 5);
              }
 
              
