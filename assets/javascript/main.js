@@ -686,6 +686,7 @@ function carouselOptions(){
               // options
                 cellSelector: '.gallery-cell',
                 imagesLoaded: true,
+                lazyLoad: false,
                 prevNextButtons: false,
                 wrapAround: false
             });
