@@ -594,7 +594,9 @@ function modalFreezePageScrolling(){
 
     });
 
-    $(".modal").on("show.bs.modal", function () {
+    $(".modal").on("show.bs.modal", function (event) {
+
+
         $.fn.fullpage.setAllowScrolling(false);
         $.fn.fullpage.setKeyboardScrolling(false);
 
@@ -625,19 +627,26 @@ function onResize(){
     
     if (!isMobileDevice()){
         $('#fp-nav').css('display', 'block');
-        $('#ui-ux-section').css('display', 'block');
-        $('#ui-ux-carousel').css('display', 'none');
-        $('#experimental-carousel').css('display', 'none');
-        $('#experimental-section').css('display', 'block');
+
+        $('#ui-ux-desktop').css('display', 'block');
+        $('#ui-ux-mobile').css('display', 'none');
+
+        $('#experimental-mobile').css('display', 'none');
+        $('#experimental-desktop').css('display', 'block');
+
         $('#about-placeholder').css('display', 'block');
     }
     //Touch Screen
     else{
         $('#fp-nav').css('display', 'none');
-        $('#ui-ux-section').css('display', 'none');
-        $('#ui-ux-carousel').css('display', 'block');
-        $('#experimental-carousel').css('display', 'block');
-        $('#experimental-section').css('display', 'none');
+
+        $('#ui-ux-desktop').css('display', 'none');
+        $('#ui-ux-mobile').css('display', 'block');
+
+        $('#experimental-mobile').css('display', 'block');
+        $('#experimental-desktop').css('display', 'none');
+
+        $('#about-profile').css('font-weight', '300')
     
     }
     //Remove about image if screen is too narrow
@@ -662,20 +671,71 @@ function carouselOptions(){
     //setup Flickity Carousel
     $('.carousel-container').each( function( i, container ) {
         
- 
-
         var $container = $( container );
-        var $carousel = $container.find('.main-gallery').flickity({
-          // options
-            cellSelector: '.gallery-cell',
-            imagesLoaded: true,
-            prevNextButtons: false,
-            wrapAround: true
-        });
-        
+        console.log($container);
+        console.log($container.find('.main-gallery').hasClass('desktop'));
+
+
+        // var $carousel = $container.find('#ui-ux-mobile.main-gallery').flickity({
+        //   // options
+        //     cellSelector: '.gallery-cell',
+        //     imagesLoaded: true,
+        //     prevNextButtons: false,
+        //     wrapAround: true
+        // });
+        if($container.find('.main-gallery').hasClass('desktop')){
+            var $carousel = $container.find('.main-gallery').flickity({
+              // options
+                cellSelector: '.gallery-cell',
+                imagesLoaded: true,
+                prevNextButtons: false,
+                wrapAround: false
+            });
+
+        }
+        else{
+            var $carousel = $container.find('.main-gallery').flickity({
+              // options
+                cellSelector: '.gallery-cell',
+                imagesLoaded: true,
+                prevNextButtons: false,
+                wrapAround: true
+            });
+        }
+
+        //Load modal if center carousel is clicked, 
+        //change selected modal if left or right is clicked
+        $('.modal-link').on('click', function(){
+            if ($(this).hasClass('is-selected')){
+                console.log("yay")
+                $('#theModal').modal('show');
+                $('#myModalContent').load('assets/html/' +this.getAttribute('modal') + '.html');
+             }
+             else{
+                var index = $(this).index();
+                console.log(index);
+                setTimeout(function() {
+
+                    
+                    $carousel.flickity( 'select', index );
+                }, 100);
+             }
+
+             
+         });
+
+            
+            
+
 
         // Flickity instance
-        $carousel.on( 'select.flickity', function() {
+        $carousel.on( 'select.flickity', function(event, index) {
+//data-target=#theModal
+            //add modal click options
+            
+            
+
+
           // set image caption using img's alt
           var flkty = $carousel.data('flickity');
           var caption = $container.find('.caption');
@@ -742,15 +802,19 @@ $( document ).ready(function() {
             $('body').addClass('modal-open');
         }
     });
+
+        // $('modal-link').on('click', function(event){
+        //     event.stopPropagation();
+        // });
+
     onPortfolioTitleHover();
     $("#connect-icons").on('mouseenter', '#email', function(event){
         $('#email p').fadeTo(500, 1.0);
     });
-    $('.modal-link').on('click', function(){
-        $('#myModalContent').load('assets/html/' +this.getAttribute('modal') + '.html');
-    })
+
     //focus searchbar when searching modal is clicked
     $('#theModal').on('shown.bs.modal', function () {
+
         $('input').focus();
 
     });

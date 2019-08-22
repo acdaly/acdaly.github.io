@@ -7,10 +7,40 @@
 
 body { font-family: sans-serif; }
 
-
-
-.gallery {
+#ui-ux-desktop .flickity-slider, #experimental-desktop .flickity-slider{
+  display: flex;
+  align-items: center;
 }
+
+
+#ui-ux-desktop .carousel-title, #experimental-desktop .carousel-title{
+  padding-bottom: 30px;
+}
+
+#ui-ux-desktop .is-selected.gallery-cell, #experimental-desktop .is-selected.gallery-cell{
+  height: 70vh;
+  transition: 0.4s;
+
+}
+
+#ui-ux-desktop .is-selected.gallery-cell img, #experimental-desktop .is-selected.gallery-cell img{
+    filter: none;
+    opacity: 1;
+    transition: 0.5s;
+  }
+
+  
+#ui-ux-desktop .gallery-cell img:hover{
+    filter: none;
+    opacity: 0.85;
+    transition: ease-in 0.2s;
+}
+
+#ui-ux-desktop .gallery-cell:hover{
+
+  transition: ease-in 0.2s;
+}
+
 
 .carousel-title{
     text-align: center;
@@ -18,7 +48,7 @@ body { font-family: sans-serif; }
     letter-spacing: 2px;
     padding-bottom: 20px;
     font-weight: 300;
-    margin-top: 30px;
+/*    margin-top: 30px;*/
 }
 
 .caption {
@@ -43,16 +73,23 @@ body { font-family: sans-serif; }
   height: 40px;
 }
 
-.flickity-page-dots {
+#ui-ux-desktop .flickity-page-dots, #experimental-desktop .flickity-page-dots{
+/*  padding-top: 5px;*/
+  position: relative;
+}
+
+#ui-ux-mobile .flickity-page-dots, #experimental-mobile .flickity-page-dots {
   bottom: -120px;
 }
 
 .gallery-cell {
   width: 100%;
-  height: 200px;
+/*  height: 200px;*/
   margin-right: 10px;
   background: transparent;
   counter-increment: gallery-cell;
+/*    box-shadow: 0 0 20px 20px white inset;*/
+
 }
 
 /* cell number */
@@ -72,7 +109,16 @@ body { font-family: sans-serif; }
 
 }
 
-.gallery-cell img {
+#ui-ux-desktop .gallery-cell img, #experimental-desktop .gallery-cell img{
+  display: block;
+  max-width: 100%;
+  filter: blur(2px);
+  opacity: 0.5;
+
+
+}
+
+#ui-ux-mobile .gallery-cell img, #experimental-mobile .gallery-cell img{
   display: block;
   max-height: 100%;
 

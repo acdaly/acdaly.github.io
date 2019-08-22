@@ -331,6 +331,8 @@ function fillColor(z, p){
     //update background of lower div
     $('#background').css('background-image', 'linear-gradient('+ rgbString +', #121721)');
     $('#home-sketch').css('background', rgbString);
+    // $('.gallery-cell').css('box-shadow', '0 0 50px 5px black inset');
+    // $('.gallery-cell').css('box-shadow', '0 0 20px 10px ' + rgbString + ' inset');
     return p.color(rgbString);
 }
 

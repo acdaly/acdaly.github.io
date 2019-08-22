@@ -100,27 +100,56 @@
       <br><br><br>
       <!--UI/UX PORTFOLIO-->
       <div class="section">
-        <div id="ui-ux-carousel">
+
+
+        <!-- DESKTOP PORTFOLIO -->
+        <div id="ui-ux-desktop">
           <div class="carousel-container">
             <h5 class="carousel-title">UI / UX DESIGN </h5>
             <!-- Flickity HTML init -->
-            <div  class="main-gallery">
+            <div  class="main-gallery desktop">
+ 
+              <div class="gallery-cell modal-link" data-selector=".cell0"  modal="learnsphere-modal" data-toggle="modal"  alt="LearnSphere" desc="A display for plane, train, and ferry data" >
+                <img src="assets/images/design/learnsphere-thumbnail.jpg">
+              </div>
+              <div class="gallery-cell modal-link" data-selector=".cell1"  modal="saanka-modal" data-toggle="modal"  alt="Saan Ka" desc="A responsive website for food trucks on Carnegie Mellon campus">
+                <img src="assets/images/design/saan-ka-thumbnail.jpg" >
+              </div>
+              <div class="gallery-cell modal-link" data-selector=".cell2" modal="shift-modal" data-toggle="modal" alt="Swift Shift" desc="A mobile app design for shift swapping in the workplace">
+                <img src="assets/images/design/swift_shift.jpg" >
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+        <!-- PHONE PORTFOLIO -->
+        <div id="ui-ux-mobile">
+          <div class="carousel-container">
+            <h5 class="carousel-title">UI / UX DESIGN </h5>
+            <!-- Flickity HTML init -->
+
+
+            <div  class="main-gallery mobile">
+              <div class="gallery-cell modal-link" modal="learnsphere-modal" data-toggle="modal" data-target=#theModal alt="LearnSphere" desc="A new website for PL&sup2; and redesigns for educational research web apps">
+                <img src="assets/images/design/learnsphere-mobile.jpg">
+              </div>
+              <div class="gallery-cell modal-link" modal="saanka-modal" data-toggle="modal" data-target=#theModal alt="Saan Ka" desc="A mobile app design for crowdsourcing the effects of the Manila traffic crisis" >
+                <img src="assets/images/design/saan-ka-mobile.jpg" >
+              </div>
               <div class="gallery-cell modal-link" modal="shift-modal" data-toggle="modal" data-target=#theModal alt="Swift Shift" desc="A mobile app design for shift swapping in the workplace">
                 <img src="assets/images/design/ui-ux.jpg" >
-              </div>
-              <div class="gallery-cell modal-link" modal="ptf-modal" data-toggle="modal" data-target=#theModal alt="Transit Display" desc="A display for plane, train, and ferry data" >
-                <img src="assets/images/design/ptf1.jpg">
-              </div>
-              <div class="gallery-cell modal-link" modal="foodtruck-modal" data-toggle="modal" data-target=#theModal alt="CMU To Go" desc="A responsive website for food trucks on Carnegie Mellon campus">
-                <img src="assets/images/design/foodtruck-thumbnail1.jpg" >
               </div>
             </div>
             <p class="caption">&nbsp;</p>
             <p class="description">&nbsp;</p>
           </div>
-          
         </div>
-         <div class="row">
+
+
+
+         <!-- <div class="row">
 
 
 
@@ -152,19 +181,41 @@
                 <a id = "shift-modal" class="modal-link" modal="shift-modal" data-toggle="modal" data-target=#theModal>SWIFT SHIFT</a>
               </div>
 
-            </div>
-          </div>
+            </div> 
+          </div> 
 
-        </div> 
+        </div> -->
       </div>
  
       <br><br><br>
-      <!--PORTFOLIO-->
+      
       <div class="section">
-        <div id="experimental-carousel">
+        <!--DESKTOP EXPERIMENTAL PORTFOLIO-->
+        <div id="experimental-desktop">
+          <div class="carousel-container">
+
+            <h5 class="carousel-title">INTERACTION DESIGN </h5>
+            <div  class="main-gallery desktop">
+
+              <div class="gallery-cell modal-link cell1" data-selector=".cell1" modal="river-modal" data-toggle="modal" alt="teamLab River" desc="A projection prototype in Unity for teamLab’s Borderless Museum">
+                <img src="assets/images/featured/7.jpg">
+              </div>
+              <div class="gallery-cell modal-link cell2" data-selector=".cell2" modal="searching-modal" data-toggle="modal"  alt="Searching" desc="Alternative storytelling through a website's searchbar">
+                <img src="assets/images/featured/searching-phone.png">
+              </div>
+              <div class="gallery-cell modal-link cell3"  data-selector=".cell3" modal="google-modal" data-toggle="modal"  alt="Iontank Prototype" desc="Installation prototype for Iontank's client project">
+                <img src="assets/images/featured/tall.jpg">
+              </div>
+            </div>
+          </div>
+          
+        </div>
+
+        <!--PHONE EXPERIMENTAL PORTFOLIO-->
+        <div id="experimental-mobile">
           <div class="carousel-container">
             <h5 class="carousel-title">INTERACTION DESIGN </h5>
-            <div  class="main-gallery">
+            <div  class="main-gallery mobile">
               <div class="gallery-cell modal-link" modal="river-modal" data-toggle="modal" data-target=#theModal alt="teamLab River" desc="A projection prototype in Unity for teamLab’s Borderless Museum">
                 <img src="assets/images/featured/7.jpg">
               </div>
@@ -182,7 +233,7 @@
         </div>
 
 
-        <div class="row">
+<!--         <div class="row">
           <div id = "experimental-section" class="col-sm-12 portfolio">
             
             <div class="row justify-content-center portfolio-content">
@@ -214,7 +265,7 @@
             </div>
          </div>
 
-      </div>
+      </div> -->
     </div>
 
 
