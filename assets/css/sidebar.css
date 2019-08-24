@@ -115,7 +115,7 @@
 }
 
 #resume-nav:hover{
-    background-color: white;
+    background-color: white !important;
     transition: 0.2s;
 }
 
