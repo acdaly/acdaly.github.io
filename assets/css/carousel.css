@@ -162,7 +162,7 @@ transform: translateZ(0);
 
 .dot:hover {
   opacity: 1;
-  transition: 0.2s;
+  transition: 0.15s;
 }
 
 .dot.is-selected {
