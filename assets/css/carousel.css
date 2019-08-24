@@ -137,5 +137,39 @@ transform: translateZ(0);
 #ui-ux-mobile .gallery-cell img, #experimental-mobile .gallery-cell img{
   display: block;
   max-height: 100%;
-
+  opacity: 0.5;
 }
+
+/*#ui-ux-desktop .is-selected.gallery-cell, #experimental-desktop .is-selected.gallery-cell{
+  height: 70vh !important;
+  transition: 0.2s;
+
+}*/
+
+#ui-ux-mobile .is-selected.gallery-cell img, #experimental-mobile .is-selected.gallery-cell img{
+    opacity: 1;
+    transition: 0.3s;
+  }
+
+.dot {
+  height: 12px;
+  width: 12px;
+  background-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  border: solid 2px white;
+}
+
+.dot:hover {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+.dot.is-selected {
+/*  height: 12px;
+  width: 12px;*/
+  background-color: white;
+}
+
+
+

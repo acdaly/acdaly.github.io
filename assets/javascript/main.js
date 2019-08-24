@@ -485,11 +485,38 @@ function windowSizeOptions(){
       autoScrolling: false,
       touchSensitivity: 10,
       scrollingSpeed: 800,
-      navigation: true,
+      navigation: false,
       navigationPosition: 'left',
       navigationTooltips: ['Home', 'UI/UX Design','Experimental', 'About', 'Connect'],
       anchors: ['home', 'ui-ux','experimental', 'about', 'connect'],
-      scrollOverflow: false
+      scrollOverflow: false,
+      onLeave: function(origin, destination, direction){
+            if(destination==1){
+                $("#ui-ux-nav").css("font-weight", "300");
+                $("#experimental-nav").css("font-weight", "300");
+                $("#about-nav").css("font-weight", "300");
+                $("#resume-nav").css("background-color", "transparent");
+            }
+            if(destination==2){
+                $("#ui-ux-nav").css("font-weight", "600");
+                $("#experimental-nav").css("font-weight", "300");
+                $("#about-nav").css("font-weight", "300");
+                $("#resume-nav").css("background-color", "transparent");
+            }
+            if(destination==3){
+                $("#ui-ux-nav").css("font-weight", "300");
+                $("#experimental-nav").css("font-weight", "600");
+                $("#about-nav").css("font-weight", "300");
+                $("#resume-nav").css("background-color", "transparent");
+            }
+            if(destination==4){
+                $("#ui-ux-nav").css("font-weight", "300");
+                $("#experimental-nav").css("font-weight", "300");
+                $("#about-nav").css("font-weight", "600");
+                $("#resume-nav").css("background-color", "#121721");
+            }
+        }
+
     });
   }
   else {$('#fullpage').fullpage({
@@ -500,7 +527,10 @@ function windowSizeOptions(){
     navigationPosition: 'left',
     navigationTooltips: ['Home', 'UI/UX Design','Experimental', 'About', 'Connect'],
     anchors: ['home', 'ui-ux','experimental', 'about', 'connect'],
-    scrollOverflow: false
+    scrollOverflow: false,
+    onLeave: function(origin, destination, direction){
+            console.log(destination)
+        }
     });
   }
 }
@@ -757,9 +787,13 @@ function carouselOptions(){
     });
 }
 
+// function navBarSelection(){
+//     console.log(fullpage_api.getActiveSection());
+// }
+
 $( document ).ready(function() {
 
-
+    // navBarSelection();
     carouselOptions();
     windowSizeOptions();
     onResize();
