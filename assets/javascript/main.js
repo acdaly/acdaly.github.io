@@ -75,9 +75,9 @@ function modalFreezePageScrolling(){
         $("body").removeClass("modal-open")
 
         //unblur nav
-        $("#fp-nav").css({
-            "filter": "none",
-            "transition": "0.3s"
+        $("nav").css({
+            "filter": "blur(0px)",
+            "transition": "0.2s"
         });
       
 
@@ -94,9 +94,9 @@ function modalFreezePageScrolling(){
         $('input').focus();
 
         //blur nav
-        $("#fp-nav").css({
+        $("nav").css({
             "filter": "blur(2px)",
-            "transition": "0.3s"
+            "transition": "0.2s"
         });
     });
 }
