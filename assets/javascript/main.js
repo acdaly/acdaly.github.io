@@ -1,6 +1,3 @@
-
-
-
 function windowSizeOptions(){
   var win = $(this);
   if (win.width() >= 600) {
