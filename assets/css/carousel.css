@@ -11,6 +11,10 @@ body { font-family: sans-serif; }
   cursor: pointer;
 }
 
+.flickity-enabled.is-draggable .flickity-viewport{
+  cursor: default !important;
+}
+
 #ui-ux-desktop .flickity-slider, #experimental-desktop .flickity-slider{
   display: flex;
   align-items: center;
