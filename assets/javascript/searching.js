@@ -38,6 +38,7 @@ function updateText(){
             return;
         }
         if (e.key != questions[qIndex][charIndex]){
+            console.log("wrong key")
             e.preventDefault();
         }
         //question typed
