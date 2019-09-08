@@ -44,7 +44,7 @@ body { font-family: sans-serif; }
 
   }
   
-#ui-ux-desktop .gallery-cell img:hover{
+#ui-ux-desktop .gallery-cell img:hover, #experimental-desktop .gallery-cell img:hover{
     filter: blur(0px);
     opacity: 0.85;
     transition: 0.2s;
