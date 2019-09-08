@@ -193,16 +193,24 @@ function carouselOptions(){
 
         //Load modal if center carousel is clicked, 
         //change selected modal if left or right is clicked
-        $('.modal-link').on('click', function(){
+        $('.modal-link').on('click', function(e){
             if ($(this).hasClass('is-selected')){
-                $('#theModal').modal('show');
-                $('#myModalContent').load('assets/html/' +this.getAttribute('modal') + '.html');
+                if(!$(this).hasClass('no-modal')){ //if it's searching, don't open modal
+                    $('#theModal').modal('show');
+                    $('#myModalContent').load('assets/html/' +this.getAttribute('modal') + '.html');
+                }
+                
              }
              else{
+                //for searching, don't open new tab before the thumbnail is selected
+                if ($(this).hasClass('no-modal')){
+                    e.preventDefault();
+                }
                 var index = $(this).index();
                 setTimeout(function() {
                     $carousel.flickity( 'select', index );
                 }, 5);
+                 
              }
 
              
