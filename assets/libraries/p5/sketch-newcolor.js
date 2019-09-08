@@ -387,9 +387,10 @@ function drawBackgroundGradient(x, y, w, h, color1, color2, p){
 }
 
 function p1Draw(p) {
-    if (width < p.windowWidth - 50 || width > p.windowWidth + 50 
+    //(p.windowWidth+50) accounts for the extra canvas for when resizing bigger
+    if (width < (p.windowWidth+50) - 50 || width > (p.windowWidth+50) + 50 
         || height > p.windowHeight + 50 || height < p.windowHeight - 80){
-        width = p.windowWidth;
+        width = p.windowWidth + 50;
         height = p.windowHeight;
         resize(p);
         var cnv = p.createCanvas(width, height);
@@ -420,7 +421,7 @@ function resize(p){
 }
 
 function p1Setup(p) {
-    width = p.windowWidth;
+    width = p.windowWidth + 50;
     height = p.windowHeight;
     resize(p);
     randomStartTime  = p.random(0, 100000);
