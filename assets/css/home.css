@@ -16,7 +16,6 @@ body.fade-out {
 }
 .regular{
     font-weight: 300;
-    color: white;
 }
 
 .thin{
@@ -35,7 +34,15 @@ body.fade-out {
     position: absolute;
     height: 250vh;
     width: 100%;
-    background-image: linear-gradient(#121721, #121721);
+/*    background-image: linear-gradient(#121721, #121721);*/
+/*    z-index: -1;*/
+}
+
+#black-gradient{
+    position: absolute;
+    height: 251vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(19, 23, 33, 0), rgba(19, 23, 33, 1));
 /*    z-index: -1;*/
 }
 

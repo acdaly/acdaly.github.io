@@ -6,6 +6,7 @@ var t=[];
 var oldTime = 0;
 var initialY;
 var randomStartTime = 0;
+var rgbString;
 
 function RGB(r, g, b) {
     this.r = r;
@@ -324,12 +325,13 @@ function fillColor(z, p){
     //     hsvTwean.v -= 0.2;
     //     newTwean = HSVtoRGB(hsvTwean);
     // }
-    var rgbString='rgb('+p.int(newTwean.r)+','+p.int(newTwean.g)+','+p.int(newTwean.b) +')';
+    rgbString='rgb('+p.int(newTwean.r)+','+p.int(newTwean.g)+','+p.int(newTwean.b) +')';
 
 
 
     //update background of lower div
-    $('#background').css('background-image', 'linear-gradient('+ rgbString +', #121721)');
+    //$('#background').css('background-image', 'linear-gradient('+ rgbString +', #121721)');
+    $('#background').css('background', rgbString);
     $('#home-sketch').css('background', rgbString);
     // $('.gallery-cell').css('box-shadow', '0 0 50px 5px black inset');
     // $('.gallery-cell').css('box-shadow', '0 0 20px 10px ' + rgbString + ' inset');

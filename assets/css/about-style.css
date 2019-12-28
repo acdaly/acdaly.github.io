@@ -70,6 +70,10 @@ p{
 
 }
 
+#about-intro{
+    font-weight: 400;
+}
+
 #about-placeholder{
     border-style: solid;
     border-width: 2px;
@@ -134,14 +138,10 @@ p{
 
         display: block;
     }
-    #about-intro{
-        font-weight: 300;
-    }
 
     #about-profile{
         padding-left: 20px;
         padding-right: 0px;
-        font-weight: 100;
     }
     #resume{
         margin-top: -2px;
@@ -167,14 +167,10 @@ p{
     #about-img-container{
         display: none;
     }
-    #about-intro{
-        font-weight: 400;
-    }
 
     #about-profile{
         padding-left: 50px;
         padding-right: 30px;
-        font-weight: 300;
     }
 
     #resume{

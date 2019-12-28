@@ -83,7 +83,14 @@ a{
     }
 }
 
+.black{
+    font-weight: 700;
+    color: white;
+}
 
+.regular {
+    font-weight: 300;
+}
 
 .close{
     color: white;
@@ -145,6 +152,7 @@ a{
 /*    border-color:  rgba(19, 23, 33, 0.5) !important;
     box-shadow: 0px 0px !important;*/
 }
+
 
 
 #portfolio nav {
@@ -327,10 +335,10 @@ ul .bullet::before {
 
 
 
-.design-project:hover {
+/*.design-project:hover {
     text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.8);
-}
-
+}*/
+/*
 .design-project{
     font-family: 'Lato', sans-serif;
     font-weight: 300;
@@ -340,12 +348,13 @@ ul .bullet::before {
     text-align: center;
     color: white;
     transition:.1s ease-out, .15s ease-in;
-}
+}*/
 
 #myModalContent{
-    background-color: #121721 !important;
+    background-color: #0C1119 !important;
     color: rgba(255, 255, 255, 0.9);
 }
+
 
 .back{
     padding-top: 30px;
