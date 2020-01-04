@@ -1,5 +1,46 @@
-<!-- Google Modal -->
+<!DOCTYPE html>
+<html>
 
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel="stylesheet">
+
+
+  <!-- flickity-->
+  <script src="assets/libraries/flickity-docs/flickity.pkgd.min.js"></script>
+  <link rel="stylesheet" href="assets/libraries/flickity-docs/flickity.css" media="screen">
+  <!-- custom CSS -->
+  <link href="assets/css/carousel.css" rel="stylesheet">
+  <link href="assets/css/detail.css" rel="stylesheet">
+    <link href="assets/css/portfolio.css" rel="stylesheet">
+  <link href="assets/css/home.css" rel="stylesheet">
+
+  <!-- custom JavaScript -->
+  <script src="assets/javascript/test.js"></script>
+  <link rel="stylesheet" type="text/css" href="assets/css/searching.css">
+
+</head>
+
+<body>
+       
+
+
+  <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary modal-link" data-toggle="modal" data-target="#searchingModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade main-modal" id="searchingModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div id="myModalContent" class="modal-content">
+
+
+
+  
   <div class="modal-header">
     <h5 class="modal-title" id="exampleModalLongTitle">
      Light Prototype
@@ -230,3 +271,73 @@
       Return to Portfolio
     </button>
   </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade z-index-2000 " id="img-lightbox" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <button type="button" class="close nested-close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+
+      <div class="modal-body row padding-0">
+   <img  data-toggle="modal" data-target="#img-lightbox" class="col-md-12 height-100 padding-0" src="assets/images/food-truck/post-its.jpg">
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Storyboard Modals -->
+<div class="modal fade z-index-2000 " id="story1-lightbox" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <button type="button" class="close nested-close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+
+      <div class="modal-body row padding-0">
+   <img  data-toggle="modal" data-target="#story1-lightbox" class="col-md-12 height-100 padding-0" src="assets/images/food-truck/story1.png">
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade z-index-2000 " id="story2-lightbox" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <button type="button" class="close nested-close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+
+      <div class="modal-body row padding-0">
+   <img  data-toggle="modal" data-target="#story2-lightbox" class="col-md-12 height-100 padding-0" src="assets/images/food-truck/story2.png">
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade z-index-2000 " id="story3-lightbox" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <button type="button" class="close nested-close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+
+      <div class="modal-body row padding-0">
+   <img  data-toggle="modal" data-target="#story3-lightbox" class="col-md-12 height-100 padding-0" src="assets/images/food-truck/story3.png">
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</body>
+
+</html>
