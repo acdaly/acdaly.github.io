@@ -153,6 +153,10 @@ li{
     font-size: 0.97em; 
 }
 
+.spacer-sm{
+    padding-top: 30px;
+}
+
 .spacer-md{
     padding-top: 80px;
 }
