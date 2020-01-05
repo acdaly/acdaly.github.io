@@ -25,6 +25,14 @@
     top: 0;
 }*/
 
+ol{
+    text-indent: -33px;
+}
+
+li{
+    text-indent: -22px;
+}
+
 .adult-icon{
     width: 60%;
     object-fit: contain;
