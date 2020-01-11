@@ -27,7 +27,15 @@
     height: 60px;
 }
 
-
+#about-footer{
+    width: 100%;
+    justify-content: center;
+    bottom: 15px;
+    font-size: 0.75em;
+    color: rgba(215, 240,255, 0.6);
+    text-align: center;
+    position: absolute;
+}
 
 .connect-icon {
     text-align: center;
