@@ -48,7 +48,6 @@
     position: absolute;
     width: 100%;
 
-    bottom: 0;
     overflow: hidden;
     z-index: -1;
     bottom: 0;
@@ -57,14 +56,14 @@
 /*Desktop*/
 @media all and (min-width: 500px) {
     #connect-sketch-holder{
-            height: 260px;
+        height: 190px;
     }
 }
 
 /*Phone*/
 @media all and (max-width: 500px) {
     #connect-sketch{
-    height: 160px;
+    height: 150px;
 
     }
 }
