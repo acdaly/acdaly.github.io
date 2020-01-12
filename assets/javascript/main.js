@@ -71,8 +71,13 @@ function modalFreezePageScrolling(){
       
         $("body").removeClass("modal-open")
 
-        //unblur nav
+        //unblur background
         $("nav").css({
+            "filter": "blur(0px)",
+            "transition": "0.2s"
+        });
+
+        $(".carousel-container").css({
             "filter": "blur(0px)",
             "transition": "0.2s"
         });
@@ -90,11 +95,17 @@ function modalFreezePageScrolling(){
         $("body").addClass("modal-open");
         $('input').focus();
 
-        //blur nav
+        //blur background
         $("nav").css({
             "filter": "blur(2px)",
             "transition": "0.2s"
         });
+
+        $(".carousel-container").css({
+            "filter": "blur(2px)",
+            "transition": "0.2s"
+        });
+
     });
 }
 
