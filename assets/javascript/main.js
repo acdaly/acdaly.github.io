@@ -16,31 +16,31 @@ function windowSizeOptions(){
                     {'box-shadow': "0px 0px 8px rgba(255, 255, 255, 0.9)",
                         'border-radius':'25px'}
                 );
-                $("#ui-ux-nav").css("font-weight", "300");
-                $("#experimental-nav").css("font-weight", "300");
-                $("#about-nav").css("font-weight", "300");
+                $("#ui-ux-nav").css({"font-weight": "300", "color":"rgba(255,255, 255, 0.8)"});
+                $("#experimental-nav").css({"font-weight": "300", "color":"rgba(255,255, 255, 0.8)"});
+                $("#about-nav").css({"font-weight": "300", "color":"rgba(255,255, 255, 0.8)"});                
                 $("#resume-nav").css("background-color", "transparent");
 
             }
             if(destination==2){
                 $("#home-logo img").css('box-shadow', "none");
-                $("#ui-ux-nav").css("font-weight", "600");
-                $("#experimental-nav").css("font-weight", "300");
-                $("#about-nav").css("font-weight", "300");
+                $("#ui-ux-nav").css({"font-weight": "600", "color":"white"});
+                $("#experimental-nav").css({"font-weight": "300", "color":"rgba(255,255, 255, 0.8)"});
+                $("#about-nav").css({"font-weight": "300", "color":"rgba(255,255, 255, 0.8)"});
                 $("#resume-nav").css("background-color", "transparent");
             }
             if(destination==3){
                 $("#home-logo img").css('box-shadow', "none");
-                $("#ui-ux-nav").css("font-weight", "300");
-                $("#experimental-nav").css("font-weight", "600");
-                $("#about-nav").css("font-weight", "300");
+                $("#ui-ux-nav").css({"font-weight": "300", "color":"rgba(255,255, 255, 0.8)"});
+                $("#experimental-nav").css({"font-weight": "600", "color":"white"});
+                $("#about-nav").css({"font-weight": "300", "color":"rgba(255,255, 255, 0.8)"});
                 $("#resume-nav").css("background-color", "transparent");
             }
             if(destination==4){
                 $("#home-logo img").css('box-shadow', "none");
-                $("#ui-ux-nav").css("font-weight", "300");
-                $("#experimental-nav").css("font-weight", "300");
-                $("#about-nav").css("font-weight", "600");
+                $("#ui-ux-nav").css({"font-weight": "300", "color":"rgba(255,255, 255, 0.8)"});
+                $("#experimental-nav").css({"font-weight": "300", "color":"rgba(255,255, 255, 0.8)"});
+                $("#about-nav").css({"font-weight": "600", "color":"white"});
                 $("#resume-nav").css("background-color", "#121721");
             }
         }
