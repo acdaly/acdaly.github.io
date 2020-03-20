@@ -368,10 +368,10 @@ $( document ).ready(function() {
         
         // $('.flickity-page-dots').css('bottom', '-120px')
         // $('#ui-ux .is-selected.gallery-cell').css('height', '60vh !important');
-        $('#saanka-img').attr('src','assets/images/design/saanka-mobile.jpg');
-        $('#adulting-img').attr('src','assets/images/design/adulting-mobile.jpg');
-        $('#pl2-img').attr('src','assets/images/design/pl2-mobile.jpg');
-        $('#tigris-img').attr('src','assets/images/design/tigris-mobile.jpg');
+        $('#oasis-img').attr('src','assets/images/2d/oasis-mobile.png');
+        $('#adulting-img').attr('src','assets/images/2d/adulting-mobile.png');
+        $('#pl2-img').attr('src','assets/images/2d/pl2-mobile.png');
+        // $('#tigris-img').attr('src','assets/images/design/tigris-mobile.jpg');
 
         $('#river-img').attr('src','assets/images/featured/river-mobile.jpg');
         $('#light-img').attr('src','assets/images/featured/light-mobile.jpg');
