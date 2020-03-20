@@ -223,6 +223,7 @@ function carouselOptions(){
             if ($(this).hasClass('is-selected')){
                 if(!$(this).hasClass('no-modal')){ //if it's searching, don't open modal
                     $('#theModal').modal('show');
+                    console.log(this);
                     $('#myModalContent').load('assets/html/' +this.getAttribute('modal') + '.html');
                 }
                 
@@ -374,7 +375,7 @@ $( document ).ready(function() {
 
         $('#river-img').attr('src','assets/images/featured/river-mobile.jpg');
         $('#light-img').attr('src','assets/images/featured/light-mobile.jpg');
-        $('#searching-img').attr('src','assets/images/featured/searching-mobile.jpg');
+        $('#twod-img').attr('src','assets/images/2d/twod-mobile.png');
 
 
     }
@@ -428,29 +429,30 @@ $( document ).ready(function() {
     });
 
     //hover styling on left and right carousel cells
-    $('#ui-ux .carousel-container .modal-link').hover(function() {
-        var hoverIndex = $(this).index();
-        var selectedIndex = $('.is-selected').index();
 
-        if (hoverIndex > selectedIndex){
-            $('#ui-ux .carousel-container .flickity-prev-next-button.next').css('opacity', '1');
-            $('#ui-ux .carousel-container .flickity-prev-next-button.next').css('box-shadow', '2px 2px 5px 5px rgba(0,0,0,0.1');
-        }
-        else if (hoverIndex != selectedIndex){
-            $('#ui-ux .carousel-container .flickity-prev-next-button.previous').css('opacity', '1');
-        }
-        }, function() {
-        // on mouseout, reset the background colour
-        $('#ui-ux .carousel-container .flickity-prev-next-button').css('opacity', '0.7');
-        $('#ui-ux .carousel-container .flickity-prev-next-button').css('box-shadow', 'none');
-        var selectedIndex = $('#ui-ux .carousel-container .is-selected').index();
-        if(selectedIndex == 0){
-            $('#ui-ux .carousel-container .flickity-prev-next-button.previous').css('opacity', '0.1');
-        }
-        else if(selectedIndex == 3){
-            $('#ui-ux .carousel-container .flickity-prev-next-button.next').css('opacity', '0.1');
-        }
-    });
+    // $('#ui-ux .carousel-container .modal-link').hover(function() {
+    //     var hoverIndex = $(this).index();
+    //     var selectedIndex = $('.is-selected').index();
+
+    //     if (hoverIndex > selectedIndex){
+    //         $('#ui-ux .carousel-container .flickity-prev-next-button.next').css('opacity', '1');
+    //         $('#ui-ux .carousel-container .flickity-prev-next-button.next').css('box-shadow', '2px 2px 5px 5px rgba(0,0,0,0.1');
+    //     }
+    //     else if (hoverIndex != selectedIndex){
+    //         $('#ui-ux .carousel-container .flickity-prev-next-button.previous').css('opacity', '1');
+    //     }
+    //     }, function() {
+    //     // on mouseout, reset the background colour
+    //     $('#ui-ux .carousel-container .flickity-prev-next-button').css('opacity', '0.7');
+    //     $('#ui-ux .carousel-container .flickity-prev-next-button').css('box-shadow', 'none');
+    //     var selectedIndex = $('#ui-ux .carousel-container .is-selected').index();
+    //     if(selectedIndex == 0){
+    //         $('#ui-ux .carousel-container .flickity-prev-next-button.previous').css('opacity', '0.1');
+    //     }
+    //     else if(selectedIndex == 3){
+    //         $('#ui-ux .carousel-container .flickity-prev-next-button.next').css('opacity', '0.1');
+    //     }
+    // });
 
     $('#experimental .carousel-container .modal-link').hover(function() {
         var hoverIndex = $(this).index();
