@@ -70,28 +70,45 @@ body.fade-out {
 }
 
 #arrow {
-    height: 40px;
-    width: 40px;
+    padding-top: 10px;
+    width: auto;
+    height: 29px;
+}
+
+#arrow-container{
     margin: auto;
     position: absolute;
-    left: 0; 
+    left: 0;
     right: 0;
+    width: 100px;
+    justify-content: center;
     z-index: 10;
+
+    color: white;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.75em;
+    font-weight: 300;
+}
+
+#arrow-container p{
     opacity: .5;
 }
 
+
+
 /*Desktop*/
 @media all and (min-width: 500px) {
-#arrow {
+#arrow-container {
 
-    bottom: 30px;
+    bottom: 50px;
 
 }
 }
 
 /*Phone*/
 @media all and (max-width: 500px) {
-#arrow {
+#arrow-container {
 
     bottom: 70px;
 
@@ -112,6 +129,7 @@ body.fade-out {
 }
 }
 #home-ari {
+    font-weight: 100;
     padding-top: 28vh;
     font-size: 3em;
     color: rgba(255, 255, 255, .9);
@@ -120,8 +138,9 @@ body.fade-out {
 
 #home-role {
     padding-right: 10px;
-    letter-spacing: .48em;
-    font-size: 1.4em;
+    font-weight: 100;
+/*    letter-spacing: .48em;*/
+    font-size: 1em;
     color: rgba(255, 255, 255, .9);
     text-align: center;
 }

@@ -20,9 +20,14 @@ body { font-family: sans-serif; }
   align-items: center;
 }
 
+.carousel-container{
+  padding-top: 30px;
+}
+
+
 
 #ui-ux .carousel-title, #experimental .carousel-title{
-  padding-bottom: 30px;
+  padding-bottom: 20px;
 }
 
 
@@ -40,7 +45,7 @@ body { font-family: sans-serif; }
   
 #ui-ux .gallery-cell img:hover, #experimental .gallery-cell img:hover{
 /*    filter: blur(0px);*/
-    opacity: 0.85;
+    opacity: 0.65;
     transition: 0.1s;
 }
 
@@ -71,11 +76,11 @@ body { font-family: sans-serif; }
 
 
 .carousel-title{
+    font-family: "Josefin Sans", sans-serif;
     text-align: center;
     color: white;
     letter-spacing: 1.8px;
     padding-bottom: 20px;
-    font-weight: 300;
     font-weight: 400;
 /*    margin-top: 30px;*/
 }
@@ -111,27 +116,23 @@ body { font-family: sans-serif; }
 
 
 .flickity-prev-next-button.next{
-  right: 70px;
+  right: 85px;
 }
 
 .flickity-prev-next-button.previous{
-  left: 70px;
+  left: 85px;
 }
 
 
 /* cell number */
 .gallery-cell {
-    width: 70%;
     height: 60vh;
-    margin-right: 10px;
-    /* flex-box, center image in cell */
-/*    display: -webkit-box;
-    display: -webkit-flex;*/
+    width: 50%;
+    margin-right: 13px;
+    margin-left: 13px;
     display:         flex;
-/*    -webkit-box-pack: center;
-    -webkit-justify-content: center;*/
     justify-content: center;
-/*    -webkit-align-items: center;*/
+/*    background: green;*/
     align-items: center;
     overflow: hidden;
 
@@ -141,8 +142,8 @@ body { font-family: sans-serif; }
 
 
 .desktop .is-selected.gallery-cell{
-  height: 70vh !important;
-/*  transition: 0.2s;*/
+/*  height: 68vh !important;*/
+  transition: 0.1s;
 
 }
 
@@ -150,7 +151,7 @@ body { font-family: sans-serif; }
   display: block;
   max-width: 100%;
 /*  filter: blur(2px);*/
-  opacity: 0.5;
+  opacity: 0.3;
 }
 
 #ui-ux-mobile .gallery-cell img, #experimental-mobile .gallery-cell img{

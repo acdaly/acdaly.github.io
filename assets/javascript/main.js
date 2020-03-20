@@ -174,15 +174,10 @@ function carouselOptions(){
     }
 
     $('.carousel-container .flickity-prev-next-button.next').html(
-        '<svg xmlns="http://www.w3.org/2000/svg" width="12.99" height="22.988"'
-            + 'viewBox="0 0 12.99 22.988"><path id="Path_65" data-name="Path 65"' 
-            + 'd="M-24182.766,17957.246l-9.371,9.373,9.371,9.373"' 
-            + 'transform="translate(-24180.645 17978.113) rotate(180)"'
-            + 'fill="none" stroke="#fff" stroke-linecap="round"'
-            + 'stroke-linejoin="round" stroke-width="3"/></svg>');
+        '<svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.5303 6.53033C15.8232 6.23744 15.8232 5.76256 15.5303 5.46967L10.7574 0.696699C10.4645 0.403806 9.98959 0.403806 9.6967 0.696699C9.40381 0.989593 9.40381 1.46447 9.6967 1.75736L13.9393 6L9.6967 10.2426C9.40381 10.5355 9.40381 11.0104 9.6967 11.3033C9.98959 11.5962 10.4645 11.5962 10.7574 11.3033L15.5303 6.53033ZM0 6.75H15V5.25H0V6.75Z" fill="white"/></svg>');
     $('.carousel-container .flickity-prev-next-button.previous').html(
-        '<svg xmlns="http://www.w3.org/2000/svg" width="12.99" height="22.988" viewBox="0 0 12.99 22.988"><path id="Path_65" data-name="Path 65" d="M-24182.766,17957.246l-9.371,9.373,9.371,9.373" transform="translate(24193.635 -17955.125)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/></svg>');
-    $('.is-selected.gallery-cell').css('height','60vh');
+        '<svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.469669 5.46967C0.176776 5.76256 0.176776 6.23744 0.469669 6.53033L5.24264 11.3033C5.53553 11.5962 6.01041 11.5962 6.3033 11.3033C6.59619 11.0104 6.59619 10.5355 6.3033 10.2426L2.06066 6L6.3033 1.75736C6.59619 1.46447 6.59619 0.989592 6.3033 0.696698C6.01041 0.403805 5.53553 0.403805 5.24264 0.696698L0.469669 5.46967ZM16 5.25L0.999999 5.25L0.999999 6.75L16 6.75L16 5.25Z" fill="white"/></svg>')
+            // $('.is-selected.gallery-cell').css('height','60vh');
     //  $('.carousel-experimental .flickity-prev-next-button.next').html(
     //     '<svg xmlns="http://www.w3.org/2000/svg" width="12.99" height="22.988"'
     //         + 'viewBox="0 0 12.99 22.988"><path id="Path_65" data-name="Path 65"' 
