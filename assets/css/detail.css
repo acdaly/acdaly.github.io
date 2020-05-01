@@ -1,3 +1,7 @@
+.col-md-8{
+    max-width: 675px;
+}
+
 .modal-header{
     background-color: #121924;
     border-bottom: none !important;
