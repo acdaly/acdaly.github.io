@@ -28,9 +28,9 @@
 <!--   <script src="assets/libraries/p5/sketch.js"></script> -->
   <script src="assets/libraries/p5/sketch-newcolor.js"></script>
   <!-- fullpage (one page scrolling) -->
-  <script type="text/javascript" src="assets/libraries/fullpage/scrolloverflow.min.js"></script>
+<!--   <script type="text/javascript" src="assets/libraries/fullpage/scrolloverflow.min.js"></script>
   <link rel="stylesheet" type="text/css" href="assets/libraries/fullpage/jquery.fullPage.css" />
-  <script type="text/javascript" src="assets/libraries/fullpage/jquery.fullPage.js"></script>
+  <script type="text/javascript" src="assets/libraries/fullpage/jquery.fullPage.js"></script> -->
   
 
   <!-- flickity-->
@@ -40,15 +40,15 @@
 
 
   <!-- custom JavaScript -->
-  <script src="assets/javascript/main.js"></script>
+  <script src="assets/javascript/main-test.js"></script>
   <script src="assets/javascript/searching.js"></script>
   <!-- custom CSS -->
-    <link href="assets/css/carousel.css" rel="stylesheet">
+    <link href="assets/css/carousel-test.css" rel="stylesheet">
   <link href="assets/css/sidebar.css" rel="stylesheet">
-  <link href="assets/css/home.css" rel="stylesheet">
+  <link href="assets/css/home-height.css" rel="stylesheet">
   <link href="assets/css/portfolio.css" rel="stylesheet">
-  <link href="assets/css/about-style.css" rel="stylesheet">
-  <link href="assets/css/connect-style.css" rel="stylesheet">
+  <link href="assets/css/about-style-test.css" rel="stylesheet">
+<!--   <link href="assets/css/connect-style.css" rel="stylesheet"> -->
   <link href="assets/css/detail.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="assets/css/searching.css">
   <link href="assets/css/projects/google-prototype.css" rel="stylesheet">
@@ -84,20 +84,20 @@
 </div>
 
 
-  <div id="fullpage">
+  <div>
     <!--This is the container for the grid in Bootstrap-->
     <div class="container-fluid">
 
 
       <div id="sidenav-container">
         <nav id="sidenav">
-          <a id="home-logo" href="#home">
+          <a id="home-logo" class="sliding-link" href="#home-section">
             <img id="home-img" src="assets/images/home-logo.svg">
           </a>
           <div class="side-spacer"></div>
 
           <div class="side-text-container">
-              <a id="ui-ux-nav" class="side-text" href="#ui-ux-projects">UI / UX DESIGN</a>
+              <a id="ui-ux-nav" class="side-text sliding-link" href="#ui-ux">UI / UX DESIGN</a>
 
             
           </div>
@@ -105,13 +105,13 @@
           <div class="side-spacer"></div>
           <div class="side-text-container">
 
-              <a id="experimental-nav" class="side-text" href="#experimental-projects">EXPERIMENTAL</a>
+              <a id="experimental-nav" class="side-text sliding-link" href="#experimental">EXPERIMENTAL</a>
           </div>
 
           <div class="side-spacer"></div>
 
           <div class="side-text-container">
-              <a id="about-nav" class="side-text" href="#about">ABOUT</a>
+              <a id="about-nav" class="side-text sliding-link" href="#about">ABOUT</a>
           </div>
 
           <div class="side-spacer"></div>
@@ -126,9 +126,9 @@
         </nav>
       </div>
 
-
+      <div id="background"></div>
       <!--HOME-->
-      <div class="section" id="section0">
+      <div class="section" id="home-section">
         
         <div class ="col-sm-12" id="home-sketch"></div>
         
@@ -144,7 +144,7 @@
           </div>
         </div>
       </div>
-      <div id="background"></div>
+      
       <div id="black-gradient"></div>
       <br><br><br>
       <!--UI/UX PORTFOLIO-->
@@ -227,7 +227,7 @@
 
       <br><br><br>
       <!--ABOUT-->
-      <div class="section">
+      <div id="about" class="section">
 
         <div class="row">
 
