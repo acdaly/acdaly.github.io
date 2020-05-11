@@ -50,6 +50,7 @@ function windowSizeOptions(){
   }
   else {$('#fullpage').fullpage({
     autoScrolling: false,
+    verticalCentered: false,
     touchSensitivity: 10,
     scrollingSpeed: 800,
     navigation: false,
