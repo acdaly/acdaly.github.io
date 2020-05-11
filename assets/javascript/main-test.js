@@ -355,18 +355,9 @@ function carouselOptions(){
 
 }
 
+//update navbar on scroll
+function navbarScroll(){
 
-
-$( document ).ready(function() {
-
-    //scroll to website sections on navbar anchor click
-    $(".sliding-link").click(function(e) {
-        e.preventDefault();
-        var aid = $(this).attr("href");
-        $('html,body').animate({scrollTop: $(aid).offset().top},'slow');
-    });
-
-    //update navbar on scroll
     $(document).scroll(function(){
         // console.log("scrolling!");
         // console.log($(document).scrollTop());
@@ -377,7 +368,7 @@ $( document ).ready(function() {
         var aboutSection = $("#about").offset().top;
 
         //offset above anchor position
-        var pixelOffset = 100;
+        var pixelOffset = 150;
 
         //for debugging
         // console.log(currPos + "," + aboutSection)
@@ -427,6 +418,21 @@ $( document ).ready(function() {
             $("#resume-nav").css("background-color", "#121721");
         }
     });
+}
+
+
+
+$( document ).ready(function() {
+
+    //scroll to website sections on navbar anchor click
+    $(".sliding-link").click(function(e) {
+        e.preventDefault();
+        var aid = $(this).attr("href");
+        $('html,body').animate({scrollTop: $(aid).offset().top},'slow');
+    });
+
+    navbarScroll();
+
 
     carouselOptions();
 
