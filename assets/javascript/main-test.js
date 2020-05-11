@@ -1,68 +1,68 @@
 function windowSizeOptions(){
   var win = $(this);
-  if (win.width() >= 600) {
-    $('#fullpage').fullpage({
-      autoScrolling: false,
-      touchSensitivity: 10,
-      verticalCentered: false,
-      bigSectionsDestination: 'top',
-      scrollingSpeed: 800,
-      navigation: false,
-      navigationPosition: 'left',
-      navigationTooltips: ['Home', 'UI/UX Design','Experimental', 'About'],
-      anchors: ['home', 'ui-ux-projects','experimental-projects', 'about'],
-      scrollOverflow: false,
-      onLeave: function(origin, destination, direction){
-            if(destination==1){
-                $("#home-logo img").css(
-                    {'box-shadow': "0px 0px 8px rgba(255, 255, 255, 0.9)",
-                        'border-radius':'25px'}
-                );
-                $("#ui-ux-nav").css({"font-weight": "300", "color":"rgba(255,255, 255, 0.8)"});
-                $("#experimental-nav").css({"font-weight": "300", "color":"rgba(255,255, 255, 0.8)"});
-                $("#about-nav").css({"font-weight": "300", "color":"rgba(255,255, 255, 0.8)"});                
-                $("#resume-nav").css("background-color", "transparent");
+  // if (win.width() >= 600) {
+  //   $('#fullpage').fullpage({
+  //     autoScrolling: false,
+  //     touchSensitivity: 10,
+  //     verticalCentered: false,
+  //     bigSectionsDestination: 'top',
+  //     scrollingSpeed: 800,
+  //     navigation: false,
+  //     navigationPosition: 'left',
+  //     navigationTooltips: ['Home', 'UI/UX Design','Experimental', 'About'],
+  //     anchors: ['home', 'ui-ux-projects','experimental-projects', 'about'],
+  //     scrollOverflow: false,
+  //     onLeave: function(origin, destination, direction){
+  //           if(destination==1){
+  //               $("#home-logo img").css(
+  //                   {'box-shadow': "0px 0px 8px rgba(255, 255, 255, 0.9)",
+  //                       'border-radius':'25px'}
+  //               );
+  //               $("#ui-ux-nav").css({"font-weight": "300", "color":"rgba(255,255, 255, 0.8)"});
+  //               $("#experimental-nav").css({"font-weight": "300", "color":"rgba(255,255, 255, 0.8)"});
+  //               $("#about-nav").css({"font-weight": "300", "color":"rgba(255,255, 255, 0.8)"});                
+  //               $("#resume-nav").css("background-color", "transparent");
 
-            }
-            if(destination==2){
-                $("#home-logo img").css('box-shadow', "none");
-                $("#ui-ux-nav").css({"font-weight": "600", "color":"white"});
-                $("#experimental-nav").css({"font-weight": "300", "color":"rgba(255,255, 255, 0.8)"});
-                $("#about-nav").css({"font-weight": "300", "color":"rgba(255,255, 255, 0.8)"});
-                $("#resume-nav").css("background-color", "transparent");
-            }
-            if(destination==3){
-                $("#home-logo img").css('box-shadow', "none");
-                $("#ui-ux-nav").css({"font-weight": "300", "color":"rgba(255,255, 255, 0.8)"});
-                $("#experimental-nav").css({"font-weight": "600", "color":"white"});
-                $("#about-nav").css({"font-weight": "300", "color":"rgba(255,255, 255, 0.8)"});
-                $("#resume-nav").css("background-color", "transparent");
-            }
-            if(destination==4){
-                $("#home-logo img").css('box-shadow', "none");
-                $("#ui-ux-nav").css({"font-weight": "300", "color":"rgba(255,255, 255, 0.8)"});
-                $("#experimental-nav").css({"font-weight": "300", "color":"rgba(255,255, 255, 0.8)"});
-                $("#about-nav").css({"font-weight": "600", "color":"white"});
-                $("#resume-nav").css("background-color", "#121721");
-            }
-        }
+  //           }
+  //           if(destination==2){
+  //               $("#home-logo img").css('box-shadow', "none");
+  //               $("#ui-ux-nav").css({"font-weight": "600", "color":"white"});
+  //               $("#experimental-nav").css({"font-weight": "300", "color":"rgba(255,255, 255, 0.8)"});
+  //               $("#about-nav").css({"font-weight": "300", "color":"rgba(255,255, 255, 0.8)"});
+  //               $("#resume-nav").css("background-color", "transparent");
+  //           }
+  //           if(destination==3){
+  //               $("#home-logo img").css('box-shadow', "none");
+  //               $("#ui-ux-nav").css({"font-weight": "300", "color":"rgba(255,255, 255, 0.8)"});
+  //               $("#experimental-nav").css({"font-weight": "600", "color":"white"});
+  //               $("#about-nav").css({"font-weight": "300", "color":"rgba(255,255, 255, 0.8)"});
+  //               $("#resume-nav").css("background-color", "transparent");
+  //           }
+  //           if(destination==4){
+  //               $("#home-logo img").css('box-shadow', "none");
+  //               $("#ui-ux-nav").css({"font-weight": "300", "color":"rgba(255,255, 255, 0.8)"});
+  //               $("#experimental-nav").css({"font-weight": "300", "color":"rgba(255,255, 255, 0.8)"});
+  //               $("#about-nav").css({"font-weight": "600", "color":"white"});
+  //               $("#resume-nav").css("background-color", "#121721");
+  //           }
+  //       }
 
-    });
+  //   });
 
-  }
-  else {$('#fullpage').fullpage({
-    autoScrolling: false,
-    verticalCentered: false,
-    bigSectionsDestination: 'top',
-    touchSensitivity: 10,
-    scrollingSpeed: 800,
-    navigation: false,
-    navigationPosition: 'left',
-    navigationTooltips: ['Home', 'UI/UX Design','Experimental', 'About'],
-    anchors: ['home', 'ui-ux-projects','experimental-projects', 'about'],
-    scrollOverflow: false
-    });
-  }
+  // }
+  // else {$('#fullpage').fullpage({
+  //   autoScrolling: false,
+  //   verticalCentered: false,
+  //   bigSectionsDestination: 'top',
+  //   touchSensitivity: 10,
+  //   scrollingSpeed: 800,
+  //   navigation: false,
+  //   navigationPosition: 'left',
+  //   navigationTooltips: ['Home', 'UI/UX Design','Experimental', 'About'],
+  //   anchors: ['home', 'ui-ux-projects','experimental-projects', 'about'],
+  //   scrollOverflow: false
+  //   });
+  // }
 }
 
 
@@ -70,8 +70,8 @@ function windowSizeOptions(){
 function modalFreezePageScrolling(){
     //disable main page scrolling when modal is open
     $(".modal").on("hidden.bs.modal", function () {
-        $.fn.fullpage.setAllowScrolling(true);
-        $.fn.fullpage.setKeyboardScrolling(true);
+        // $.fn.fullpage.setAllowScrolling(true);
+        // $.fn.fullpage.setKeyboardScrolling(true);
       
         $("body").removeClass("modal-open")
 
@@ -92,8 +92,8 @@ function modalFreezePageScrolling(){
     $(".modal").on("show.bs.modal", function (event) {
 
 
-        $.fn.fullpage.setAllowScrolling(false);
-        $.fn.fullpage.setKeyboardScrolling(false);
+        // $.fn.fullpage.setAllowScrolling(false);
+        // $.fn.fullpage.setKeyboardScrolling(false);
 
       
         $("body").addClass("modal-open");
