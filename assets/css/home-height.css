@@ -1,0 +1,203 @@
+body{
+    background-color: #121721;
+    opacity: 1;
+    transition: 1.5s opacity;
+
+}
+
+body.fade-out {
+    opacity: 0;
+    transition: none;
+}
+
+.bold{
+    font-weight: 400;
+    color: white;
+}
+.regular{
+    font-weight: 300;
+}
+
+.thin{
+    font-weight: 100;
+    color: white;
+}
+
+.underline{
+    padding-bottom: 5px;
+    width: 55%;
+    border-bottom: 1.5px solid rgb(255, 255, 255, 0.5);
+}
+
+
+#background{
+    position: absolute;
+/*    height: 250vh;*/
+    width: 100%;
+/*    background-image: linear-gradient(#121721, #121721);*/
+/*    z-index: -1;*/
+}
+
+#black-gradient{
+    position: absolute;
+/*    height: 251vh;*/
+    width: 100%;
+    background-image: linear-gradient(rgba(19, 23, 33, 0), rgba(19, 23, 33, 1));
+/*    z-index: -1;*/
+}
+
+#home-background {
+/*    height: 100vh;*/
+    width: 100%;
+/*    background-color: #121721;*/
+    font-family: 'Josefin Sans', sans-serif;
+    color: white;
+    text-align: center;
+}
+
+.row{
+    margin: 0 !important;
+}
+
+#home-sketch{
+    
+    padding: 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#arrow {
+    padding-top: 10px;
+    width: auto;
+    height: 29px;
+}
+
+#arrow-container{
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100px;
+    justify-content: center;
+    z-index: 10;
+
+    color: white;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.75em;
+    font-weight: 300;
+}
+
+#arrow-container p{
+    opacity: .5;
+}
+
+
+
+/*Desktop*/
+@media all and (min-width: 500px) {
+#arrow-container {
+
+    bottom: 50px;
+
+}
+}
+
+/*Phone*/
+@media all and (max-width: 500px) {
+#arrow-container {
+
+    bottom: 70px;
+
+}
+}
+
+
+@media all and (max-width: 500px) {
+#home-ari {
+    letter-spacing: .2em;
+
+}
+}
+@media all and (min-width: 500px) {
+#home-ari {
+    letter-spacing: .3em;
+
+}
+}
+#home-ari {
+    font-weight: 100;
+/*    padding-top: 28vh;*/
+    font-size: 3em;
+    color: rgba(255, 255, 255, .9);
+    text-align: center;
+}
+
+#home-role {
+    padding-right: 10px;
+    font-weight: 100;
+/*    letter-spacing: .48em;*/
+    font-size: 1em;
+    color: rgba(255, 255, 255, .9);
+    text-align: center;
+}
+
+#home-profile {
+    padding-top: 100px;
+    padding-left: 12%;
+    padding-right: 12%;
+    font-size: .9em;
+    letter-spacing: .02em;
+    color: rgba(255, 255, 255, .8);
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
+
+#home-image{
+    height: -webkit-fill-available;
+    overflow: hidden;
+    padding: 0px;
+}
+
+#home-image img{
+/*    height: 100vh;*/
+    float: right;
+
+}
+
+/* THE FOLLOWING CODE COPY PASTED FROM 
+https://www.codeply.com/go/LhLJlldsLN/bootstrap-4-carousel-fade BY SKELLY
+*/
+
+
+.carousel-fade .carousel-item {
+ opacity: 0;
+ transition-duration: .6s;
+ transition-property: opacity;
+}
+
+.carousel-fade  .carousel-item.active,
+.carousel-fade  .carousel-item-next.carousel-item-left,
+.carousel-fade  .carousel-item-prev.carousel-item-right {
+  opacity: 1;
+}
+
+.carousel-fade .active.carousel-item-left,
+.carousel-fade  .active.carousel-item-right {
+ opacity: 0;
+}
+
+.carousel-fade  .carousel-item-next,
+.carousel-fade .carousel-item-prev,
+.carousel-fade .carousel-item.active,
+.carousel-fade .active.carousel-item-left,
+.carousel-fade  .active.carousel-item-prev {
+ transform: translateX(0);
+ transform: translate3d(0, 0, 0);
+}
+
+/*END OF COPY PASTED CODE*/
+
