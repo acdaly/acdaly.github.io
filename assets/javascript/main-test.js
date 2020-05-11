@@ -356,9 +356,77 @@ function carouselOptions(){
 }
 
 
+
 $( document ).ready(function() {
 
+    //scroll to website sections on navbar anchor click
+    $(".sliding-link").click(function(e) {
+        e.preventDefault();
+        var aid = $(this).attr("href");
+        $('html,body').animate({scrollTop: $(aid).offset().top},'slow');
+    });
 
+    //update navbar on scroll
+    $(document).scroll(function(){
+        // console.log("scrolling!");
+        // console.log($(document).scrollTop());
+        var currPos = $(document).scrollTop();
+        var homeSection = $("#home-section").offset().top;
+        var uiSection = $("#ui-ux").offset().top;
+        var experimentalSection = $("#experimental").offset().top;
+        var aboutSection = $("#about").offset().top;
+
+        //offset above anchor position
+        var pixelOffset = 100;
+
+        //for debugging
+        // console.log(currPos + "," + aboutSection)
+
+        //if in HOME
+        if (currPos < uiSection - pixelOffset){
+            console.log("home!");
+              $("#home-logo img").css(
+                  {'box-shadow': "0px 0px 8px rgba(255, 255, 255, 0.9)",
+                      'border-radius':'25px'}
+              );
+            $("#ui-ux-nav").css({"font-weight": "300", "color":"rgba(255,255, 255, 0.8)"});
+            $("#experimental-nav").css({"font-weight": "300", "color":"rgba(255,255, 255, 0.8)"});
+            $("#about-nav").css({"font-weight": "300", "color":"rgba(255,255, 255, 0.8)"});                
+            $("#resume-nav").css("background-color", "transparent");
+
+        }
+
+        //if in UI / UX DESIGN
+        if (uiSection - pixelOffset < currPos && currPos < experimentalSection - pixelOffset){
+            console.log("ui!");
+              $("#home-logo img").css('box-shadow', "none");
+              $("#ui-ux-nav").css({"font-weight": "600", "color":"white"});
+              $("#experimental-nav").css({"font-weight": "300", "color":"rgba(255,255, 255, 0.8)"});
+              $("#about-nav").css({"font-weight": "300", "color":"rgba(255,255, 255, 0.8)"});
+              $("#resume-nav").css("background-color", "transparent");
+
+        }
+
+        //if in EXPERIMENTAL
+        if (experimentalSection - pixelOffset < currPos && currPos < aboutSection - pixelOffset){
+            console.log("experimental!");
+            $("#home-logo img").css('box-shadow', "none");
+            $("#ui-ux-nav").css({"font-weight": "300", "color":"rgba(255,255, 255, 0.8)"});
+            $("#experimental-nav").css({"font-weight": "600", "color":"white"});
+            $("#about-nav").css({"font-weight": "300", "color":"rgba(255,255, 255, 0.8)"});
+            $("#resume-nav").css("background-color", "transparent");
+        }
+
+        //if in ABOUT
+        if (aboutSection - pixelOffset < currPos){
+            console.log("about!");
+            $("#home-logo img").css('box-shadow', "none");
+            $("#ui-ux-nav").css({"font-weight": "300", "color":"rgba(255,255, 255, 0.8)"});
+            $("#experimental-nav").css({"font-weight": "300", "color":"rgba(255,255, 255, 0.8)"});
+            $("#about-nav").css({"font-weight": "600", "color":"white"});
+            $("#resume-nav").css("background-color", "#121721");
+        }
+    });
 
     carouselOptions();
 
@@ -432,31 +500,7 @@ $( document ).ready(function() {
         }
     });
 
-    //hover styling on left and right carousel cells
 
-    // $('#ui-ux .carousel-container .modal-link').hover(function() {
-    //     var hoverIndex = $(this).index();
-    //     var selectedIndex = $('.is-selected').index();
-
-    //     if (hoverIndex > selectedIndex){
-    //         $('#ui-ux .carousel-container .flickity-prev-next-button.next').css('opacity', '1');
-    //         $('#ui-ux .carousel-container .flickity-prev-next-button.next').css('box-shadow', '2px 2px 5px 5px rgba(0,0,0,0.1');
-    //     }
-    //     else if (hoverIndex != selectedIndex){
-    //         $('#ui-ux .carousel-container .flickity-prev-next-button.previous').css('opacity', '1');
-    //     }
-    //     }, function() {
-    //     // on mouseout, reset the background colour
-    //     $('#ui-ux .carousel-container .flickity-prev-next-button').css('opacity', '0.7');
-    //     $('#ui-ux .carousel-container .flickity-prev-next-button').css('box-shadow', 'none');
-    //     var selectedIndex = $('#ui-ux .carousel-container .is-selected').index();
-    //     if(selectedIndex == 0){
-    //         $('#ui-ux .carousel-container .flickity-prev-next-button.previous').css('opacity', '0.1');
-    //     }
-    //     else if(selectedIndex == 3){
-    //         $('#ui-ux .carousel-container .flickity-prev-next-button.next').css('opacity', '0.1');
-    //     }
-    // });
 
     $('#experimental .carousel-container .modal-link').hover(function() {
         var hoverIndex = $(this).index();
