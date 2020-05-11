@@ -4,6 +4,8 @@ function windowSizeOptions(){
     $('#fullpage').fullpage({
       autoScrolling: false,
       touchSensitivity: 10,
+      verticalCentered: false,
+      bigSectionsDestination: 'top',
       scrollingSpeed: 800,
       navigation: false,
       navigationPosition: 'left',
@@ -51,6 +53,7 @@ function windowSizeOptions(){
   else {$('#fullpage').fullpage({
     autoScrolling: false,
     verticalCentered: false,
+    bigSectionsDestination: 'top',
     touchSensitivity: 10,
     scrollingSpeed: 800,
     navigation: false,
