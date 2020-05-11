@@ -1,7 +1,7 @@
 #about-section{
     display: block;
     overflow: auto;
-/*    min-height: 100vh;*/
+    min-height: 100vh;
 /*    background-color: #121721;*/
     padding-left: 0;
     padding-right: 0;
@@ -170,7 +170,7 @@ p{
         padding-top: 120px;
     }*/
     #about-container{
-        /*height: calc(100vh - 170px);*/
+        height: calc(100vh - 170px);
     }
 
     #about-img-container{
@@ -200,7 +200,7 @@ p{
     }
 */
     #about-container{
-        /*height: calc(100vh - 110px);*/
+        height: calc(100vh - 110px);
     }
 
     #about-img-container{

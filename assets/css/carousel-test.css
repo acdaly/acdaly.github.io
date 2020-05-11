@@ -126,7 +126,7 @@ body { font-family: sans-serif; }
 
 /* cell number */
 .gallery-cell {
-/*    height: 60vh;*/
+    height: 60vh;
     width: 50%;
     margin-right: 13px;
     margin-left: 13px;
