@@ -10,6 +10,10 @@ body.fade-out {
     transition: none;
 }
 
+#home-section{
+    height: 100vh;
+}
+
 .section{
     height: 100%;
 }
