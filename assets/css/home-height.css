@@ -48,7 +48,7 @@ body.fade-out {
 
 #background{
     position: absolute;
-    height: 250vh;
+    height: 350vh;
     width: 100%;
 /*    background-image: linear-gradient(#121721, #121721);*/
     z-index: -1;
