@@ -1,4 +1,4 @@
-.col-md-8{
+.txt-width{
     max-width: 675px;
 }
 
@@ -282,7 +282,7 @@ li{
 
 .text-34{
     font-weight:400;
-    font-size: 1em;
+    font-size: 1.1em;
     padding-bottom: 10px
 }
 
@@ -295,7 +295,7 @@ li{
 @media all and (min-width: 1200px) {
     .text-34-half{
         font-weight:400;
-        font-size: 1em;
+        font-size: 1.1em;
     }
 }
 

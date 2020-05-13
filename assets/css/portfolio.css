@@ -51,9 +51,20 @@
     font-style: italic;
 }
 
-.modal-lg {
-    max-width: 85vw !important;
-}   
+@media all and (min-width: 501px) {
+    .modal-lg {
+        max-width: 95vw !important;
+    }   
+}
+
+@media all and (max-width: 500px){
+    .modal-lg {
+        max-width: 85vw !important;
+    }   
+}
+
+
+
 
 .modal-title{
     width: 100%;
