@@ -161,16 +161,19 @@ li{
 }
 
 .spacer-sm{
-    padding-top: 30px;
+    padding-top: 2vw;
+    /*padding-top: 30px;*/
 }
 
 .spacer-md{
-    padding-top: 80px;
+    padding-top: 4vw;
+/*    padding-top: 80px;*/
 }
 
 
 .spacer-lg{
-    padding-top: 130px;
+    padding-top: 8vw;
+/*    padding-top: 130px;*/
 }
 
 .indent{
@@ -190,7 +193,9 @@ li{
 
 .img-detail{
     width: 100%;
-    object-fit: contain; 
+    object-fit: contain;
+    padding-top: 10px;
+    padding-bottom: 10px; 
 }
 
 .center-img{
