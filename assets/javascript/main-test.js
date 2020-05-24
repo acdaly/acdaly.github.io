@@ -99,14 +99,14 @@ function carouselOptions(){
             cellSelector: '.gallery-cell',
             imagesLoaded: true,
             prevNextButtons: false,
-            wrapAround: true
+            wrapAround: false
         });
         $('#experimental .carousel-container').flickity({
         // options
             cellSelector: '.gallery-cell',
             imagesLoaded: true,
             prevNextButtons: false,
-            wrapAround: true
+            wrapAround: false
         });
     }
 
