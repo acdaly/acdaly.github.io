@@ -35,19 +35,29 @@ $( document ).ready(function() {
 		
 	});
 
-
+	//change detail page thumbnails on mobile
     if (isMobileDevice()){
     	if (getPageName() == "adulting.html"){
-    		console.log("changing banner!");
     		$('.banner-img img').attr('src','assets/images/1-featured/adulting-banner-mobile.png');
     	}
-        // $('.banner-img').attr('src','assets/images/2d/adulting-mobile.png');
-        // $('.banner-img').attr('src','assets/images/2d/pl2-mobile.png');
-        // $('.banner-img').attr('src','assets/images/2d/oasis-mobile.png');
+    	else if (getPageName() == "pl2.html"){
+    		$('.banner-img img').attr('src','assets/images/1-featured/pl2-banner-mobile.png');
+    	}
+    	else if (getPageName() == "oasis.html"){
+    		$('.banner-img img').attr('src','assets/images/1-featured/oasis-banner-mobile.png');
+    	}
 
-        // $('.banner-img').attr('src','assets/images/featured/river-mobile.jpg');
-        // $('.banner-img').attr('src','assets/images/featured/light-mobile.jpg');
-        // $('.banner-img').attr('src','assets/images/2d/twod-mobile.png');
+
+    	else if (getPageName() == "teamlab.html"){
+    		$('.banner-img img').attr('src','assets/images/featured/river-mobile.jpg');
+    	}
+		else if (getPageName() == "2d.html"){
+    		$('.banner-img img').attr('src','assets/images/2d/twod-mobile.png');
+    	}
+		else if (getPageName() == "iontank.html"){
+    		$('.banner-img img').attr('src','assets/images/featured/light-mobile.jpg');
+    	}
+
 
 
     }
