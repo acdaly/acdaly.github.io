@@ -156,7 +156,7 @@ function carouselOptions(){
         
         
         $('.modal-link').on('click', function(e){
-            //Load modal if center carousel is clicked, 
+            //For experimental carousel-- go to detail page if center cell is clicked
             if ($(this).hasClass('is-selected')){
                 if(!$(this).hasClass('no-modal')){ //if it's searching, don't open modal
                     if($(this).hasClass('cell0')){
