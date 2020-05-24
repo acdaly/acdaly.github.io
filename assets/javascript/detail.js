@@ -16,7 +16,7 @@ $( document ).ready(function() {
 		}
 		else{
 			$(".logo-black").css("opacity", "1");
-			$(".logo-white").css("opacity", "0");
+			// $(".logo-white").css("opacity", "0");
 			$(".detail-title").css("opacity", "0");
 			$(".detail-back").css("opacity", "0");
 		}
