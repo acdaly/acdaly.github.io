@@ -3,6 +3,7 @@
 $( document ).ready(function() {
 	//fade in home screen
     $('body').removeClass('fade-out');
+    console.log(window.outerWidth);
 
 	//hide black logo and show white logo on scroll
 	$(document).scroll(function(){
