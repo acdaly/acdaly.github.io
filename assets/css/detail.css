@@ -42,6 +42,17 @@
     
 }
 
+.og-label{
+    font-size: 0.8em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.blue-num{
+    font-size: 3em;
+    color: #A2F1FF;
+}
+
 /*Desktop*/
 @media all and (min-width: 750px) {
     .detail-nav{
