@@ -185,11 +185,11 @@ body.fade-out {
 @media all and (max-width: 500px) {
     #home-subtitle{
         font-weight: 300;
-        color: rgba(255, 255, 255, .5);
+        color: rgba(255, 255, 255, .7);
     }
     #home-role{
         font-weight: 400;
-        color: rgba(255, 255, 255, .7);
+        color: rgba(255, 255, 255, .8);
     }
 }
 
