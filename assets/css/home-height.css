@@ -157,15 +157,17 @@ body.fade-out {
     text-align: center;
 }
 
+#home-subtitle{
+    padding-right: 10px;
+    font-size: 1em;
+    text-align: center;
+}
+
 /*Desktop*/
 @media all and (min-width: 500px) {
     #home-subtitle{
-    padding-right: 10px;
     font-weight: 100;
-/*    letter-spacing: .48em;*/
-    font-size: 1em;
     color: rgba(255, 255, 255, .9);
-    text-align: center;
     }
 
     #home-role{
@@ -178,12 +180,8 @@ body.fade-out {
 /*Phone*/
 @media all and (max-width: 500px) {
     #home-subtitle{
-    padding-right: 10px;
     font-weight: 300;
-/*    letter-spacing: .48em;*/
-    font-size: 1em;
     color: rgba(255, 255, 255, .5);
-    text-align: center;
     }
     #home-role{
         display: inline;
