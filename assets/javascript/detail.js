@@ -43,7 +43,7 @@ $( document ).ready(function() {
     	else if (getPageName() == "pl2.html"){
     		$('.banner-img img').attr('src','assets/images/1-featured/pl2-banner-mobile.png');
     	}
-    	else if (getPageName() == "oasis.html"){
+    	else if (getPageName() == "liveline.html"){
     		$('.banner-img img').attr('src','assets/images/1-featured/oasis-banner-mobile.png');
     	}
 

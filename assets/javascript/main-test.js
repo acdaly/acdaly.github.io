@@ -391,9 +391,9 @@ $( document ).ready(function() {
         
         // $('.flickity-page-dots').css('bottom', '-120px')
         // $('#ui-ux .is-selected.gallery-cell').css('height', '60vh !important');
-        $('#oasis-img').attr('src','assets/images/2d/oasis-mobile.png');
-        $('#adulting-img').attr('src','assets/images/2d/adulting-mobile.png');
-        $('#pl2-img').attr('src','assets/images/2d/pl2-mobile.png');
+        $('#oasis-img').attr('src','assets/images/1-featured/oasis-mobile.png');
+        $('#adulting-img').attr('src','assets/images/1-featured/adulting-mobile.png');
+        $('#pl2-img').attr('src','assets/images/1-featured/pl2-mobile.png');
         // $('#tigris-img').attr('src','assets/images/design/tigris-mobile.jpg');
 
         $('#river-img').attr('src','assets/images/featured/river-mobile.jpg');
