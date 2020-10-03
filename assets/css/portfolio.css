@@ -198,8 +198,17 @@ a{
 .btn-outline-secondary {
     color: white;
     background-color: #121721;
-    border-color: white; /*set the color you want here*/
+    border-color: rgba(255, 255, 255, 0.8); /*set the color you want here*/
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-size: .75rem;
+    border-width:1px;
+    padding-top: .5rem;
 }
+
 .btn-outline-secondary:hover{
     color: #121721;
     background-color: white;

@@ -83,7 +83,7 @@
 #portfolio-resume{
     letter-spacing: 2px;
     font-size:.7em;
-    border-width: 2px;
+    border-color: white;
 }
 
 #portfolio-resume:hover{
