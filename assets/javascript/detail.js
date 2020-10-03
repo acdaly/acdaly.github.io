@@ -4,6 +4,10 @@ function isMobileDevice() {
     return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
 };
 
+function isPhone(){
+	return (window.innerHeight < 1000 && window.innerWidth < 700);
+}
+
 function getPageName(){
 	var path = window.location.pathname;
 	var page = path.split("/").pop();
@@ -36,7 +40,7 @@ $( document ).ready(function() {
 	});
 
 	//change detail page thumbnails on mobile
-    if (isMobileDevice()){
+    if (isMobileDevice() && isPhone()){
     	if (getPageName() == "adulting.html"){
     		$('.banner-img img').attr('src','assets/images/1-featured/adulting-banner-mobile.png');
     	}
