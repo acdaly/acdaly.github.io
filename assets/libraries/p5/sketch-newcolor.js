@@ -474,7 +474,7 @@ function p2drawOcean(p){
     for (var z = 0; z < p2waveLayers; z++){
         
         p.beginShape();
-        p.fill(p.color('#121721'));
+        p.fill(p.color('#0E131C'));
         p.curveVertex(0, p2height);
         p.curveVertex(0, p2height);
         for (var i = 0; i < p2curves + 1; i++) {
@@ -526,7 +526,7 @@ function p2Setup(p) {
     var cnvTwo = p.createCanvas(p2width, p2height);
     // cnvTwo.parent('p5-sketch');
     p2curves = p.int(p2width/50);
-    p2skyColor = p.color('#121721');
+    p2skyColor = p.color('#0E131C');
     p2create2DNoiseList(p);
     p.background(p2skyColor);
 }
