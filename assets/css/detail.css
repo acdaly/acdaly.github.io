@@ -53,6 +53,8 @@
     color: #A2F1FF;
 }
 
+
+
 /*Desktop*/
 @media all and (min-width: 750px) {
     .detail-nav{
