@@ -2,6 +2,9 @@ body{
     background-color: #0E131C;
     opacity: 1;
     transition: 1.5s opacity;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 
 }
 
@@ -170,13 +173,13 @@ body.fade-out {
 /*Desktop*/
 @media all and (min-width: 500px) {
     #home-subtitle{
-        font-weight: 100;
-        color: rgba(255, 255, 255, .9);
+        font-weight: 300;
+        color: rgba(255, 255, 255, 1);
     }
 
     #home-role{
-
-        font-weight: 300;
+/*        color: rgba(255, 255, 255, 1);
+        font-weight: 300;*/
 
     }
 }

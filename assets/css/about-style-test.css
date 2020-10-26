@@ -110,7 +110,15 @@ p{
 }
 
 #about-intro{
+    font-weight: 700;
+    color: white;
+    font-size: 1em;
+}
+
+#about-detail{
     font-weight: 400;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1em;
 }
 
 #about-placeholder{
@@ -151,11 +159,8 @@ p{
     margin-right: 10px;
     padding-left: 0;
     padding-right: 0;
-    color: white;
-    font-size: 1em;
+
     padding-top: 20px;
-
-
 
 }
 #about-img img{
