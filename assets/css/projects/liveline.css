@@ -4,6 +4,38 @@
 
 #phone-img{
 	padding: 50px;
+	margin-top: -50px;
+	z-index: 0;
+}
+
+
+.content-warning{
+    background-color: #951919;
+/*    height: 540px;*/
+}
+
+.gradient-background{
+	background-image: linear-gradient(#0E131C, #000000);
+	
+}
+
+.warning-title{
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+    letter-spacing: 10%;
+    font-size: 1.3em;
+}
+
+.warning-detail{
+    /*padding-left: 50px;*/
+    font-size: 1.3em;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.8);
+
+}
+
+.front{
+	z-index: 5;
 }
 
 #solution-header{
