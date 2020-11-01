@@ -64,6 +64,12 @@
     margin: -10px;
 }
 
+.black-background{
+    background-color: black;
+    z-index: -1;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
 
 /*Desktop*/
 @media all and (min-width: 750px) {
