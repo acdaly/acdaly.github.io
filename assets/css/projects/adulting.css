@@ -1,0 +1,38 @@
+
+#solution-header{
+	color: rgba(255, 255, 255, 0.6);
+}
+
+.teal-background{
+    background-color: #0A1F2C;
+    z-index: -1;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+
+/*Desktop*/
+@media all and (min-width: 900px) {
+    #adulting-solution{
+    position: absolute;
+    top: 0;
+}
+}
+
+/*Narrow Destop*/
+@media all and (max-width: 900px) {
+    #adulting-solution{
+    position: relative;
+}
+}
+
+
+
+
+.competitive-left{
+    padding-left:0;
+}
+
+.competitive-right{
+    padding-right:0;
+}
