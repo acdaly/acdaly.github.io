@@ -45,7 +45,7 @@ var colorWhite = new RGB(255, 255, 255);
 var dayPastelList = [pastelBlue, pastelGreen, pastelPink, pastelBlue];
 
 //orange & teal
-var skyTurq = new RGB(80, 208, 218);
+var skyTurq = new RGB(46, 158, 167);
 var skyOrange = new RGB(213, 185, 146);
 
 var dirtyOrange = new RGB(165, 174, 156);
@@ -57,20 +57,20 @@ var orangeTealList = [dirtyOrange, offTeal, darkerTeal, blueEmerald];
 var orangeTealSky = [skyTurq, skyOrange]
 
 //clearest daytime
-var healthyTop = new RGB(37, 167, 198);
-var healthyBottom = new RGB(132, 186, 223);
+var healthyTop = new RGB(0, 143, 177);
+var healthyBottom = new RGB(112, 165, 201);
 
 var clearBlue1 = new RGB(56, 150, 176);
-var clearBlue2 = new RGB(60, 165, 181);
+var clearBlue2 = new RGB(84, 170, 173);
 var clearBlue3 = new RGB(48, 128, 125);
-var clearBlue4 = new RGB(110, 201, 189);
+var clearBlue4 = new RGB(32, 85, 75);
 
 var healthyWaves = [clearBlue1, clearBlue2, clearBlue3, clearBlue4];
 var healthySky = [healthyTop, healthyBottom]
 
 //natural daytime
-var trueBlueSky = new RGB(27, 122, 196);
-var trueLightSky = new RGB(165, 236, 255);
+var trueBlueSky = new RGB(5, 104, 181);
+var trueLightSky = new RGB(126, 204, 224);
 
 var cleanTeal = new RGB(36, 164, 202);
 var darkerCleanTeal = new RGB(0, 133, 176);

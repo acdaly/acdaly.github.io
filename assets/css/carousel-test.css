@@ -21,7 +21,7 @@ body { font-family: sans-serif; }
 }
 
 .carousel-container{
-  padding-top: 30px;
+  padding-top: 50px;
 }
 
 
@@ -77,12 +77,13 @@ body { font-family: sans-serif; }
 
 
 .carousel-title{
-    font-family: "Josefin Sans", sans-serif;
+    font-family: "Lato", sans-serif;
     text-align: center;
     color: white;
     letter-spacing: 1.8px;
     padding-bottom: 20px;
     font-weight: 400;
+    font-size: 0.9em;
 /*    margin-top: 30px;*/
 }
 

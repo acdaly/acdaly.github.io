@@ -23,7 +23,8 @@
     font-family: 'Lato', sans-serif;
 /*    padding-left: 150px;
     padding-right: 150px;*/
-    width: 600px;
+    width: 650px;
+    font-size: 1.05em;
 }
 
 .category-text-container{
@@ -201,12 +202,12 @@ a{
     border-color: rgba(255, 255, 255, 0.8); /*set the color you want here*/
     border-radius: 20px;
     text-transform: uppercase;
-    font-family: 'Josefin Sans', sans-serif;
+/*    font-family: 'Josefin Sans', sans-serif;*/
     font-weight: 500;
     letter-spacing: 2px;
-    font-size: .75rem;
+    font-size: .9rem;
     border-width:1px;
-    padding-top: .5rem;
+    padding-top: .4rem;
 }
 
 .btn-outline-secondary:hover{

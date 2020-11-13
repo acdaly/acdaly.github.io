@@ -82,7 +82,7 @@
 
 #portfolio-resume{
     letter-spacing: 2px;
-    font-size:.7em;
+    font-size:.8em;
     border-color: white;
 }
 
@@ -118,7 +118,7 @@ p{
 #about-detail{
     font-weight: 400;
     color: rgba(255, 255, 255, 0.8);
-    font-size: 1em;
+    font-size: 1.05em;
 }
 
 #about-placeholder{
