@@ -468,7 +468,7 @@ li{
 .detail-h2{
     color: #A2F1FF;
     text-transform: uppercase;
-    font-size: 0.75em; 
+    font-size: 0.875em; 
     padding-top: 3px;
     padding-bottom: 25px;
     font-weight: 500;
@@ -505,6 +505,7 @@ li{
 }
 
 .text-14{
+    max-width: 700px;
     font-weight:400;
     font-size: 0.8em;
     padding-bottom: 10px;
@@ -512,44 +513,50 @@ li{
 }
 
 .text-18{
+    max-width: 700px;
     font-weight:400;
-    font-size: 1.05em;
+    font-size: 1.125em;
     padding-bottom: 10px;
     line-height: 150%;
 }
 
 .text-18-bold{
+    max-width: 700px;
     font-weight:700;
-    font-size: 1.05em;
+    font-size: 1.125em;
     padding-bottom: 10px;
     line-height: 150%;
 }
 
 .text-18-light{
+    max-width: 700px;
     font-weight:400;
-    font-size: 1.05em;
+    font-size: 1.125em;
     padding-bottom: 10px;
     line-height: 150%;
     color: rgba(255, 255, 255, 0.8);
 }
 
 .text-24{
+    max-width: 700px;
     font-weight:400;
-    font-size: 1.35em;
+    font-size: 1.5em;
     padding-bottom: 10px;
     line-height: 150%;
     color: rgba(255, 255, 255, 0.8);
 }
 
 .text-24-bold{
+    max-width: 700px;
     font-weight:700;
-    font-size: 1.35em;
+    font-size: 1.5em;
     padding-bottom: 10px;
     line-height: 150%;
     color: rgba(255, 255, 255, 1);
 }
 
 .overview-title{
+    max-width: 700px;
     font-weight:700;
     font-size: 2em;
     padding-bottom: 20px;
@@ -559,8 +566,9 @@ li{
 
 
 .quote{
+    max-width: 700px;
     font-weight:700;
-    font-size: 1.3em;
+    font-size: 1.5em;
     padding-bottom: 10px;
     line-height: 150%;
     color: rgba(255, 255, 255, 1);
@@ -570,6 +578,7 @@ li{
 
 
 .text-34{
+    max-width: 700px;
     font-weight:400;
     font-size: 1.05em;
     padding-bottom: 10px;
