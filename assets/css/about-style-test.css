@@ -112,13 +112,13 @@ p{
 #about-intro{
     font-weight: 700;
     color: white;
-    font-size: 1em;
+    font-size: 1.125em;
 }
 
 #about-detail{
     font-weight: 400;
     color: rgba(255, 255, 255, 0.8);
-    font-size: 1.05em;
+    font-size: 1.125em;
 }
 
 #about-placeholder{
